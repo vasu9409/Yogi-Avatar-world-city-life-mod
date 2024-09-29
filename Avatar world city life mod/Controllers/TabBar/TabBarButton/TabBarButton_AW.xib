@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BalooThambi-Regular.ttf">
+            <string>BalooThambi-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBarButton_AW" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
+            <connections>
+                <outlet property="coronImg" destination="zL6-Cg-KGI" id="8er-uH-gJh"/>
+                <outlet property="tabImageView" destination="znD-SM-jzT" id="4xa-CW-ODX"/>
+                <outlet property="tabTitle" destination="sFO-xH-Dk8" id="dpZ-Z7-9fM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zlP-03-1MJ">
+            <rect key="frame" x="0.0" y="0.0" width="87" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moods" translatesAutoresizingMaskIntoConstraints="NO" id="znD-SM-jzT">
+                    <rect key="frame" x="26" y="-0.5" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="cE3-pD-UJb">
+                            <variation key="heightClass=regular-widthClass=regular" constant="35"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="20" id="gj8-FT-MAP">
+                            <variation key="heightClass=regular-widthClass=regular" constant="35"/>
+                        </constraint>
+                    </constraints>
+                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Главное" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFO-xH-Dk8">
+                    <rect key="frame" x="20" y="38.5" width="47" height="20"/>
+                    <fontDescription key="fontDescription" name="BalooThambi-Regular" family="Baloo Thambi" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coron" translatesAutoresizingMaskIntoConstraints="NO" id="zL6-Cg-KGI">
+                    <rect key="frame" x="61" y="-4.5" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="B8R-1C-pjQ"/>
+                        <constraint firstAttribute="width" constant="12" id="y7Q-04-ARL"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="L2F-yJ-5SH"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="znD-SM-jzT" firstAttribute="centerY" secondItem="zlP-03-1MJ" secondAttribute="centerY" constant="-15" id="KMR-a5-Wij"/>
+                <constraint firstItem="sFO-xH-Dk8" firstAttribute="centerX" secondItem="znD-SM-jzT" secondAttribute="centerX" id="LQM-4G-MNj"/>
+                <constraint firstItem="zL6-Cg-KGI" firstAttribute="top" secondItem="znD-SM-jzT" secondAttribute="top" constant="-4" id="LzZ-Q9-5g2"/>
+                <constraint firstItem="znD-SM-jzT" firstAttribute="centerX" secondItem="zlP-03-1MJ" secondAttribute="centerX" id="eGj-Aq-yvZ"/>
+                <constraint firstItem="zL6-Cg-KGI" firstAttribute="leading" secondItem="znD-SM-jzT" secondAttribute="trailing" id="oYu-SA-hdD"/>
+                <constraint firstItem="sFO-xH-Dk8" firstAttribute="top" secondItem="znD-SM-jzT" secondAttribute="bottom" constant="4" id="sqO-j8-wEg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="158.01526717557252" y="71.126760563380287"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="coron" width="12" height="12"/>
+        <image name="moods" width="34" height="34"/>
+    </resources>
+</document>

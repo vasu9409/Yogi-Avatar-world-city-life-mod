@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BalooThambi-Regular.ttf">
+            <string>BalooThambi-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditorViewController_AW" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="qsp-lX-qTa" id="zCz-1K-bsy"/>
+                <outlet property="deleteBtn" destination="1fv-UJ-vb5" id="5K5-Yp-lXf"/>
+                <outlet property="leftButton" destination="qTv-35-3rf" id="vPX-zf-kcg"/>
+                <outlet property="rightButton" destination="WMA-q5-vsD" id="0ZJ-A5-OiG"/>
+                <outlet property="view" destination="Fcl-nE-IJE" id="n0v-Jy-pnd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Fcl-nE-IJE">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fv-UJ-vb5">
+                    <rect key="frame" x="20" y="79" width="110" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="Gku-gI-dpE"/>
+                        <constraint firstAttribute="height" constant="50" id="TY0-nL-Oci"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="BalooThambi-Regular" family="Baloo Thambi" pointSize="20"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Delete" backgroundImage="pinkButtonBackgroundBig"/>
+                    <connections>
+                        <action selector="deleteButtonAction:" destination="-1" eventType="touchUpInside" id="NQr-mz-7sX"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qsp-lX-qTa">
+                    <rect key="frame" x="0.0" y="119" width="430" height="643"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y0I-8F-yXu">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-DI-gzv">
+                    <rect key="frame" x="290" y="79" width="120" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="KIj-EG-9N2"/>
+                        <constraint firstAttribute="width" constant="120" id="uWN-bs-Q6f">
+                            <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="BalooThambi-Regular" family="Baloo Thambi" pointSize="20"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Add new" backgroundImage="button_download"/>
+                    <connections>
+                        <action selector="addButtonAction:" destination="-1" eventType="touchUpInside" id="odC-tL-PNa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-35-3rf">
+                    <rect key="frame" x="20" y="436" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="lMt-AP-kPL">
+                            <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="60" id="y5Z-p4-zve">
+                            <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                        </constraint>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="leftButton"/>
+                    <connections>
+                        <action selector="leftButtonAction:" destination="-1" eventType="touchUpInside" id="9xV-yh-lcK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMA-q5-vsD">
+                    <rect key="frame" x="350" y="436" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="5Tv-Dv-LVc">
+                            <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="60" id="oZQ-zW-Oq4">
+                            <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                        </constraint>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="rightButton"/>
+                    <connections>
+                        <action selector="rightButtonAction:" destination="-1" eventType="touchUpInside" id="hLJ-Sv-fiu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="mMk-UQ-kEc"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Pgs-DI-gzv" firstAttribute="centerY" secondItem="1fv-UJ-vb5" secondAttribute="centerY" id="2aP-wK-ane"/>
+                <constraint firstItem="qTv-35-3rf" firstAttribute="centerY" secondItem="Fcl-nE-IJE" secondAttribute="centerY" id="Anz-ec-sn5"/>
+                <constraint firstItem="mMk-UQ-kEc" firstAttribute="trailing" secondItem="qsp-lX-qTa" secondAttribute="trailing" id="CTi-8j-H9m"/>
+                <constraint firstItem="qsp-lX-qTa" firstAttribute="height" secondItem="Fcl-nE-IJE" secondAttribute="height" multiplier="0.69" id="GuV-x7-biW"/>
+                <constraint firstItem="1fv-UJ-vb5" firstAttribute="leading" secondItem="mMk-UQ-kEc" secondAttribute="leading" constant="20" id="N1W-LX-EDV">
+                    <variation key="heightClass=regular-widthClass=regular" constant="85"/>
+                </constraint>
+                <constraint firstItem="1fv-UJ-vb5" firstAttribute="top" secondItem="mMk-UQ-kEc" secondAttribute="top" constant="20" id="Qc3-Ux-2Fn"/>
+                <constraint firstItem="qsp-lX-qTa" firstAttribute="leading" secondItem="mMk-UQ-kEc" secondAttribute="leading" id="YfR-ZZ-Yzk"/>
+                <constraint firstItem="qTv-35-3rf" firstAttribute="leading" secondItem="mMk-UQ-kEc" secondAttribute="leading" constant="20" id="dym-ae-k49">
+                    <variation key="heightClass=regular-widthClass=regular" constant="85"/>
+                </constraint>
+                <constraint firstItem="mMk-UQ-kEc" firstAttribute="trailing" secondItem="Pgs-DI-gzv" secondAttribute="trailing" constant="20" id="f6W-0T-M8Y">
+                    <variation key="heightClass=regular-widthClass=regular" constant="85"/>
+                </constraint>
+                <constraint firstItem="mMk-UQ-kEc" firstAttribute="trailing" secondItem="WMA-q5-vsD" secondAttribute="trailing" constant="20" id="ifX-ty-s4m">
+                    <variation key="heightClass=regular-widthClass=regular" constant="85"/>
+                </constraint>
+                <constraint firstItem="WMA-q5-vsD" firstAttribute="centerY" secondItem="Fcl-nE-IJE" secondAttribute="centerY" id="u31-kp-1C8"/>
+                <constraint firstItem="qsp-lX-qTa" firstAttribute="top" secondItem="Pgs-DI-gzv" secondAttribute="bottom" constant="-10" id="zPn-Rf-jGu"/>
+            </constraints>
+            <point key="canvasLocation" x="107.63358778625954" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_download" width="141" height="58"/>
+        <image name="leftButton" width="60" height="60"/>
+        <image name="pinkButtonBackgroundBig" width="154" height="58"/>
+        <image name="rightButton" width="60" height="60"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

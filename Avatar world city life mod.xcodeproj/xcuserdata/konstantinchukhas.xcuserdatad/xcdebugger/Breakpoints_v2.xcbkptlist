@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9740473A-FC0A-4326-83AB-DDAD12DE598A"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C55270F5-1905-4C91-B279-D5CD9D867086"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/DetailContent/Views/DetailDescriptionCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22DB3DC7-2309-4BFF-A19A-97C21F576367"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Utilities/DBManager_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
+            landmarkName = "getPath_MTW(for:imgPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E335500B-AE92-44CC-9CFA-495AF3E68DAB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Utilities/DBManager_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "fetchData_AW(for:client:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E335500B-AE92-44CC-9CFA-495AF3E68DAB - 701678bd1160cc0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.DBManager_AW.fetchData(for: Avatar_world_city_life_mod.EditorContentData_AW, client: SwiftyDropbox.DropboxClient, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Utilities/DBManager_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "251"
+                  endingLineNumber = "251"
+                  offsetFromSymbolStart = "1048">
+               </Location>
+               <Location
+                  uuid = "E335500B-AE92-44CC-9CFA-495AF3E68DAB - 5f88932204608b47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in Avatar_world_city_life_mod.DBManager_AW.fetchData(for: Avatar_world_city_life_mod.EditorContentData_AW, client: SwiftyDropbox.DropboxClient, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Utilities/DBManager_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "252"
+                  endingLineNumber = "252"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "E335500B-AE92-44CC-9CFA-495AF3E68DAB - 5f88932204608ca4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in Avatar_world_city_life_mod.DBManager_AW.fetchData(for: Avatar_world_city_life_mod.EditorContentData_AW, client: SwiftyDropbox.DropboxClient, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Utilities/DBManager_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "251"
+                  endingLineNumber = "251"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4772F842-871A-4BC4-A6B9-7B1AE25F0F05"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Utilities/DBManager_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "fetchEditorContent_AW(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4772F842-871A-4BC4-A6B9-7B1AE25F0F05 - 514b2f701576280f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.DBManager_AW.fetchEditorContent(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Utilities/DBManager_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "4772F842-871A-4BC4-A6B9-7B1AE25F0F05 - 90b9b4060ba61baf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (SwiftyDropbox.DropboxClient) -&gt; () in Avatar_world_city_life_mod.DBManager_AW.fetchEditorContent(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Utilities/DBManager_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "4772F842-871A-4BC4-A6B9-7B1AE25F0F05 - 90b9b4060ba61bcc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (SwiftyDropbox.DropboxClient) -&gt; () in Avatar_world_city_life_mod.DBManager_AW.fetchEditorContent(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Utilities/DBManager_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "180"
+                  endingLineNumber = "180"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "636170CA-8169-458F-AC1E-0437B30567B7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Utilities/ContentManager_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "serialize_AW(data:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1EDE2246-4CE3-4D5E-A3F5-9F193D86CD95"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "loadContent_AW(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "630BA7CC-7CB5-478B-9159-37B8E9B40A95"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/Views/CharacterEditorImage_AW/CharacterEditorImage_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "changeStatus_AW(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D1FF143-7AF1-4528-8E50-8EAAB1B900A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "setSelectedByImgPath_AW(_:type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C59A2CFF-B392-4749-B6D1-258D1B27DE94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "makeSelectedContent_AW(model:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E3E02AC-F12E-4713-B348-55F96F4E8795"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "makeSelectedContent_AW(model:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADB6A612-E26B-4E41-A54B-FB82A1671B19"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "makeSelectedContent_AW(model:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF94BDE4-1BE5-4A1E-9F97-DF3BF86ADF10"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/DetailContent/DetailContentViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "createContentLayout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35C5E73D-C255-4CB3-BBAD-07E1275B0139"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Mods/ModsViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "filterButtonAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "35C5E73D-C255-4CB3-BBAD-07E1275B0139 - 27fb2c80e8a09f37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.ModsViewController_AW.filterButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Mods/ModsViewController_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "35C5E73D-C255-4CB3-BBAD-07E1275B0139 - 5214b26028bf4775"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Avatar_world_city_life_mod.FilterAction_AIC) -&gt; () in Avatar_world_city_life_mod.ModsViewController_AW.filterButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Mods/ModsViewController_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B5FB5F1-212C-41B3-8265-8DBDB89B575D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "EditorViewController_AW"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "0B5FB5F1-212C-41B3-8265-8DBDB89B575D - 30ffc5500698d589"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorViewController_AW.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Editor/EditorViewController_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "0B5FB5F1-212C-41B3-8265-8DBDB89B575D - 30ffc5500698d5aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorViewController_AW.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Editor/EditorViewController_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15FCCC07-3396-42A8-8196-0BDBC009550C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "doneButtonAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "15FCCC07-3396-42A8-8196-0BDBC009550C - 1547c5cd7242e8d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewController.doneButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1020">
+               </Location>
+               <Location
+                  uuid = "15FCCC07-3396-42A8-8196-0BDBC009550C - 1547c5cd7242e8d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewController.doneButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1092">
+               </Location>
+               <Location
+                  uuid = "15FCCC07-3396-42A8-8196-0BDBC009550C - 1547c5cd7242e8d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewController.doneButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1664">
+               </Location>
+               <Location
+                  uuid = "15FCCC07-3396-42A8-8196-0BDBC009550C - 1547c5cd7242e8d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewController.doneButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1200">
+               </Location>
+               <Location
+                  uuid = "15FCCC07-3396-42A8-8196-0BDBC009550C - 1547c5cd7242e8d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewController.doneButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1276">
+               </Location>
+               <Location
+                  uuid = "15FCCC07-3396-42A8-8196-0BDBC009550C - 1547c5cd7242e8d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewController.doneButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1868">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE60C9CC-E90D-4A07-9E08-E7FD0EA95588"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Services/ContentService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "isGuidesListEmpty(by:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3E9B8F6-F53B-406D-BABE-67E0A9FAD968"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "fetchContent_AW()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71E958C8-E273-49ED-B131-807798AB7860"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/DetailContent/DetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchIpa(by:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "71E958C8-E273-49ED-B131-807798AB7860 - 461e14a0c9df5873"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.DetailViewModel.fetchIpa(by: Swift.String, completion: (Foundation.URL) -&gt; ()) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/DetailContent/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "71E958C8-E273-49ED-B131-807798AB7860 - 461e14a0c9df5873"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.DetailViewModel.fetchIpa(by: Swift.String, completion: (Foundation.URL) -&gt; ()) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/DetailContent/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "603F9A38-494B-41A7-BB43-826561A04607"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Subscription/Flow/configs/IAPHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "processPurchase_AW(for:with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "603F9A38-494B-41A7-BB43-826561A04607 - 60f1138091a43cdd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.IAPManager.processPurchase(for: Swift.Optional&lt;__C.SKProduct&gt;, with: Swift.String) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Subscription/Flow/configs/IAPHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "603F9A38-494B-41A7-BB43-826561A04607 - 60f1138091a43cf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.IAPManager.processPurchase(for: Swift.Optional&lt;__C.SKProduct&gt;, with: Swift.String) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Subscription/Flow/configs/IAPHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A1B2DBB-A5BA-4972-98EC-C989CC1DEB63"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Subscription/Flow/configs/IAPHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "doPurchase_AW()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5A1B2DBB-A5BA-4972-98EC-C989CC1DEB63 - 42afb6a1b67a71f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.IAPManager.doPurchase() -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Subscription/Flow/configs/IAPHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "5A1B2DBB-A5BA-4972-98EC-C989CC1DEB63 - 42afb6a1b67a71d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.IAPManager.doPurchase() -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Subscription/Flow/configs/IAPHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84404702-2F5B-4A58-81A8-E0DF08B4A317"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Subscription/Flow/configs/IAPHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "processPurchase_AW(for:with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "84404702-2F5B-4A58-81A8-E0DF08B4A317 - 60f1138091a43d17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.IAPManager.processPurchase(for: Swift.Optional&lt;__C.SKProduct&gt;, with: Swift.String) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Subscription/Flow/configs/IAPHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "84404702-2F5B-4A58-81A8-E0DF08B4A317 - 60f1138091a43d17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.IAPManager.processPurchase(for: Swift.Optional&lt;__C.SKProduct&gt;, with: Swift.String) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Subscription/Flow/configs/IAPHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "684">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9477FBFF-A0FA-4388-9664-D8CC88DB6378"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Utilities/Configurations_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "ConfigurationMediaSub_AW"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "9477FBFF-A0FA-4388-9664-D8CC88DB6378 - a8bec6f1e94c963a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for videoFileType"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Utilities/Configurations_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "9477FBFF-A0FA-4388-9664-D8CC88DB6378 - d9f7da7272d6bfec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.ConfigurationMediaSub_AW.videoFileType.unsafeMutableAddressor : Swift.String"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Utilities/Configurations_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "360FE100-F0F5-464C-9A6F-C943B2908951"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Subscription/Flow/configs/IAPHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "416"
+            endingLineNumber = "416"
+            landmarkName = "updateSubscriptions_AW(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2047D900-FC9A-4746-969E-5DFBEBD636AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "backButtonAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2047D900-FC9A-4746-969E-5DFBEBD636AC - acb9e90cbb49994f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewController.backButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "2047D900-FC9A-4746-969E-5DFBEBD636AC - 55175c159f656417"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Avatar_world_city_life_mod.EditorSetupViewController.backButtonAction(Any) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50E85CB9-3420-40C1-9313-3C8BFE55AE69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "setSelectedByImgPath_AW(_:type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5B8AA38-3686-44DB-89E0-4A70AD178649"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "setSelectedByImgPath_AW(_:type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5B8AA38-3686-44DB-89E0-4A70AD178649 - c9a3dc24b4a46798"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewModel.setSelectedByImgPath_AW(_: Swift.String, type: Avatar_world_city_life_mod.CharacterContentType_AW) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "2572">
+               </Location>
+               <Location
+                  uuid = "E5B8AA38-3686-44DB-89E0-4A70AD178649 - c9a3dc24b4a46756"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorSetupViewModel.setSelectedByImgPath_AW(_: Swift.String, type: Avatar_world_city_life_mod.CharacterContentType_AW) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/EditorSetup/EditorSetupViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "2572">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B78F66A2-3393-4C1C-B872-89714905220A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/EditorSetup/Views/CharacterEditorImage_AW/CharacterEditorImage_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "changeStatus_AW(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA5A8CC3-232D-4C81-B7DE-592311528190"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Mods/ModsContentModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "checkUpdateModel(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA5A8CC3-232D-4C81-B7DE-592311528190 - 52fd53764ca32327"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.ModsContentModel.checkUpdateModel(with: Avatar_world_city_life_mod.ListDTO) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Mods/ModsContentModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "EA5A8CC3-232D-4C81-B7DE-592311528190 - 52fd53764ca32327"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.ModsContentModel.checkUpdateModel(with: Avatar_world_city_life_mod.ListDTO) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Mods/ModsContentModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  uuid = "EA5A8CC3-232D-4C81-B7DE-592311528190 - 138e8829e26923bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Avatar_world_city_life_mod.ListDTO) -&gt; Swift.Bool in Avatar_world_city_life_mod.ModsContentModel.checkUpdateModel(with: Avatar_world_city_life_mod.ListDTO) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Mods/ModsContentModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB67AFB2-7BD4-486F-9CBF-FAB4E423326E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Mods/ModsContentModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "updateFilter(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1D1469F-EAE7-42A5-BD85-67154974B57B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Views/FilterView/FilterView_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A1D1469F-EAE7-42A5-BD85-67154974B57B - f8376516bac733a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.FilterView_AW.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Views/FilterView/FilterView_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "A1D1469F-EAE7-42A5-BD85-67154974B57B - f8376516bac733a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.FilterView_AW.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Views/FilterView/FilterView_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "348">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDF13937-2341-4244-B8AB-8E9E5B9F2CF4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/DetailContent/DetailContentViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "makeIsFavorite_AW(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E086B78-2E28-4257-BCD7-F8878F49F73A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Home/HomeViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04FC1D18-E177-4BC4-934B-5CD78D4AAEE4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Mods/ModsViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6C61F6A-CE8D-4E3C-8868-C5B50FA8AADA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/TabBar/TabBarButton/TabBarButton_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "isContentLocked"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "E6C61F6A-CE8D-4E3C-8868-C5B50FA8AADA - 9c0bad058bfa9ca2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.TabBarButton_AW.isContentLocked.didset : Swift.Bool"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/TabBar/TabBarButton/TabBarButton_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "E6C61F6A-CE8D-4E3C-8868-C5B50FA8AADA - 71c5a5467a490bc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.TabBarButton_AW.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Avatar_world_city_life_mod.TabBarButton_AW&gt;"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/TabBar/TabBarButton/TabBarButton_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "440">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E775B374-EC0D-4E90-9496-FC901543864E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Utilities/StoreManagerCharacters_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "removeAllCharacterPreviewModels_AW()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2429A127-8330-4F2F-A749-8F9A3B94EC3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "setupCollection_AW()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2429A127-8330-4F2F-A749-8F9A3B94EC3A - efc000ebd250e843"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorViewController_AW.setupCollection_AW() -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Editor/EditorViewController_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "2024">
+               </Location>
+               <Location
+                  uuid = "2429A127-8330-4F2F-A749-8F9A3B94EC3A - efc000ebd250ebee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorViewController_AW.setupCollection_AW() -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Editor/EditorViewController_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEE567E3-6C9F-45BC-8290-25CFD02C5502"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "setupCollection_AW()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AEE567E3-6C9F-45BC-8290-25CFD02C5502 - efc000ebd250ea89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorViewController_AW.setupCollection_AW() -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Editor/EditorViewController_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1352">
+               </Location>
+               <Location
+                  uuid = "AEE567E3-6C9F-45BC-8290-25CFD02C5502 - efc000ebd250eaa8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Avatar_world_city_life_mod.EditorViewController_AW.setupCollection_AW() -&gt; ()"
+                  moduleName = "Avatar world city life mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/Soft/ios-Avatar-world-city-life-mod/Avatar%20world%20city%20life%20mod/Controllers/Editor/EditorViewController_AW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1336">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF8D02CE-7310-46EA-9AAD-251F57573D40"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
+            landmarkName = "deleteButtonAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31DEDD45-9570-4E7A-B384-230C10C634C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "deleteButtonAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "639062A6-78B4-4CD2-96CE-FF24157DF546"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "scrollToNextItem()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "151FC4AF-C47E-4AD6-AE1A-8E2C8101E169"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
+            landmarkName = "deleteButtonAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "369C9518-8539-4136-9310-67151FE1A84A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Avatar world city life mod/Controllers/Editor/EditorViewController_AW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "scrollToLastItem()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
