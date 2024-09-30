@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.9.1)
+  - Applio (1.0.8):
+    - Alamofire
+
+DEPENDENCIES:
+  - Applio
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Applio
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  Applio: b7bc51eae8df271f7098fd85216eba9b101a8319
+
+PODFILE CHECKSUM: 89cf0efe1bcd664395cf1a39afbc5a5526d878e4
+
+COCOAPODS: 1.15.0

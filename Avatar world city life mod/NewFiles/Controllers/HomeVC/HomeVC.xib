@@ -27,8 +27,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITW-tc-94n">
                     <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-tu-9Cm">
-                            <rect key="frame" x="175.66666666666666" y="14.666666666666671" width="42" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-tu-9Cm">
+                            <rect key="frame" x="175" y="14.666666666666671" width="43" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" name="newblackcolorfounded"/>
                             <nil key="highlightedColor"/>
@@ -37,7 +37,9 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="DwB-tu-9Cm" firstAttribute="centerX" secondItem="ITW-tc-94n" secondAttribute="centerX" id="ZiG-2X-MV9"/>
-                        <constraint firstAttribute="height" constant="50" id="dWU-E2-CQl"/>
+                        <constraint firstAttribute="height" constant="50" id="dWU-E2-CQl">
+                            <variation key="heightClass=regular-widthClass=regular" constant="110"/>
+                        </constraint>
                         <constraint firstItem="DwB-tu-9Cm" firstAttribute="centerY" secondItem="ITW-tc-94n" secondAttribute="centerY" id="gZr-hq-wOc"/>
                     </constraints>
                 </view>

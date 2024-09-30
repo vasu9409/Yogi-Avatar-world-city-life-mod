@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
+func checkIsDarkMode() -> Bool {
+    return UITraitCollection.current.userInterfaceStyle == .dark
+}

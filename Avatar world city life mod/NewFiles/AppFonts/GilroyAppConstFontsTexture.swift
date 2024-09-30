@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ConfigAppConstFontsText {
+class GilroyAppConstFontsTexture {
     
     public static func gilroyDimension(size: CGFloat, style: gilroySystemReduced) -> UIFont {
         return UIFont(name: style.secondaryGilroyFontUnite(), size: size) ?? .systemFont(ofSize: 14)

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryCell" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="194" height="148"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -46,6 +46,10 @@
                 <constraint firstItem="GvV-30-NVG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yhs-Zz-q2j"/>
             </constraints>
             <size key="customSize" width="194" height="148"/>
+            <connections>
+                <outlet property="backView" destination="GvV-30-NVG" id="6Yr-th-NAi"/>
+                <outlet property="catNameLabel" destination="vvA-Ff-0rE" id="qVv-ko-DlJ"/>
+            </connections>
             <point key="canvasLocation" x="227.48091603053433" y="54.225352112676056"/>
         </collectionViewCell>
     </objects>

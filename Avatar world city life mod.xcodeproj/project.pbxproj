@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28A9379A0CFA6D154CE91348 /* Pods_Avatar_world_city_life_mod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B566DA273D2412985271AA9 /* Pods_Avatar_world_city_life_mod.framework */; };
+		597CD0BC2CA9214700D8BF2B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0BA2CA9214700D8BF2B /* HomeVC.swift */; };
+		597CD0BD2CA9214700D8BF2B /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0BB2CA9214700D8BF2B /* HomeVC.xib */; };
+		597CD0C12CA9258100D8BF2B /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0BF2CA9258100D8BF2B /* HomeTVC.swift */; };
+		597CD0C22CA9258100D8BF2B /* HomeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0C02CA9258100D8BF2B /* HomeTVC.xib */; };
+		597CD0C62CA92CDC00D8BF2B /* AppFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0C52CA92CDC00D8BF2B /* AppFunctions.swift */; };
+		597CD0CA2CA92E8800D8BF2B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0C92CA92E8800D8BF2B /* AppColors.swift */; };
+		597CD0CC2CA9344500D8BF2B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0CB2CA9344500D8BF2B /* AppConstants.swift */; };
+		597CD0D02CA9358500D8BF2B /* ModsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0CE2CA9358500D8BF2B /* ModsVCViewController.swift */; };
+		597CD0D12CA9358500D8BF2B /* ModsVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0CF2CA9358500D8BF2B /* ModsVCViewController.xib */; };
+		597CD0D42CA935AF00D8BF2B /* GilroyAppConstFontsTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0D32CA935AF00D8BF2B /* GilroyAppConstFontsTexture.swift */; };
+		597CD0D82CA93A7C00D8BF2B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0D62CA93A7C00D8BF2B /* CategoryCell.swift */; };
+		597CD0D92CA93A7C00D8BF2B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0D72CA93A7C00D8BF2B /* CategoryCell.xib */; };
+		597CD0E62CA9477100D8BF2B /* gilroyFloatRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0E32CA9477100D8BF2B /* gilroyFloatRegular.ttf */; };
+		597CD0E72CA9477100D8BF2B /* gilroyChromeShadesExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0E02CA9477100D8BF2B /* gilroyChromeShadesExtraBold.ttf */; };
+		597CD0E82CA9477100D8BF2B /* gilroyLongMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0E22CA9477100D8BF2B /* gilroyLongMedium.ttf */; };
+		597CD0E92CA9477100D8BF2B /* gilroyStringSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0E42CA9477100D8BF2B /* gilroyStringSemiBold.ttf */; };
+		597CD0EA2CA9477100D8BF2B /* gilroyIntegerThink.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0E52CA9477100D8BF2B /* gilroyIntegerThink.ttf */; };
+		597CD0EB2CA9477100D8BF2B /* gilroyDoubleBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0DF2CA9477100D8BF2B /* gilroyDoubleBold.ttf */; };
+		597CD0EC2CA9477100D8BF2B /* gilroyLightGroundKey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0E12CA9477100D8BF2B /* gilroyLightGroundKey.ttf */; };
+		597CD0F32CA94AF400D8BF2B /* ModsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0F12CA94AF400D8BF2B /* ModsTableCell.swift */; };
+		597CD0F42CA94AF400D8BF2B /* ModsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */; };
 		B80004932AE670E70013D096 /* FilterViewTableViewCell_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80004912AE670E70013D096 /* FilterViewTableViewCell_AW.swift */; };
 		B80004942AE670E70013D096 /* FilterViewTableViewCell_AW.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80004922AE670E70013D096 /* FilterViewTableViewCell_AW.xib */; };
 		B815D42E2AED1B44003A1344 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B815D42D2AED1B44003A1344 /* Reachability */; };
@@ -16,7 +38,6 @@
 		B815D43D2AEFA7BA003A1344 /* ViewController_AW+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815D43C2AEFA7BA003A1344 /* ViewController_AW+Extensions.swift */; };
 		B815D4402AEFA7F5003A1344 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B815D43F2AEFA7F5003A1344 /* MBProgressHUD */; };
 		B815D67E2AF04B4B003A1344 /* Configurations_AW .swift in Sources */ = {isa = PBXBuildFile; fileRef = B815D63B2AF04B4A003A1344 /* Configurations_AW .swift */; };
-		B815D6822AF04CBA003A1344 /* sub.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B815D6812AF04CBA003A1344 /* sub.ttf */; };
 		B815D6842AF127F2003A1344 /* UIImage_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815D6832AF127F2003A1344 /* UIImage_AW.swift */; };
 		B815D6862AF12B04003A1344 /* ReachabilityManager_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815D6852AF12B04003A1344 /* ReachabilityManager_AW.swift */; };
 		B82C40142AF15B9100401575 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B82C40132AF15B9100401575 /* Lottie */; };
@@ -68,7 +89,6 @@
 		B8788B622AAB440B00C7B676 /* FilterView_AW.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8788B612AAB440B00C7B676 /* FilterView_AW.xib */; };
 		B8788B662AAB4B9900C7B676 /* DetailContentViewController_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8788B642AAB4B9900C7B676 /* DetailContentViewController_AW.swift */; };
 		B8788B672AAB4B9900C7B676 /* DetailContentViewController_AW.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8788B652AAB4B9900C7B676 /* DetailContentViewController_AW.xib */; };
-		B8788B692AAB4C5900C7B676 /* BalooThambi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8788B682AAB4C5900C7B676 /* BalooThambi-Regular.ttf */; };
 		B89FFD672AAA34F400DD71EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FFD662AAA34F400DD71EF /* AppDelegate.swift */; };
 		B89FFD6E2AAA34F400DD71EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89FFD6C2AAA34F400DD71EF /* Main.storyboard */; };
 		B89FFD702AAA34F500DD71EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89FFD6F2AAA34F500DD71EF /* Assets.xcassets */; };
@@ -79,10 +99,6 @@
 		B89FFD8C2AAA561000DD71EF /* TabBarButton_AW.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89FFD8B2AAA561000DD71EF /* TabBarButton_AW.xib */; };
 		B89FFD8E2AAA578D00DD71EF /* Colors_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FFD8D2AAA578D00DD71EF /* Colors_AW.swift */; };
 		B89FFD902AAA57C000DD71EF /* Fonts_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FFD8F2AAA57C000DD71EF /* Fonts_AW.swift */; };
-		B89FFD962AAA59F700DD71EF /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89FFD912AAA59F700DD71EF /* Inter-Regular.ttf */; };
-		B89FFD972AAA59F700DD71EF /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89FFD922AAA59F700DD71EF /* Inter-SemiBold.ttf */; };
-		B89FFD982AAA59F700DD71EF /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89FFD932AAA59F700DD71EF /* Inter-Bold.ttf */; };
-		B89FFD9A2AAA59F700DD71EF /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89FFD952AAA59F700DD71EF /* Inter-Medium.ttf */; };
 		B89FFDC62AAA5C2600DD71EF /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = B89FFDC52AAA5C2600DD71EF /* Stevia */; };
 		B89FFDC82AAA5C5300DD71EF /* Defines_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FFDC72AAA5C5300DD71EF /* Defines_AW.swift */; };
 		B89FFDCB2AAA5D5F00DD71EF /* UIView_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FFDCA2AAA5D5F00DD71EF /* UIView_AW.swift */; };
@@ -102,7 +118,6 @@
 		B8C26A462AF5275C00887D24 /* DetailContentTableViewCell_AW.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C26A442AF5275C00887D24 /* DetailContentTableViewCell_AW.xib */; };
 		B8DCDD212AD53F79006F6AD2 /* DetailViewModel_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCDD202AD53F79006F6AD2 /* DetailViewModel_AW.swift */; };
 		B8DCDD232AD540B3006F6AD2 /* UIString_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCDD222AD540B3006F6AD2 /* UIString_AW.swift */; };
-		B8DCDD2E2AD5457E006F6AD2 /* ITCKRIST.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8DCDD2D2AD5457E006F6AD2 /* ITCKRIST.ttf */; };
 		B8E0F04E2AE7A073008429BB /* CharacterContentType_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E0F04D2AE7A073008429BB /* CharacterContentType_AW.swift */; };
 		B8E0F0502AE7A0E0008429BB /* EditorContentData_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E0F04F2AE7A0E0008429BB /* EditorContentData_AW.swift */; };
 		B8E0F0522AE7A10D008429BB /* Category_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E0F0512AE7A10D008429BB /* Category_AW.swift */; };
@@ -112,6 +127,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B566DA273D2412985271AA9 /* Pods_Avatar_world_city_life_mod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Avatar_world_city_life_mod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26715B33BBEAAC2A35C4A4A0 /* Pods-Avatar world city life mod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avatar world city life mod.release.xcconfig"; path = "Target Support Files/Pods-Avatar world city life mod/Pods-Avatar world city life mod.release.xcconfig"; sourceTree = "<group>"; };
+		597CD0BA2CA9214700D8BF2B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		597CD0BB2CA9214700D8BF2B /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		597CD0BF2CA9258100D8BF2B /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
+		597CD0C02CA9258100D8BF2B /* HomeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTVC.xib; sourceTree = "<group>"; };
+		597CD0C52CA92CDC00D8BF2B /* AppFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFunctions.swift; sourceTree = "<group>"; };
+		597CD0C92CA92E8800D8BF2B /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		597CD0CB2CA9344500D8BF2B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		597CD0CE2CA9358500D8BF2B /* ModsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsVCViewController.swift; sourceTree = "<group>"; };
+		597CD0CF2CA9358500D8BF2B /* ModsVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModsVCViewController.xib; sourceTree = "<group>"; };
+		597CD0D32CA935AF00D8BF2B /* GilroyAppConstFontsTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GilroyAppConstFontsTexture.swift; sourceTree = "<group>"; };
+		597CD0D62CA93A7C00D8BF2B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		597CD0D72CA93A7C00D8BF2B /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		597CD0DF2CA9477100D8BF2B /* gilroyDoubleBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyDoubleBold.ttf; sourceTree = "<group>"; };
+		597CD0E02CA9477100D8BF2B /* gilroyChromeShadesExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyChromeShadesExtraBold.ttf; sourceTree = "<group>"; };
+		597CD0E12CA9477100D8BF2B /* gilroyLightGroundKey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyLightGroundKey.ttf; sourceTree = "<group>"; };
+		597CD0E22CA9477100D8BF2B /* gilroyLongMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyLongMedium.ttf; sourceTree = "<group>"; };
+		597CD0E32CA9477100D8BF2B /* gilroyFloatRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyFloatRegular.ttf; sourceTree = "<group>"; };
+		597CD0E42CA9477100D8BF2B /* gilroyStringSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyStringSemiBold.ttf; sourceTree = "<group>"; };
+		597CD0E52CA9477100D8BF2B /* gilroyIntegerThink.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyIntegerThink.ttf; sourceTree = "<group>"; };
+		597CD0F12CA94AF400D8BF2B /* ModsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsTableCell.swift; sourceTree = "<group>"; };
+		597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModsTableCell.xib; sourceTree = "<group>"; };
 		B80004912AE670E70013D096 /* FilterViewTableViewCell_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewTableViewCell_AW.swift; sourceTree = "<group>"; };
 		B80004922AE670E70013D096 /* FilterViewTableViewCell_AW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewTableViewCell_AW.xib; sourceTree = "<group>"; };
 		B815D4312AED1C50003A1344 /* Avatar world city life mod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Avatar world city life mod.entitlements"; sourceTree = "<group>"; };
@@ -121,7 +159,6 @@
 		B815D43A2AEFA74C003A1344 /* ApkStoreManager_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApkStoreManager_AW.swift; sourceTree = "<group>"; };
 		B815D43C2AEFA7BA003A1344 /* ViewController_AW+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController_AW+Extensions.swift"; sourceTree = "<group>"; };
 		B815D63B2AF04B4A003A1344 /* Configurations_AW .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Configurations_AW .swift"; sourceTree = "<group>"; };
-		B815D6812AF04CBA003A1344 /* sub.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sub.ttf; sourceTree = "<group>"; };
 		B815D6832AF127F2003A1344 /* UIImage_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage_AW.swift; sourceTree = "<group>"; };
 		B815D6852AF12B04003A1344 /* ReachabilityManager_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager_AW.swift; sourceTree = "<group>"; };
 		B82C40192AF15F2500401575 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
@@ -170,7 +207,6 @@
 		B8788B612AAB440B00C7B676 /* FilterView_AW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView_AW.xib; sourceTree = "<group>"; };
 		B8788B642AAB4B9900C7B676 /* DetailContentViewController_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentViewController_AW.swift; sourceTree = "<group>"; };
 		B8788B652AAB4B9900C7B676 /* DetailContentViewController_AW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailContentViewController_AW.xib; sourceTree = "<group>"; };
-		B8788B682AAB4C5900C7B676 /* BalooThambi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooThambi-Regular.ttf"; sourceTree = "<group>"; };
 		B89FFD632AAA34F400DD71EF /* Avatar world city life mod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avatar world city life mod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89FFD662AAA34F400DD71EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89FFD6D2AAA34F400DD71EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,10 +219,6 @@
 		B89FFD8B2AAA561000DD71EF /* TabBarButton_AW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarButton_AW.xib; sourceTree = "<group>"; };
 		B89FFD8D2AAA578D00DD71EF /* Colors_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors_AW.swift; sourceTree = "<group>"; };
 		B89FFD8F2AAA57C000DD71EF /* Fonts_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts_AW.swift; sourceTree = "<group>"; };
-		B89FFD912AAA59F700DD71EF /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
-		B89FFD922AAA59F700DD71EF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		B89FFD932AAA59F700DD71EF /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
-		B89FFD952AAA59F700DD71EF /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		B89FFDC72AAA5C5300DD71EF /* Defines_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines_AW.swift; sourceTree = "<group>"; };
 		B89FFDCA2AAA5D5F00DD71EF /* UIView_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_AW.swift; sourceTree = "<group>"; };
 		B89FFDCD2AAA5DE400DD71EF /* HomeViewController_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController_AW.swift; sourceTree = "<group>"; };
@@ -203,13 +235,13 @@
 		B8C26A442AF5275C00887D24 /* DetailContentTableViewCell_AW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailContentTableViewCell_AW.xib; sourceTree = "<group>"; };
 		B8DCDD202AD53F79006F6AD2 /* DetailViewModel_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel_AW.swift; sourceTree = "<group>"; };
 		B8DCDD222AD540B3006F6AD2 /* UIString_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIString_AW.swift; sourceTree = "<group>"; };
-		B8DCDD2D2AD5457E006F6AD2 /* ITCKRIST.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ITCKRIST.ttf; sourceTree = "<group>"; };
 		B8E0F04D2AE7A073008429BB /* CharacterContentType_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterContentType_AW.swift; sourceTree = "<group>"; };
 		B8E0F04F2AE7A0E0008429BB /* EditorContentData_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorContentData_AW.swift; sourceTree = "<group>"; };
 		B8E0F0512AE7A10D008429BB /* Category_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category_AW.swift; sourceTree = "<group>"; };
 		B8FE40862AAF467E0070D716 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		B8FE40A52AAF4B5F0070D716 /* ModsContentModel_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsContentModel_AW.swift; sourceTree = "<group>"; };
 		B8FE40A72AAF4D4C0070D716 /* ContentListDataModel_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListDataModel_AW.swift; sourceTree = "<group>"; };
+		D14462B6D4D77552677D0FE0 /* Pods-Avatar world city life mod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avatar world city life mod.debug.xcconfig"; path = "Target Support Files/Pods-Avatar world city life mod/Pods-Avatar world city life mod.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,12 +257,131 @@
 				B815D42E2AED1B44003A1344 /* Reachability in Frameworks */,
 				B834C1002AD56B8B00615420 /* RealmSwift in Frameworks */,
 				B89FFDE42AAA603B00DD71EF /* IQKeyboardManagerSwift in Frameworks */,
+				28A9379A0CFA6D154CE91348 /* Pods_Avatar_world_city_life_mod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4330B6D0C856ACE672748968 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D14462B6D4D77552677D0FE0 /* Pods-Avatar world city life mod.debug.xcconfig */,
+				26715B33BBEAAC2A35C4A4A0 /* Pods-Avatar world city life mod.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		597CD0B82CA91BE900D8BF2B /* NewFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B89FFD7A2AAA368D00DD71EF /* Resource */,
+				597CD0D22CA935A600D8BF2B /* AppFonts */,
+				597CD0C82CA92E7F00D8BF2B /* AppColors */,
+				597CD0C72CA92E7700D8BF2B /* AppConstants */,
+				597CD0C42CA92CA300D8BF2B /* AppFunctions */,
+				597CD0C32CA92C9800D8BF2B /* Controllers */,
+			);
+			path = NewFiles;
+			sourceTree = "<group>";
+		};
+		597CD0B92CA9213A00D8BF2B /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0BE2CA9257200D8BF2B /* HomeTVC */,
+				597CD0BA2CA9214700D8BF2B /* HomeVC.swift */,
+				597CD0BB2CA9214700D8BF2B /* HomeVC.xib */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		597CD0BE2CA9257200D8BF2B /* HomeTVC */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0BF2CA9258100D8BF2B /* HomeTVC.swift */,
+				597CD0C02CA9258100D8BF2B /* HomeTVC.xib */,
+			);
+			path = HomeTVC;
+			sourceTree = "<group>";
+		};
+		597CD0C32CA92C9800D8BF2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0DA2CA93D6E00D8BF2B /* ModsTableCell */,
+				597CD0D52CA93A6D00D8BF2B /* CategoryCell */,
+				597CD0CD2CA9355F00D8BF2B /* ModsVC */,
+				597CD0B92CA9213A00D8BF2B /* HomeVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		597CD0C42CA92CA300D8BF2B /* AppFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0C52CA92CDC00D8BF2B /* AppFunctions.swift */,
+			);
+			path = AppFunctions;
+			sourceTree = "<group>";
+		};
+		597CD0C72CA92E7700D8BF2B /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0CB2CA9344500D8BF2B /* AppConstants.swift */,
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		597CD0C82CA92E7F00D8BF2B /* AppColors */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0C92CA92E8800D8BF2B /* AppColors.swift */,
+			);
+			path = AppColors;
+			sourceTree = "<group>";
+		};
+		597CD0CD2CA9355F00D8BF2B /* ModsVC */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0CE2CA9358500D8BF2B /* ModsVCViewController.swift */,
+				597CD0CF2CA9358500D8BF2B /* ModsVCViewController.xib */,
+			);
+			path = ModsVC;
+			sourceTree = "<group>";
+		};
+		597CD0D22CA935A600D8BF2B /* AppFonts */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0DF2CA9477100D8BF2B /* gilroyDoubleBold.ttf */,
+				597CD0E02CA9477100D8BF2B /* gilroyChromeShadesExtraBold.ttf */,
+				597CD0E12CA9477100D8BF2B /* gilroyLightGroundKey.ttf */,
+				597CD0E22CA9477100D8BF2B /* gilroyLongMedium.ttf */,
+				597CD0E32CA9477100D8BF2B /* gilroyFloatRegular.ttf */,
+				597CD0E42CA9477100D8BF2B /* gilroyStringSemiBold.ttf */,
+				597CD0E52CA9477100D8BF2B /* gilroyIntegerThink.ttf */,
+				597CD0D32CA935AF00D8BF2B /* GilroyAppConstFontsTexture.swift */,
+			);
+			path = AppFonts;
+			sourceTree = "<group>";
+		};
+		597CD0D52CA93A6D00D8BF2B /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0D62CA93A7C00D8BF2B /* CategoryCell.swift */,
+				597CD0D72CA93A7C00D8BF2B /* CategoryCell.xib */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		597CD0DA2CA93D6E00D8BF2B /* ModsTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				597CD0F12CA94AF400D8BF2B /* ModsTableCell.swift */,
+				597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */,
+			);
+			path = ModsTableCell;
+			sourceTree = "<group>";
+		};
 		B80004902AE670D40013D096 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				B815D4332AED1C8F003A1344 /* StoreKit.framework */,
+				0B566DA273D2412985271AA9 /* Pods_Avatar_world_city_life_mod.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -447,6 +599,7 @@
 				B89FFD642AAA34F400DD71EF /* Products */,
 				B815D4322AED1C8F003A1344 /* Frameworks */,
 				B844637A2AF3DA16004AFBD7 /* Recovered References */,
+				4330B6D0C856ACE672748968 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -461,6 +614,7 @@
 		B89FFD652AAA34F400DD71EF /* Avatar world city life mod */ = {
 			isa = PBXGroup;
 			children = (
+				597CD0B82CA91BE900D8BF2B /* NewFiles */,
 				B815D4312AED1C50003A1344 /* Avatar world city life mod.entitlements */,
 				B89FFD662AAA34F400DD71EF /* AppDelegate.swift */,
 				B815D63A2AF04B4A003A1344 /* Configurations */,
@@ -473,7 +627,6 @@
 				B89FFDE52AAA634200DD71EF /* Common */,
 				B89FFD7C2AAA36B500DD71EF /* Services */,
 				B834C0EA2AD55B1B00615420 /* Utilities */,
-				B89FFD7A2AAA368D00DD71EF /* Resource */,
 			);
 			path = "Avatar world city life mod";
 			sourceTree = "<group>";
@@ -482,13 +635,6 @@
 			isa = PBXGroup;
 			children = (
 				B82C40192AF15F2500401575 /* animation.json */,
-				B8788B682AAB4C5900C7B676 /* BalooThambi-Regular.ttf */,
-				B8DCDD2D2AD5457E006F6AD2 /* ITCKRIST.ttf */,
-				B89FFD932AAA59F700DD71EF /* Inter-Bold.ttf */,
-				B89FFD952AAA59F700DD71EF /* Inter-Medium.ttf */,
-				B89FFD912AAA59F700DD71EF /* Inter-Regular.ttf */,
-				B815D6812AF04CBA003A1344 /* sub.ttf */,
-				B89FFD922AAA59F700DD71EF /* Inter-SemiBold.ttf */,
 				B89FFD6C2AAA34F400DD71EF /* Main.storyboard */,
 				B89FFD6F2AAA34F500DD71EF /* Assets.xcassets */,
 				B89FFD712AAA34F500DD71EF /* LaunchScreen.storyboard */,
@@ -678,9 +824,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B89FFD772AAA34F500DD71EF /* Build configuration list for PBXNativeTarget "Avatar world city life mod" */;
 			buildPhases = (
+				9C9A13F55E95CD78650495BA /* [CP] Check Pods Manifest.lock */,
 				B89FFD5F2AAA34F400DD71EF /* Sources */,
 				B89FFD602AAA34F400DD71EF /* Frameworks */,
 				B89FFD612AAA34F400DD71EF /* Resources */,
+				E3D0561013313C3F2296FF18 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -791,27 +939,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597CD0C22CA9258100D8BF2B /* HomeTVC.xib in Resources */,
 				B8788B622AAB440B00C7B676 /* FilterView_AW.xib in Resources */,
 				B8788B672AAB4B9900C7B676 /* DetailContentViewController_AW.xib in Resources */,
-				B89FFD972AAA59F700DD71EF /* Inter-SemiBold.ttf in Resources */,
 				B8788B542AAB136700C7B676 /* ContentTableViewCell_AW.xib in Resources */,
 				B86BA9722AE7DED200D22BCF /* EditorSetupViewController_AW.xib in Resources */,
 				B89FFDDA2AAA5E5400DD71EF /* EditorViewController_AW.xib in Resources */,
 				B89FFD732AAA34F500DD71EF /* LaunchScreen.storyboard in Resources */,
 				B86BA9A12AE90F8500D22BCF /* EditorAlert_AW.xib in Resources */,
 				B82C401A2AF15F2500401575 /* animation.json in Resources */,
-				B8788B692AAB4C5900C7B676 /* BalooThambi-Regular.ttf in Resources */,
-				B89FFD962AAA59F700DD71EF /* Inter-Regular.ttf in Resources */,
-				B815D6822AF04CBA003A1344 /* sub.ttf in Resources */,
+				597CD0D12CA9358500D8BF2B /* ModsVCViewController.xib in Resources */,
 				B8C26A462AF5275C00887D24 /* DetailContentTableViewCell_AW.xib in Resources */,
 				B815D4392AED933E003A1344 /* LoadingView_AW.xib in Resources */,
 				B86BA99C2AE9082400D22BCF /* EditorPreviewViewController_AW.xib in Resources */,
 				B89FFDDF2AAA5E9E00DD71EF /* SettingsViewController_AW.xib in Resources */,
-				B89FFD982AAA59F700DD71EF /* Inter-Bold.ttf in Resources */,
+				597CD0BD2CA9214700D8BF2B /* HomeVC.xib in Resources */,
+				597CD0E62CA9477100D8BF2B /* gilroyFloatRegular.ttf in Resources */,
+				597CD0E72CA9477100D8BF2B /* gilroyChromeShadesExtraBold.ttf in Resources */,
+				597CD0F42CA94AF400D8BF2B /* ModsTableCell.xib in Resources */,
+				597CD0E82CA9477100D8BF2B /* gilroyLongMedium.ttf in Resources */,
+				597CD0E92CA9477100D8BF2B /* gilroyStringSemiBold.ttf in Resources */,
+				597CD0EA2CA9477100D8BF2B /* gilroyIntegerThink.ttf in Resources */,
+				597CD0EB2CA9477100D8BF2B /* gilroyDoubleBold.ttf in Resources */,
+				597CD0EC2CA9477100D8BF2B /* gilroyLightGroundKey.ttf in Resources */,
 				B86BA97F2AE7E2C500D22BCF /* CategoryCollectionViewCell.xib in Resources */,
-				B89FFD9A2AAA59F700DD71EF /* Inter-Medium.ttf in Resources */,
 				B89FFDD52AAA5E1F00DD71EF /* ModsViewController_AW.xib in Resources */,
 				B89FFD702AAA34F500DD71EF /* Assets.xcassets in Resources */,
+				597CD0D92CA93A7C00D8BF2B /* CategoryCell.xib in Resources */,
 				B80004942AE670E70013D096 /* FilterViewTableViewCell_AW.xib in Resources */,
 				B86BA9952AE8042700D22BCF /* CharacterEditorImage_AW.xib in Resources */,
 				B8788B5B2AAB29F300C7B676 /* SearchView_AW.xib in Resources */,
@@ -821,12 +975,53 @@
 				B834C1042AD5834500615420 /* PreloaderViewController_AW.xib in Resources */,
 				B89FFD8C2AAA561000DD71EF /* TabBarButton_AW.xib in Resources */,
 				B86BA9A92AE91A9800D22BCF /* InfoAlert_AW.xib in Resources */,
-				B8DCDD2E2AD5457E006F6AD2 /* ITCKRIST.ttf in Resources */,
 				B86BA9AE2AE928E600D22BCF /* EditorCollectionViewCell_AW.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C9A13F55E95CD78650495BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Avatar world city life mod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3D0561013313C3F2296FF18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Avatar world city life mod/Pods-Avatar world city life mod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Avatar world city life mod/Pods-Avatar world city life mod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Avatar world city life mod/Pods-Avatar world city life mod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B89FFD5F2AAA34F400DD71EF /* Sources */ = {
@@ -847,7 +1042,9 @@
 				B834C1032AD5834500615420 /* PreloaderViewController_AW.swift in Sources */,
 				B834C0FB2AD55CEF00615420 /* ContentType_AW.swift in Sources */,
 				B834C0F52AD55C2000615420 /* Keys_AW.swift in Sources */,
+				597CD0F32CA94AF400D8BF2B /* ModsTableCell.swift in Sources */,
 				B89FFDCB2AAA5D5F00DD71EF /* UIView_AW.swift in Sources */,
+				597CD0CA2CA92E8800D8BF2B /* AppColors.swift in Sources */,
 				B86BA9A32AE9133900D22BCF /* AlertManager_AW.swift in Sources */,
 				B8DCDD212AD53F79006F6AD2 /* DetailViewModel_AW.swift in Sources */,
 				B8788B532AAB136700C7B676 /* ContentTableViewCell_AW.swift in Sources */,
@@ -858,11 +1055,13 @@
 				B8C26A452AF5275C00887D24 /* DetailContentTableViewCell_AW.swift in Sources */,
 				B89FFDE12AAA5F0E00DD71EF /* Coordinators_AW.swift in Sources */,
 				B89FFDDE2AAA5E9E00DD71EF /* SettingsViewController_AW.swift in Sources */,
+				597CD0D82CA93A7C00D8BF2B /* CategoryCell.swift in Sources */,
 				B84463782AF3C57B004AFBD7 /* CarouselFlowLayout_AW.swift in Sources */,
 				B86BA97E2AE7E2C500D22BCF /* CategoryCollectionViewCell.swift in Sources */,
 				B8FE40A82AAF4D4C0070D716 /* ContentListDataModel_AW.swift in Sources */,
 				B8788B662AAB4B9900C7B676 /* DetailContentViewController_AW.swift in Sources */,
 				B89FFDE72AAA635C00DD71EF /* BaseController_AW.swift in Sources */,
+				597CD0C12CA9258100D8BF2B /* HomeTVC.swift in Sources */,
 				B8FE40A62AAF4B5F0070D716 /* ModsContentModel_AW.swift in Sources */,
 				B815D4372AED9339003A1344 /* LoadingView_AW.swift in Sources */,
 				B86BA9902AE7FB7900D22BCF /* BaseCollectionViewCell_AW.swift in Sources */,
@@ -875,10 +1074,13 @@
 				B815D67E2AF04B4B003A1344 /* Configurations_AW .swift in Sources */,
 				B834C0FD2AD56AF800615420 /* StoreManager_AW.swift in Sources */,
 				B834C0F72AD55C4300615420 /* InternetManager_AW.swift in Sources */,
+				597CD0D02CA9358500D8BF2B /* ModsVCViewController.swift in Sources */,
 				B86BA9712AE7DED200D22BCF /* EditorSetupViewController_AW.swift in Sources */,
 				B8FE40872AAF467E0070D716 /* CategoriesModel.swift in Sources */,
 				B86BA9792AE7E2B900D22BCF /* ContentCollectionViewCell.swift in Sources */,
+				597CD0D42CA935AF00D8BF2B /* GilroyAppConstFontsTexture.swift in Sources */,
 				B8788B4B2AAB12F800C7B676 /* UICollectionView_AW.swift in Sources */,
+				597CD0C62CA92CDC00D8BF2B /* AppFunctions.swift in Sources */,
 				B8DCDD232AD540B3006F6AD2 /* UIString_AW.swift in Sources */,
 				B834C0F92AD55C5F00615420 /* FileSession_AW.swift in Sources */,
 				B89FFD872AAA559A00DD71EF /* TabBarItem_AW.swift in Sources */,
@@ -889,7 +1091,9 @@
 				B89FFD8A2AAA55FE00DD71EF /* TabBarButton_AW.swift in Sources */,
 				B815D43B2AEFA74C003A1344 /* ApkStoreManager_AW.swift in Sources */,
 				B86BA99B2AE9082400D22BCF /* EditorPreviewViewController_AW.swift in Sources */,
+				597CD0CC2CA9344500D8BF2B /* AppConstants.swift in Sources */,
 				B89FFD8E2AAA578D00DD71EF /* Colors_AW.swift in Sources */,
+				597CD0BC2CA9214700D8BF2B /* HomeVC.swift in Sources */,
 				B89FFDD42AAA5E1F00DD71EF /* ModsViewController_AW.swift in Sources */,
 				B834C0F12AD55BE800615420 /* ContentManager_AW.swift in Sources */,
 				B834C0EC2AD55B2A00615420 /* DBManager_AW.swift in Sources */,
@@ -1036,13 +1240,14 @@
 		};
 		B89FFD782AAA34F500DD71EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14462B6D4D77552677D0FE0 /* Pods-Avatar world city life mod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Avatar world city life mod/Avatar world city life mod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WSL2HKX9YP;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Avatar world city life mod/Resource/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Downloading content to Photo Library";
@@ -1071,13 +1276,14 @@
 		};
 		B89FFD792AAA34F500DD71EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26715B33BBEAAC2A35C4A4A0 /* Pods-Avatar world city life mod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Avatar world city life mod/Avatar world city life mod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WSL2HKX9YP;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Avatar world city life mod/Resource/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Downloading content to Photo Library";

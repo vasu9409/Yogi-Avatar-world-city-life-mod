@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import UIKit
+
+class AppColors {
+    
+    static let blackColor = UIColor(named: "newblackcolorfounded")
+    static let englishColor = UIColor(named: "lightercoloruidrag")
+    static let whiteColor = UIColor(named: "whitedowncolorset")
+    
+}
