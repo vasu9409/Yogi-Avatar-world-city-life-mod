@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>gilroyDoubleBold.ttf</string>
+		<string>gilroyChromeShadesExtraBold.ttf</string>
+		<string>gilroyLightGroundKey.ttf</string>
+		<string>gilroyLongMedium.ttf</string>
+		<string>gilroyFloatRegular.ttf</string>
+		<string>gilroyStringSemiBold.ttf</string>
+		<string>gilroyIntegerThink.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+</dict>
+</plist>
