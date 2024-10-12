@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		28A9379A0CFA6D154CE91348 /* Pods_Avatar_world_city_life_mod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B566DA273D2412985271AA9 /* Pods_Avatar_world_city_life_mod.framework */; };
+		590EFABF2CB3860600AF7986 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590EFABD2CB3860600AF7986 /* SettingsVC.swift */; };
+		590EFAC02CB3860600AF7986 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590EFABE2CB3860600AF7986 /* SettingsVC.xib */; };
+		590EFAC42CB3863300AF7986 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590EFAC22CB3863300AF7986 /* SettingsCell.swift */; };
+		590EFAC52CB3863300AF7986 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590EFAC32CB3863300AF7986 /* SettingsCell.xib */; };
+		5966E0D62CB6D51D00294C90 /* ModsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966E0D42CB6D51D00294C90 /* ModsDetailsVC.swift */; };
+		5966E0D72CB6D51D00294C90 /* ModsDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5966E0D52CB6D51D00294C90 /* ModsDetailsVC.xib */; };
+		5966E0DB2CB6DC0500294C90 /* PopUPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966E0D92CB6DC0500294C90 /* PopUPView.swift */; };
+		5966E0DC2CB6DC0500294C90 /* PopUPView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5966E0DA2CB6DC0500294C90 /* PopUPView.xib */; };
 		597CD0BC2CA9214700D8BF2B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0BA2CA9214700D8BF2B /* HomeVC.swift */; };
 		597CD0BD2CA9214700D8BF2B /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0BB2CA9214700D8BF2B /* HomeVC.xib */; };
 		597CD0C12CA9258100D8BF2B /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0BF2CA9258100D8BF2B /* HomeTVC.swift */; };
@@ -129,6 +137,14 @@
 /* Begin PBXFileReference section */
 		0B566DA273D2412985271AA9 /* Pods_Avatar_world_city_life_mod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Avatar_world_city_life_mod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26715B33BBEAAC2A35C4A4A0 /* Pods-Avatar world city life mod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avatar world city life mod.release.xcconfig"; path = "Target Support Files/Pods-Avatar world city life mod/Pods-Avatar world city life mod.release.xcconfig"; sourceTree = "<group>"; };
+		590EFABD2CB3860600AF7986 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		590EFABE2CB3860600AF7986 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		590EFAC22CB3863300AF7986 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		590EFAC32CB3863300AF7986 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		5966E0D42CB6D51D00294C90 /* ModsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsDetailsVC.swift; sourceTree = "<group>"; };
+		5966E0D52CB6D51D00294C90 /* ModsDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModsDetailsVC.xib; sourceTree = "<group>"; };
+		5966E0D92CB6DC0500294C90 /* PopUPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUPView.swift; sourceTree = "<group>"; };
+		5966E0DA2CB6DC0500294C90 /* PopUPView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUPView.xib; sourceTree = "<group>"; };
 		597CD0BA2CA9214700D8BF2B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		597CD0BB2CA9214700D8BF2B /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		597CD0BF2CA9258100D8BF2B /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
@@ -273,10 +289,56 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		590EFABC2CB385F900AF7986 /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				590EFABD2CB3860600AF7986 /* SettingsVC.swift */,
+				590EFABE2CB3860600AF7986 /* SettingsVC.xib */,
+			);
+			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		590EFAC12CB3862500AF7986 /* SettingsCell */ = {
+			isa = PBXGroup;
+			children = (
+				590EFAC22CB3863300AF7986 /* SettingsCell.swift */,
+				590EFAC32CB3863300AF7986 /* SettingsCell.xib */,
+			);
+			path = SettingsCell;
+			sourceTree = "<group>";
+		};
+		595E5E772CAB0E5E0072F776 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				590EFAC12CB3862500AF7986 /* SettingsCell */,
+				597CD0DA2CA93D6E00D8BF2B /* ModsTableCell */,
+				597CD0D52CA93A6D00D8BF2B /* CategoryCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5966E0D32CB6D50400294C90 /* ModsDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				5966E0D42CB6D51D00294C90 /* ModsDetailsVC.swift */,
+				5966E0D52CB6D51D00294C90 /* ModsDetailsVC.xib */,
+			);
+			path = ModsDetailsVC;
+			sourceTree = "<group>";
+		};
+		5966E0D82CB6DBF600294C90 /* PopUPView */ = {
+			isa = PBXGroup;
+			children = (
+				5966E0D92CB6DC0500294C90 /* PopUPView.swift */,
+				5966E0DA2CB6DC0500294C90 /* PopUPView.xib */,
+			);
+			path = PopUPView;
+			sourceTree = "<group>";
+		};
 		597CD0B82CA91BE900D8BF2B /* NewFiles */ = {
 			isa = PBXGroup;
 			children = (
-				B89FFD7A2AAA368D00DD71EF /* Resource */,
+				595E5E772CAB0E5E0072F776 /* Cells */,
 				597CD0D22CA935A600D8BF2B /* AppFonts */,
 				597CD0C82CA92E7F00D8BF2B /* AppColors */,
 				597CD0C72CA92E7700D8BF2B /* AppConstants */,
@@ -308,8 +370,9 @@
 		597CD0C32CA92C9800D8BF2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				597CD0DA2CA93D6E00D8BF2B /* ModsTableCell */,
-				597CD0D52CA93A6D00D8BF2B /* CategoryCell */,
+				5966E0D82CB6DBF600294C90 /* PopUPView */,
+				5966E0D32CB6D50400294C90 /* ModsDetailsVC */,
+				590EFABC2CB385F900AF7986 /* SettingsVC */,
 				597CD0CD2CA9355F00D8BF2B /* ModsVC */,
 				597CD0B92CA9213A00D8BF2B /* HomeVC */,
 			);
@@ -614,6 +677,7 @@
 		B89FFD652AAA34F400DD71EF /* Avatar world city life mod */ = {
 			isa = PBXGroup;
 			children = (
+				B89FFD7A2AAA368D00DD71EF /* Resource */,
 				597CD0B82CA91BE900D8BF2B /* NewFiles */,
 				B815D4312AED1C50003A1344 /* Avatar world city life mod.entitlements */,
 				B89FFD662AAA34F400DD71EF /* AppDelegate.swift */,
@@ -946,6 +1010,7 @@
 				B86BA9722AE7DED200D22BCF /* EditorSetupViewController_AW.xib in Resources */,
 				B89FFDDA2AAA5E5400DD71EF /* EditorViewController_AW.xib in Resources */,
 				B89FFD732AAA34F500DD71EF /* LaunchScreen.storyboard in Resources */,
+				590EFAC02CB3860600AF7986 /* SettingsVC.xib in Resources */,
 				B86BA9A12AE90F8500D22BCF /* EditorAlert_AW.xib in Resources */,
 				B82C401A2AF15F2500401575 /* animation.json in Resources */,
 				597CD0D12CA9358500D8BF2B /* ModsVCViewController.xib in Resources */,
@@ -968,12 +1033,15 @@
 				597CD0D92CA93A7C00D8BF2B /* CategoryCell.xib in Resources */,
 				B80004942AE670E70013D096 /* FilterViewTableViewCell_AW.xib in Resources */,
 				B86BA9952AE8042700D22BCF /* CharacterEditorImage_AW.xib in Resources */,
+				5966E0DC2CB6DC0500294C90 /* PopUPView.xib in Resources */,
 				B8788B5B2AAB29F300C7B676 /* SearchView_AW.xib in Resources */,
 				B86BA97A2AE7E2B900D22BCF /* ContentCollectionViewCell.xib in Resources */,
 				B89FFDD02AAA5DE400DD71EF /* HomeViewController_AW.xib in Resources */,
 				B89FFD6E2AAA34F400DD71EF /* Main.storyboard in Resources */,
 				B834C1042AD5834500615420 /* PreloaderViewController_AW.xib in Resources */,
 				B89FFD8C2AAA561000DD71EF /* TabBarButton_AW.xib in Resources */,
+				5966E0D72CB6D51D00294C90 /* ModsDetailsVC.xib in Resources */,
+				590EFAC52CB3863300AF7986 /* SettingsCell.xib in Resources */,
 				B86BA9A92AE91A9800D22BCF /* InfoAlert_AW.xib in Resources */,
 				B86BA9AE2AE928E600D22BCF /* EditorCollectionViewCell_AW.xib in Resources */,
 			);
@@ -1038,6 +1106,7 @@
 				B86BA9972AE9061600D22BCF /* StoreManagerCharacters_AW.swift in Sources */,
 				B86BA9A72AE91A9400D22BCF /* InfoAlert_AW.swift in Sources */,
 				B8E0F0522AE7A10D008429BB /* Category_AW.swift in Sources */,
+				5966E0D62CB6D51D00294C90 /* ModsDetailsVC.swift in Sources */,
 				B86BA9922AE803E000D22BCF /* CharacterEditorImage_AW.swift in Sources */,
 				B834C1032AD5834500615420 /* PreloaderViewController_AW.swift in Sources */,
 				B834C0FB2AD55CEF00615420 /* ContentType_AW.swift in Sources */,
@@ -1062,6 +1131,7 @@
 				B8788B662AAB4B9900C7B676 /* DetailContentViewController_AW.swift in Sources */,
 				B89FFDE72AAA635C00DD71EF /* BaseController_AW.swift in Sources */,
 				597CD0C12CA9258100D8BF2B /* HomeTVC.swift in Sources */,
+				5966E0DB2CB6DC0500294C90 /* PopUPView.swift in Sources */,
 				B8FE40A62AAF4B5F0070D716 /* ModsContentModel_AW.swift in Sources */,
 				B815D4372AED9339003A1344 /* LoadingView_AW.swift in Sources */,
 				B86BA9902AE7FB7900D22BCF /* BaseCollectionViewCell_AW.swift in Sources */,
@@ -1081,11 +1151,13 @@
 				597CD0D42CA935AF00D8BF2B /* GilroyAppConstFontsTexture.swift in Sources */,
 				B8788B4B2AAB12F800C7B676 /* UICollectionView_AW.swift in Sources */,
 				597CD0C62CA92CDC00D8BF2B /* AppFunctions.swift in Sources */,
+				590EFABF2CB3860600AF7986 /* SettingsVC.swift in Sources */,
 				B8DCDD232AD540B3006F6AD2 /* UIString_AW.swift in Sources */,
 				B834C0F92AD55C5F00615420 /* FileSession_AW.swift in Sources */,
 				B89FFD872AAA559A00DD71EF /* TabBarItem_AW.swift in Sources */,
 				B834C1072AD58B5E00615420 /* ServiceHolder_AW.swift in Sources */,
 				B8E0F0502AE7A0E0008429BB /* EditorContentData_AW.swift in Sources */,
+				590EFAC42CB3863300AF7986 /* SettingsCell.swift in Sources */,
 				B89FFD672AAA34F400DD71EF /* AppDelegate.swift in Sources */,
 				B8788B4D2AAB12F800C7B676 /* UITableView_AW.swift in Sources */,
 				B89FFD8A2AAA55FE00DD71EF /* TabBarButton_AW.swift in Sources */,

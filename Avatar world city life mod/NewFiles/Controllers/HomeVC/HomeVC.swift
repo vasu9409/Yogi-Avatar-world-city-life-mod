@@ -79,7 +79,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             break
             
         case 3:
-            let ctrl = ModsVCViewController(nibName: "ModsVCViewController", bundle: nil)
+            let ctrl = SettingsVC(nibName: "SettingsVC", bundle: nil)
             self.navigationController?.pushViewController(ctrl, animated: true)
             
             break

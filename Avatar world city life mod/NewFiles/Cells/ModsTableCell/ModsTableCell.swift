@@ -18,7 +18,13 @@ class ModsTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.ArrowButton.layer.cornerRadius = IS_IPAD ? 82 : 48
+        
+        self.ArrowButton.layer.cornerRadius = IS_IPAD ? 52 : 26
+        self.mainView.layer.cornerRadius = IS_IPAD ? 52 : 18
+        self.cellImageView.layer.cornerRadius = IS_IPAD ? 52 : 18
+        self.heartButton.layer.cornerRadius = self.heartButton.frame.height / 2
+        
+        
     }
 
     

@@ -16,6 +16,7 @@ class CategoryCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.catNameLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
+        self.backView.layer.cornerRadius = IS_IPAD ? 32 : 22
     }
     
     func selected(_ isBool: Bool) {

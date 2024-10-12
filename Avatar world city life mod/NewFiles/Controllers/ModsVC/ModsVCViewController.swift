@@ -27,13 +27,11 @@ class ModsVCViewController: UIViewController {
         
         self.setupUI()
         self.setupTableViewAndCollectionView()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
-        self.searchButtonView.layer.cornerRadius = self.searchButtonView.frame.height / 2
-        self.menuButton.layer.cornerRadius = self.menuButtonView.frame.height / 2
+        self.menuButtonView.clipsToBounds = true
+        self.searchButtonView.clipsToBounds = true
+        self.searchButtonView.layer.cornerRadius = IS_IPAD ? 41 : 24
+        self.menuButtonView.layer.cornerRadius = IS_IPAD ? 41 : 24
         
     }
     
@@ -108,11 +106,13 @@ extension ModsVCViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let label = UILabel()
         label.text = self.categoryNameArray[indexPath.row]
+        label.textAlignment = .center
+        label.sizeToFit()
         label.layoutIfNeeded()
         
-        let labelWidth = label.frame.width + 30
+        let labelWidth = label.frame.width + 70
         
         // Return the maximum of the cell's width and the label's required width
-        return CGSize(width: labelWidth, height: collectionViewLayout.collectionViewContentSize.height)
+        return CGSize(width: labelWidth, height: collectionView.frame.height)
     }
 }
