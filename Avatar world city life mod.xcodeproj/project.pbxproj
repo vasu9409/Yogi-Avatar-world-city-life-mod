@@ -12,6 +12,10 @@
 		590EFAC02CB3860600AF7986 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590EFABE2CB3860600AF7986 /* SettingsVC.xib */; };
 		590EFAC42CB3863300AF7986 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590EFAC22CB3863300AF7986 /* SettingsCell.swift */; };
 		590EFAC52CB3863300AF7986 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590EFAC32CB3863300AF7986 /* SettingsCell.xib */; };
+		59265E7A2CBA932100D6569C /* HouseIdeasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59265E782CBA932100D6569C /* HouseIdeasVC.swift */; };
+		59265E7B2CBA932100D6569C /* HouseIdeasVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59265E792CBA932100D6569C /* HouseIdeasVC.xib */; };
+		59265E7F2CBA93AA00D6569C /* HouseIdeasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59265E7D2CBA93AA00D6569C /* HouseIdeasCell.swift */; };
+		59265E802CBA93AA00D6569C /* HouseIdeasCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59265E7E2CBA93AA00D6569C /* HouseIdeasCell.xib */; };
 		5966E0D62CB6D51D00294C90 /* ModsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966E0D42CB6D51D00294C90 /* ModsDetailsVC.swift */; };
 		5966E0D72CB6D51D00294C90 /* ModsDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5966E0D52CB6D51D00294C90 /* ModsDetailsVC.xib */; };
 		5966E0DB2CB6DC0500294C90 /* PopUPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966E0D92CB6DC0500294C90 /* PopUPView.swift */; };
@@ -37,6 +41,19 @@
 		597CD0EC2CA9477100D8BF2B /* gilroyLightGroundKey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0E12CA9477100D8BF2B /* gilroyLightGroundKey.ttf */; };
 		597CD0F32CA94AF400D8BF2B /* ModsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0F12CA94AF400D8BF2B /* ModsTableCell.swift */; };
 		597CD0F42CA94AF400D8BF2B /* ModsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */; };
+		59FB6FBF2CBA64040058AD3E /* DeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FBD2CBA64040058AD3E /* DeleteVC.swift */; };
+		59FB6FC02CBA64040058AD3E /* DeleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FB6FBE2CBA64040058AD3E /* DeleteVC.xib */; };
+		59FB6FC32CBA640B0058AD3E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FC12CBA640B0058AD3E /* SearchVC.swift */; };
+		59FB6FC42CBA640B0058AD3E /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FB6FC22CBA640B0058AD3E /* SearchVC.xib */; };
+		59FB6FC72CBA64140058AD3E /* SkinMakerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FC52CBA64140058AD3E /* SkinMakerVC.swift */; };
+		59FB6FC82CBA64140058AD3E /* SkinMakerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FB6FC62CBA64140058AD3E /* SkinMakerVC.xib */; };
+		59FB6FCB2CBA641C0058AD3E /* TermsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FC92CBA641C0058AD3E /* TermsVC.swift */; };
+		59FB6FCC2CBA641C0058AD3E /* TermsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FB6FCA2CBA641C0058AD3E /* TermsVC.xib */; };
+		59FB6FCF2CBA64240058AD3E /* PrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FCD2CBA64240058AD3E /* PrivacyVC.swift */; };
+		59FB6FD02CBA64240058AD3E /* PrivacyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FB6FCE2CBA64240058AD3E /* PrivacyVC.xib */; };
+		59FB6FD72CBA7CCE0058AD3E /* LockScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FB6FD62CBA7CCE0058AD3E /* LockScreenView.xib */; };
+		59FB6FD82CBA7CCE0058AD3E /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FD52CBA7CCE0058AD3E /* LockScreenView.swift */; };
+		59FB6FDA2CBA7D010058AD3E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FD92CBA7D010058AD3E /* BaseView.swift */; };
 		B80004932AE670E70013D096 /* FilterViewTableViewCell_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80004912AE670E70013D096 /* FilterViewTableViewCell_AW.swift */; };
 		B80004942AE670E70013D096 /* FilterViewTableViewCell_AW.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80004922AE670E70013D096 /* FilterViewTableViewCell_AW.xib */; };
 		B815D42E2AED1B44003A1344 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B815D42D2AED1B44003A1344 /* Reachability */; };
@@ -141,6 +158,10 @@
 		590EFABE2CB3860600AF7986 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		590EFAC22CB3863300AF7986 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		590EFAC32CB3863300AF7986 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		59265E782CBA932100D6569C /* HouseIdeasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseIdeasVC.swift; sourceTree = "<group>"; };
+		59265E792CBA932100D6569C /* HouseIdeasVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseIdeasVC.xib; sourceTree = "<group>"; };
+		59265E7D2CBA93AA00D6569C /* HouseIdeasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseIdeasCell.swift; sourceTree = "<group>"; };
+		59265E7E2CBA93AA00D6569C /* HouseIdeasCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseIdeasCell.xib; sourceTree = "<group>"; };
 		5966E0D42CB6D51D00294C90 /* ModsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsDetailsVC.swift; sourceTree = "<group>"; };
 		5966E0D52CB6D51D00294C90 /* ModsDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModsDetailsVC.xib; sourceTree = "<group>"; };
 		5966E0D92CB6DC0500294C90 /* PopUPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUPView.swift; sourceTree = "<group>"; };
@@ -166,6 +187,19 @@
 		597CD0E52CA9477100D8BF2B /* gilroyIntegerThink.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyIntegerThink.ttf; sourceTree = "<group>"; };
 		597CD0F12CA94AF400D8BF2B /* ModsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsTableCell.swift; sourceTree = "<group>"; };
 		597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModsTableCell.xib; sourceTree = "<group>"; };
+		59FB6FBD2CBA64040058AD3E /* DeleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVC.swift; sourceTree = "<group>"; };
+		59FB6FBE2CBA64040058AD3E /* DeleteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteVC.xib; sourceTree = "<group>"; };
+		59FB6FC12CBA640B0058AD3E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		59FB6FC22CBA640B0058AD3E /* SearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
+		59FB6FC52CBA64140058AD3E /* SkinMakerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinMakerVC.swift; sourceTree = "<group>"; };
+		59FB6FC62CBA64140058AD3E /* SkinMakerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinMakerVC.xib; sourceTree = "<group>"; };
+		59FB6FC92CBA641C0058AD3E /* TermsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsVC.swift; sourceTree = "<group>"; };
+		59FB6FCA2CBA641C0058AD3E /* TermsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsVC.xib; sourceTree = "<group>"; };
+		59FB6FCD2CBA64240058AD3E /* PrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyVC.swift; sourceTree = "<group>"; };
+		59FB6FCE2CBA64240058AD3E /* PrivacyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyVC.xib; sourceTree = "<group>"; };
+		59FB6FD52CBA7CCE0058AD3E /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
+		59FB6FD62CBA7CCE0058AD3E /* LockScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockScreenView.xib; sourceTree = "<group>"; };
+		59FB6FD92CBA7D010058AD3E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B80004912AE670E70013D096 /* FilterViewTableViewCell_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewTableViewCell_AW.swift; sourceTree = "<group>"; };
 		B80004922AE670E70013D096 /* FilterViewTableViewCell_AW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewTableViewCell_AW.xib; sourceTree = "<group>"; };
 		B815D4312AED1C50003A1344 /* Avatar world city life mod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Avatar world city life mod.entitlements"; sourceTree = "<group>"; };
@@ -307,9 +341,29 @@
 			path = SettingsCell;
 			sourceTree = "<group>";
 		};
+		59265E772CBA931500D6569C /* HouseIdeasVC */ = {
+			isa = PBXGroup;
+			children = (
+				59265E782CBA932100D6569C /* HouseIdeasVC.swift */,
+				59265E792CBA932100D6569C /* HouseIdeasVC.xib */,
+			);
+			path = HouseIdeasVC;
+			sourceTree = "<group>";
+		};
+		59265E7C2CBA939700D6569C /* HouseIdeasCell */ = {
+			isa = PBXGroup;
+			children = (
+				59265E7D2CBA93AA00D6569C /* HouseIdeasCell.swift */,
+				59265E7E2CBA93AA00D6569C /* HouseIdeasCell.xib */,
+			);
+			path = HouseIdeasCell;
+			sourceTree = "<group>";
+		};
 		595E5E772CAB0E5E0072F776 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				59265E7C2CBA939700D6569C /* HouseIdeasCell */,
+				59FB6FD12CBA64530058AD3E /* SkinCell */,
 				590EFAC12CB3862500AF7986 /* SettingsCell */,
 				597CD0DA2CA93D6E00D8BF2B /* ModsTableCell */,
 				597CD0D52CA93A6D00D8BF2B /* CategoryCell */,
@@ -338,6 +392,7 @@
 		597CD0B82CA91BE900D8BF2B /* NewFiles */ = {
 			isa = PBXGroup;
 			children = (
+				59FB6FD42CBA7CC50058AD3E /* Views */,
 				595E5E772CAB0E5E0072F776 /* Cells */,
 				597CD0D22CA935A600D8BF2B /* AppFonts */,
 				597CD0C82CA92E7F00D8BF2B /* AppColors */,
@@ -370,11 +425,17 @@
 		597CD0C32CA92C9800D8BF2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5966E0D82CB6DBF600294C90 /* PopUPView */,
-				5966E0D32CB6D50400294C90 /* ModsDetailsVC */,
-				590EFABC2CB385F900AF7986 /* SettingsVC */,
-				597CD0CD2CA9355F00D8BF2B /* ModsVC */,
 				597CD0B92CA9213A00D8BF2B /* HomeVC */,
+				597CD0CD2CA9355F00D8BF2B /* ModsVC */,
+				5966E0D32CB6D50400294C90 /* ModsDetailsVC */,
+				59265E772CBA931500D6569C /* HouseIdeasVC */,
+				59FB6FBA2CBA61CC0058AD3E /* SkinMakerVC */,
+				590EFABC2CB385F900AF7986 /* SettingsVC */,
+				59FB6FBB2CBA631A0058AD3E /* SearchVC */,
+				59FB6FBC2CBA63F20058AD3E /* DeleteVC */,
+				59FB6FB92CBA61BE0058AD3E /* TermsVC */,
+				59FB6FB82CBA61B80058AD3E /* PrivacyVC */,
+				5966E0D82CB6DBF600294C90 /* PopUPView */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -443,6 +504,68 @@
 				597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */,
 			);
 			path = ModsTableCell;
+			sourceTree = "<group>";
+		};
+		59FB6FB82CBA61B80058AD3E /* PrivacyVC */ = {
+			isa = PBXGroup;
+			children = (
+				59FB6FCD2CBA64240058AD3E /* PrivacyVC.swift */,
+				59FB6FCE2CBA64240058AD3E /* PrivacyVC.xib */,
+			);
+			path = PrivacyVC;
+			sourceTree = "<group>";
+		};
+		59FB6FB92CBA61BE0058AD3E /* TermsVC */ = {
+			isa = PBXGroup;
+			children = (
+				59FB6FC92CBA641C0058AD3E /* TermsVC.swift */,
+				59FB6FCA2CBA641C0058AD3E /* TermsVC.xib */,
+			);
+			path = TermsVC;
+			sourceTree = "<group>";
+		};
+		59FB6FBA2CBA61CC0058AD3E /* SkinMakerVC */ = {
+			isa = PBXGroup;
+			children = (
+				59FB6FC52CBA64140058AD3E /* SkinMakerVC.swift */,
+				59FB6FC62CBA64140058AD3E /* SkinMakerVC.xib */,
+			);
+			path = SkinMakerVC;
+			sourceTree = "<group>";
+		};
+		59FB6FBB2CBA631A0058AD3E /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				59FB6FC12CBA640B0058AD3E /* SearchVC.swift */,
+				59FB6FC22CBA640B0058AD3E /* SearchVC.xib */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		59FB6FBC2CBA63F20058AD3E /* DeleteVC */ = {
+			isa = PBXGroup;
+			children = (
+				59FB6FBD2CBA64040058AD3E /* DeleteVC.swift */,
+				59FB6FBE2CBA64040058AD3E /* DeleteVC.xib */,
+			);
+			path = DeleteVC;
+			sourceTree = "<group>";
+		};
+		59FB6FD12CBA64530058AD3E /* SkinCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SkinCell;
+			sourceTree = "<group>";
+		};
+		59FB6FD42CBA7CC50058AD3E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59FB6FD52CBA7CCE0058AD3E /* LockScreenView.swift */,
+				59FB6FD62CBA7CCE0058AD3E /* LockScreenView.xib */,
+				59FB6FD92CBA7D010058AD3E /* BaseView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B80004902AE670D40013D096 /* Views */ = {
@@ -1007,16 +1130,23 @@
 				B8788B622AAB440B00C7B676 /* FilterView_AW.xib in Resources */,
 				B8788B672AAB4B9900C7B676 /* DetailContentViewController_AW.xib in Resources */,
 				B8788B542AAB136700C7B676 /* ContentTableViewCell_AW.xib in Resources */,
+				59265E7B2CBA932100D6569C /* HouseIdeasVC.xib in Resources */,
 				B86BA9722AE7DED200D22BCF /* EditorSetupViewController_AW.xib in Resources */,
+				59FB6FC42CBA640B0058AD3E /* SearchVC.xib in Resources */,
+				59FB6FC82CBA64140058AD3E /* SkinMakerVC.xib in Resources */,
 				B89FFDDA2AAA5E5400DD71EF /* EditorViewController_AW.xib in Resources */,
 				B89FFD732AAA34F500DD71EF /* LaunchScreen.storyboard in Resources */,
 				590EFAC02CB3860600AF7986 /* SettingsVC.xib in Resources */,
 				B86BA9A12AE90F8500D22BCF /* EditorAlert_AW.xib in Resources */,
+				59265E802CBA93AA00D6569C /* HouseIdeasCell.xib in Resources */,
 				B82C401A2AF15F2500401575 /* animation.json in Resources */,
 				597CD0D12CA9358500D8BF2B /* ModsVCViewController.xib in Resources */,
 				B8C26A462AF5275C00887D24 /* DetailContentTableViewCell_AW.xib in Resources */,
+				59FB6FCC2CBA641C0058AD3E /* TermsVC.xib in Resources */,
 				B815D4392AED933E003A1344 /* LoadingView_AW.xib in Resources */,
 				B86BA99C2AE9082400D22BCF /* EditorPreviewViewController_AW.xib in Resources */,
+				59FB6FD72CBA7CCE0058AD3E /* LockScreenView.xib in Resources */,
+				59FB6FD02CBA64240058AD3E /* PrivacyVC.xib in Resources */,
 				B89FFDDF2AAA5E9E00DD71EF /* SettingsViewController_AW.xib in Resources */,
 				597CD0BD2CA9214700D8BF2B /* HomeVC.xib in Resources */,
 				597CD0E62CA9477100D8BF2B /* gilroyFloatRegular.ttf in Resources */,
@@ -1032,6 +1162,7 @@
 				B89FFD702AAA34F500DD71EF /* Assets.xcassets in Resources */,
 				597CD0D92CA93A7C00D8BF2B /* CategoryCell.xib in Resources */,
 				B80004942AE670E70013D096 /* FilterViewTableViewCell_AW.xib in Resources */,
+				59FB6FC02CBA64040058AD3E /* DeleteVC.xib in Resources */,
 				B86BA9952AE8042700D22BCF /* CharacterEditorImage_AW.xib in Resources */,
 				5966E0DC2CB6DC0500294C90 /* PopUPView.xib in Resources */,
 				B8788B5B2AAB29F300C7B676 /* SearchView_AW.xib in Resources */,
@@ -1102,6 +1233,7 @@
 				B89FFDC82AAA5C5300DD71EF /* Defines_AW.swift in Sources */,
 				B8E0F04E2AE7A073008429BB /* CharacterContentType_AW.swift in Sources */,
 				B89FFDD92AAA5E5400DD71EF /* EditorViewController_AW.swift in Sources */,
+				59265E7A2CBA932100D6569C /* HouseIdeasVC.swift in Sources */,
 				B815D43D2AEFA7BA003A1344 /* ViewController_AW+Extensions.swift in Sources */,
 				B86BA9972AE9061600D22BCF /* StoreManagerCharacters_AW.swift in Sources */,
 				B86BA9A72AE91A9400D22BCF /* InfoAlert_AW.swift in Sources */,
@@ -1109,10 +1241,13 @@
 				5966E0D62CB6D51D00294C90 /* ModsDetailsVC.swift in Sources */,
 				B86BA9922AE803E000D22BCF /* CharacterEditorImage_AW.swift in Sources */,
 				B834C1032AD5834500615420 /* PreloaderViewController_AW.swift in Sources */,
+				59FB6FD82CBA7CCE0058AD3E /* LockScreenView.swift in Sources */,
 				B834C0FB2AD55CEF00615420 /* ContentType_AW.swift in Sources */,
 				B834C0F52AD55C2000615420 /* Keys_AW.swift in Sources */,
 				597CD0F32CA94AF400D8BF2B /* ModsTableCell.swift in Sources */,
 				B89FFDCB2AAA5D5F00DD71EF /* UIView_AW.swift in Sources */,
+				59FB6FCF2CBA64240058AD3E /* PrivacyVC.swift in Sources */,
+				59FB6FDA2CBA7D010058AD3E /* BaseView.swift in Sources */,
 				597CD0CA2CA92E8800D8BF2B /* AppColors.swift in Sources */,
 				B86BA9A32AE9133900D22BCF /* AlertManager_AW.swift in Sources */,
 				B8DCDD212AD53F79006F6AD2 /* DetailViewModel_AW.swift in Sources */,
@@ -1130,6 +1265,7 @@
 				B8FE40A82AAF4D4C0070D716 /* ContentListDataModel_AW.swift in Sources */,
 				B8788B662AAB4B9900C7B676 /* DetailContentViewController_AW.swift in Sources */,
 				B89FFDE72AAA635C00DD71EF /* BaseController_AW.swift in Sources */,
+				59FB6FC32CBA640B0058AD3E /* SearchVC.swift in Sources */,
 				597CD0C12CA9258100D8BF2B /* HomeTVC.swift in Sources */,
 				5966E0DB2CB6DC0500294C90 /* PopUPView.swift in Sources */,
 				B8FE40A62AAF4B5F0070D716 /* ModsContentModel_AW.swift in Sources */,
@@ -1148,6 +1284,8 @@
 				B86BA9712AE7DED200D22BCF /* EditorSetupViewController_AW.swift in Sources */,
 				B8FE40872AAF467E0070D716 /* CategoriesModel.swift in Sources */,
 				B86BA9792AE7E2B900D22BCF /* ContentCollectionViewCell.swift in Sources */,
+				59265E7F2CBA93AA00D6569C /* HouseIdeasCell.swift in Sources */,
+				59FB6FCB2CBA641C0058AD3E /* TermsVC.swift in Sources */,
 				597CD0D42CA935AF00D8BF2B /* GilroyAppConstFontsTexture.swift in Sources */,
 				B8788B4B2AAB12F800C7B676 /* UICollectionView_AW.swift in Sources */,
 				597CD0C62CA92CDC00D8BF2B /* AppFunctions.swift in Sources */,
@@ -1161,6 +1299,7 @@
 				B89FFD672AAA34F400DD71EF /* AppDelegate.swift in Sources */,
 				B8788B4D2AAB12F800C7B676 /* UITableView_AW.swift in Sources */,
 				B89FFD8A2AAA55FE00DD71EF /* TabBarButton_AW.swift in Sources */,
+				59FB6FBF2CBA64040058AD3E /* DeleteVC.swift in Sources */,
 				B815D43B2AEFA74C003A1344 /* ApkStoreManager_AW.swift in Sources */,
 				B86BA99B2AE9082400D22BCF /* EditorPreviewViewController_AW.swift in Sources */,
 				597CD0CC2CA9344500D8BF2B /* AppConstants.swift in Sources */,
@@ -1168,6 +1307,7 @@
 				597CD0BC2CA9214700D8BF2B /* HomeVC.swift in Sources */,
 				B89FFDD42AAA5E1F00DD71EF /* ModsViewController_AW.swift in Sources */,
 				B834C0F12AD55BE800615420 /* ContentManager_AW.swift in Sources */,
+				59FB6FC72CBA64140058AD3E /* SkinMakerVC.swift in Sources */,
 				B834C0EC2AD55B2A00615420 /* DBManager_AW.swift in Sources */,
 				B86BA9742AE7E20900D22BCF /* EditorSetupViewModel_AW.swift in Sources */,
 				B86BA99F2AE90F8200D22BCF /* EditorAlert_AW.swift in Sources */,

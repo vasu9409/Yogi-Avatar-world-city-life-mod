@@ -53,9 +53,13 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="p9h-AK-laN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="4Ad-8F-YDO"/>
+                    <constraint firstItem="p9h-AK-laN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="4Ad-8F-YDO">
+                        <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                    </constraint>
                     <constraint firstAttribute="trailing" secondItem="p9h-AK-laN" secondAttribute="trailing" constant="20" id="eJE-Qf-U1G"/>
-                    <constraint firstAttribute="bottom" secondItem="p9h-AK-laN" secondAttribute="bottom" constant="6" id="ewn-7X-XBH"/>
+                    <constraint firstAttribute="bottom" secondItem="p9h-AK-laN" secondAttribute="bottom" constant="6" id="ewn-7X-XBH">
+                        <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                    </constraint>
                     <constraint firstItem="p9h-AK-laN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jKr-pR-ZVf"/>
                 </constraints>
             </tableViewCellContentView>

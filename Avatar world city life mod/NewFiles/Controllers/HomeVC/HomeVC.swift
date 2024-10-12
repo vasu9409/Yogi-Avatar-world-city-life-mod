@@ -16,15 +16,18 @@ class HomeVC: UIViewController {
     var homeSecurityArrayOFObjects: [String] = ["modsJarsetup", "houseIdeasMadeButton", "rocketcrashdownside", "exportSettingWheelDot"]
     var homeFoundNameArrNews: [String] = ["Mods", "House ideas", "Skin maker", "Settings"]
     
+    var isLockedCell: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupUI()
         self.setupTableView()
+        self.isLockedCell = false
     }
     
     private func setupUI() {
-        self.newHomeNavigationArrangedTitle.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 42 : 24, style: .bold)
+        self.newHomeNavigationArrangedTitle.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
     }
     
     private func setupTableView() {
@@ -49,6 +52,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         cell.nameAvtarCellChipLabel.text = self.homeFoundNameArrNews[indexPath.row]
         cell.avatarKiteImageWarning.image = UIImage(named: self.homeSecurityArrayOFObjects[indexPath.row])
         
+        
+        cell.lockView.isDark = true
+        cell.setLock(self.isLockedCell)
+        
         return cell
     }
     
@@ -57,35 +64,35 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            let ctrl = ModsVCViewController(nibName: "ModsVCViewController", bundle: nil)
-            ctrl.isForMods = true
-            self.navigationController?.pushViewController(ctrl, animated: true)
-            
-            break
-            
-        case 1:
-            let ctrl = ModsVCViewController(nibName: "ModsVCViewController", bundle: nil)
-            ctrl.isForMods = false
-            self.navigationController?.pushViewController(ctrl, animated: true)
-            
-            break
-            
-        case 2:
-            let ctrl = ModsVCViewController(nibName: "ModsVCViewController", bundle: nil)
-            self.navigationController?.pushViewController(ctrl, animated: true)
-            
-            break
-            
-        case 3:
-            let ctrl = SettingsVC(nibName: "SettingsVC", bundle: nil)
-            self.navigationController?.pushViewController(ctrl, animated: true)
-            
-            break
-            
-        default : break
-            
+        if !isLockedCell {
+            switch indexPath.row {
+            case 0:
+                let ctrl = ModsVCViewController()
+                self.navigationController?.pushViewController(ctrl, animated: true)
+                
+                break
+                
+            case 1:
+                let ctrl = HouseIdeasVC()
+                self.navigationController?.pushViewController(ctrl, animated: true)
+                
+                break
+                
+            case 2:
+                let ctrl = SkinMakerVC()
+                self.navigationController?.pushViewController(ctrl, animated: true)
+                
+                break
+                
+            case 3:
+                let ctrl = SettingsVC()
+                self.navigationController?.pushViewController(ctrl, animated: true)
+                
+                break
+                
+            default : break
+                
+            }
         }
     }
 }

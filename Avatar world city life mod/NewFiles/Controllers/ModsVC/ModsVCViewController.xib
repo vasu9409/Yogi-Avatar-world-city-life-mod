@@ -26,8 +26,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modsImageBackgroundMedic" translatesAutoresizingMaskIntoConstraints="NO" id="HQ2-Nz-Pqy">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modsImageBackgroundMedic" translatesAutoresizingMaskIntoConstraints="NO" id="HQ2-Nz-Pqy">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <variation key="heightClass=regular-widthClass=regular" image="ipadOrientationViewImageShadow"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yg-C3-niu">
                     <rect key="frame" x="20" y="59" width="353" height="50"/>
@@ -101,10 +102,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMd-D2-gSp">
-                    <rect key="frame" x="20" y="129" width="353" height="44"/>
+                    <rect key="frame" x="0.0" y="129" width="393" height="44"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-oH-0Ak">
-                            <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g1Z-qn-m5x">
                                 <size key="itemSize" width="128" height="128"/>
@@ -136,26 +137,28 @@
                 <constraint firstItem="MMd-D2-gSp" firstAttribute="top" secondItem="8yg-C3-niu" secondAttribute="bottom" constant="20" id="2uI-2N-sLm">
                     <variation key="heightClass=regular-widthClass=regular" constant="34"/>
                 </constraint>
-                <constraint firstItem="MMd-D2-gSp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BXr-YJ-CMb">
-                    <variation key="heightClass=regular-widthClass=regular" constant="140"/>
+                <constraint firstItem="MMd-D2-gSp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BXr-YJ-CMb">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
                 </constraint>
                 <constraint firstItem="BCv-dP-93F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CG3-rC-daE">
-                    <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                 </constraint>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BCv-dP-93F" secondAttribute="trailing" constant="20" id="CjK-YA-LD5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BCv-dP-93F" secondAttribute="trailing" constant="20" id="CjK-YA-LD5">
+                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                </constraint>
                 <constraint firstItem="HQ2-Nz-Pqy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Dgi-rU-tcF"/>
                 <constraint firstItem="8yg-C3-niu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LuR-cG-vfN">
-                    <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                 </constraint>
                 <constraint firstAttribute="bottom" secondItem="HQ2-Nz-Pqy" secondAttribute="bottom" id="RB2-Wh-HiY"/>
                 <constraint firstItem="BCv-dP-93F" firstAttribute="top" secondItem="MMd-D2-gSp" secondAttribute="bottom" constant="20" id="SF5-xZ-M7m"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8yg-C3-niu" secondAttribute="trailing" constant="20" id="WhT-Dt-1uK">
-                    <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                 </constraint>
                 <constraint firstItem="HQ2-Nz-Pqy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dBp-Qc-fEc"/>
                 <constraint firstItem="8yg-C3-niu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sAf-3I-akg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MMd-D2-gSp" secondAttribute="trailing" constant="20" id="skM-k2-TwI">
-                    <variation key="heightClass=regular-widthClass=regular" constant="140"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MMd-D2-gSp" secondAttribute="trailing" id="skM-k2-TwI">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
                 </constraint>
                 <constraint firstAttribute="bottom" secondItem="BCv-dP-93F" secondAttribute="bottom" id="uml-JK-gfV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HQ2-Nz-Pqy" secondAttribute="trailing" id="yOz-eC-1nE"/>
@@ -164,7 +167,8 @@
         </view>
     </objects>
     <resources>
-        <image name="fourBoxMenuAll" width="24" height="24"/>
+        <image name="fourBoxMenuAll" width="48" height="48"/>
+        <image name="ipadOrientationViewImageShadow" width="1024" height="1366"/>
         <image name="modsImageBackgroundMedic" width="375" height="812"/>
         <image name="roundNeckSearchGlass" width="24" height="24"/>
         <namedColor name="newblackcolorfounded">

@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUPView" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
             <connections>
+                <outlet property="nameBackView" destination="Igt-Dv-Cof" id="lby-bg-8zt"/>
+                <outlet property="popupnameLabel" destination="cma-P1-wUw" id="W3c-kJ-HxE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -53,8 +55,12 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Igt-Dv-Cof" firstAttribute="centerY" secondItem="b3V-Ig-dSl" secondAttribute="centerY" id="aCa-pD-vde"/>
-                        <constraint firstAttribute="trailing" secondItem="Igt-Dv-Cof" secondAttribute="trailing" constant="20" id="xQU-oE-oez"/>
-                        <constraint firstItem="Igt-Dv-Cof" firstAttribute="leading" secondItem="b3V-Ig-dSl" secondAttribute="leading" constant="20" id="xv3-gz-QRa"/>
+                        <constraint firstAttribute="trailing" secondItem="Igt-Dv-Cof" secondAttribute="trailing" constant="20" id="xQU-oE-oez">
+                            <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                        </constraint>
+                        <constraint firstItem="Igt-Dv-Cof" firstAttribute="leading" secondItem="b3V-Ig-dSl" secondAttribute="leading" constant="20" id="xv3-gz-QRa">
+                            <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                        </constraint>
                     </constraints>
                 </view>
             </subviews>

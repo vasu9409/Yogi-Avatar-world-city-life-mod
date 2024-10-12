@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkJ-NA-57G">
-                        <rect key="frame" x="20" y="6" width="280" height="40"/>
+                        <rect key="frame" x="0.0" y="6" width="320" height="40"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="aRi-6D-kJb">
-                                <rect key="frame" x="88.666666666666671" y="8" width="24" height="24"/>
+                                <rect key="frame" x="108.66666666666667" y="8" width="24.000000000000014" height="24"/>
                                 <color key="tintColor" name="darkModeColorStates"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aRi-6D-kJb" secondAttribute="height" id="k8y-Ka-Mud"/>
@@ -32,7 +32,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lm-gR-gyu">
-                                <rect key="frame" x="120.66666666666666" y="9.6666666666666643" width="63" height="21"/>
+                                <rect key="frame" x="140.66666666666666" y="9.6666666666666643" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkModeColorStates"/>
                                 <nil key="highlightedColor"/>
@@ -48,21 +48,25 @@
                             <constraint firstItem="aRi-6D-kJb" firstAttribute="centerY" secondItem="ZkJ-NA-57G" secondAttribute="centerY" id="y06-Fc-vu3"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7Y-Dw-kdU" customClass="LockScreenView" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="6" width="320" height="40"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="A7Y-Dw-kdU" firstAttribute="top" secondItem="ZkJ-NA-57G" secondAttribute="top" id="0y6-1D-u7i"/>
+                    <constraint firstItem="A7Y-Dw-kdU" firstAttribute="bottom" secondItem="ZkJ-NA-57G" secondAttribute="bottom" id="6a8-0i-yku"/>
                     <constraint firstItem="ZkJ-NA-57G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="6dh-Ra-YFQ">
                         <variation key="heightClass=regular-widthClass=regular" constant="10"/>
                     </constraint>
-                    <constraint firstItem="ZkJ-NA-57G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9S8-XB-aKK">
-                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
-                    </constraint>
+                    <constraint firstItem="ZkJ-NA-57G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9S8-XB-aKK"/>
+                    <constraint firstItem="A7Y-Dw-kdU" firstAttribute="trailing" secondItem="ZkJ-NA-57G" secondAttribute="trailing" id="YFU-Or-asL"/>
                     <constraint firstAttribute="bottom" secondItem="ZkJ-NA-57G" secondAttribute="bottom" constant="6" id="dTV-FJ-52Y">
                         <variation key="heightClass=regular-widthClass=regular" constant="10"/>
                     </constraint>
-                    <constraint firstAttribute="trailing" secondItem="ZkJ-NA-57G" secondAttribute="trailing" constant="20" id="ktt-lq-8eD">
-                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
-                    </constraint>
+                    <constraint firstItem="A7Y-Dw-kdU" firstAttribute="leading" secondItem="ZkJ-NA-57G" secondAttribute="leading" id="g08-Re-Z2y"/>
+                    <constraint firstAttribute="trailing" secondItem="ZkJ-NA-57G" secondAttribute="trailing" id="ktt-lq-8eD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -70,6 +74,7 @@
             <connections>
                 <outlet property="avatarKiteImageWarning" destination="aRi-6D-kJb" id="NaR-u1-rHo"/>
                 <outlet property="homeContainerBaseViewHope" destination="ZkJ-NA-57G" id="Odu-45-JPI"/>
+                <outlet property="lockView" destination="A7Y-Dw-kdU" id="yzn-GA-0hD"/>
                 <outlet property="nameAvtarCellChipLabel" destination="7lm-gR-gyu" id="ud2-vK-G09"/>
             </connections>
             <point key="canvasLocation" x="-12.213740458015266" y="25.704225352112676"/>

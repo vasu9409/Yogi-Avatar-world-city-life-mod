@@ -16,9 +16,7 @@ class ModsVCViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
-    
-    var isForMods: Bool = false
-    
+        
     var categoryNameArray: [String] = ["All", "New", "Favourites", "New"]
     var selectedcategoryName: String = "All"
     
@@ -44,7 +42,7 @@ class ModsVCViewController: UIViewController {
     }
     
     private func setupUI() {
-        self.modsTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 42 : 24, style: .bold)
+        self.modsTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
     }
     
     private func setupTableViewAndCollectionView() {
@@ -59,7 +57,6 @@ class ModsVCViewController: UIViewController {
         self.collectionView.registerNib(for: "CategoryCell")
         
     }
-
 }
 
 extension ModsVCViewController: UITableViewDelegate, UITableViewDataSource {
@@ -70,6 +67,18 @@ extension ModsVCViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModsTableCell", for: indexPath) as? ModsTableCell else { return UITableViewCell() }
         cell.selectionStyle = .none
+        
+        cell.isArrowButtonTapped = { [weak self] in
+            guard let self else { return }
+            let ctrl = ModsDetailsVC()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        
+        cell.isheartButtonTapped = { [weak self] in
+            guard let self else { return }
+            let ctrl = ModsDetailsVC()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
         
         return cell
     }
@@ -104,15 +113,21 @@ extension ModsVCViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let label = UILabel()
-        label.text = self.categoryNameArray[indexPath.row]
-        label.textAlignment = .center
-        label.sizeToFit()
-        label.layoutIfNeeded()
-        
-        let labelWidth = label.frame.width + 70
-        
+        let labelWidth = self.calculateCellWidth(text: self.categoryNameArray[indexPath.row], collectionView: collectionView)
         // Return the maximum of the cell's width and the label's required width
         return CGSize(width: labelWidth, height: collectionView.frame.height)
+    }
+    
+    private func calculateCellWidth(text: String, collectionView: UICollectionView) -> CGFloat {
+        let label = UILabel()
+        label.text = text
+        label.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 20, style: .bold)
+        label.sizeToFit()
+        let cellWidth = label.frame.width + 50
+        return cellWidth
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: (IS_IPAD ? 100 : 20), bottom: 0, right: (IS_IPAD ? 100 : 20))
     }
 }

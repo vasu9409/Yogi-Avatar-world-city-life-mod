@@ -6,6 +6,7 @@ target 'Avatar world city life mod' do
   use_frameworks!
 
   pod 'Applio'
+  pod 'Blurberry'
 
   # Pods for Avatar world city life mod
 

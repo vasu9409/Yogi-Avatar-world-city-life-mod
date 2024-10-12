@@ -24,6 +24,7 @@ class SettingsVC: UIViewController {
         
         self.menuButton.clipsToBounds = true
         self.menuButton.layer.cornerRadius = IS_IPAD ? 42 : 24
+        self.newHomeNavigationArrangedTitle.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
     }
     
     @IBAction func menuButton(_ sender: Any) {
@@ -58,5 +59,24 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return IS_IPAD ? 88 : 52
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let ctrl = TermsVC()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+            
+            break
+            
+        case 1:
+            let ctrl = PrivacyVC()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+            
+            break
+            
+        default : break
+            
+        }
     }
 }

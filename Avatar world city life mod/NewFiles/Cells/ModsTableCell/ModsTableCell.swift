@@ -15,30 +15,27 @@ class ModsTableCell: UITableViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var ArrowButton: UIButton!
     
+    var isArrowButtonTapped: (() -> Void)?
+    var isheartButtonTapped: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        self.ArrowButton.layer.cornerRadius = IS_IPAD ? 52 : 26
+        self.ArrowButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         self.mainView.layer.cornerRadius = IS_IPAD ? 52 : 18
         self.cellImageView.layer.cornerRadius = IS_IPAD ? 52 : 18
-        self.heartButton.layer.cornerRadius = self.heartButton.frame.height / 2
+        self.heartButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         
-        
-    }
-
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        // heartuncheckbroken - unfill heart
+        // newStromheartStone - fill
     }
     
     @IBAction func arrowButton(_ sender: Any) {
-        
+        self.isArrowButtonTapped?()
     }
     
     @IBAction func heartButton(_ sender: Any) {
-        
+        self.isheartButtonTapped?()
     }
 }

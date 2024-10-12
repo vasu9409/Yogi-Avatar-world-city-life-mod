@@ -90,7 +90,9 @@
                             <constraint firstAttribute="bottom" secondItem="fui-tq-bGW" secondAttribute="bottom" constant="4" id="e5s-6w-frP">
                                 <variation key="heightClass=regular-widthClass=regular" constant="8"/>
                             </constraint>
-                            <constraint firstItem="xpp-Rs-v2y" firstAttribute="leading" secondItem="DqD-2u-cx1" secondAttribute="leading" constant="20" id="kph-gY-IkB"/>
+                            <constraint firstItem="xpp-Rs-v2y" firstAttribute="leading" secondItem="DqD-2u-cx1" secondAttribute="leading" constant="20" id="kph-gY-IkB">
+                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                            </constraint>
                             <constraint firstItem="fui-tq-bGW" firstAttribute="leading" secondItem="xpp-Rs-v2y" secondAttribute="trailing" constant="9" id="rJ0-la-Win"/>
                             <constraint firstItem="xpp-Rs-v2y" firstAttribute="top" secondItem="SgH-tB-hot" secondAttribute="bottom" constant="16" id="yYE-hC-FLP"/>
                         </constraints>

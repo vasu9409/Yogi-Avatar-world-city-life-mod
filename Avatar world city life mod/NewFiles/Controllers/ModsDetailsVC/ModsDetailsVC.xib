@@ -11,6 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModsDetailsVC" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
             <connections>
+                <outlet property="detailDescriptionLabel" destination="tNF-8u-EBW" id="vEF-6r-LPf"/>
+                <outlet property="detailImageView" destination="3hl-V0-Tux" id="GSS-Jg-G8e"/>
+                <outlet property="detailTitleLabel" destination="BI1-ol-dxI" id="3Ex-Dj-Ggf"/>
+                <outlet property="downloadButton" destination="tIs-W5-CbQ" id="OOr-hE-H65"/>
+                <outlet property="downloadingView" destination="2gn-6M-NTM" id="Hj8-Oe-WEf"/>
+                <outlet property="largeTitleLabel" destination="5hO-vz-G78" id="LR9-2Z-4m8"/>
+                <outlet property="scrollViewBGView" destination="Ggh-pl-I3i" id="JBW-Cs-EkX"/>
                 <outlet property="view" destination="7ml-d1-OyU" id="koE-JB-1Jc"/>
             </connections>
         </placeholder>
@@ -19,8 +26,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modsImageBackgroundMedic" translatesAutoresizingMaskIntoConstraints="NO" id="00O-nu-9Gu">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modsImageBackgroundMedic" translatesAutoresizingMaskIntoConstraints="NO" id="00O-nu-9Gu">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <variation key="heightClass=regular-widthClass=regular" image="ipadOrientationViewImageShadow"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPB-g3-snr">
                     <rect key="frame" x="20" y="59" width="353" height="50"/>
@@ -39,6 +47,9 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="buttonBackRoadWays"/>
+                                    <connections>
+                                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="sbb-ut-LrL"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,7 +76,7 @@
                         <constraint firstItem="Cb8-SL-OOe" firstAttribute="centerY" secondItem="VPB-g3-snr" secondAttribute="centerY" id="zgU-PO-egZ"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcN-GX-SsK">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcN-GX-SsK">
                     <rect key="frame" x="20" y="109" width="353" height="743"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggh-pl-I3i">
@@ -83,14 +94,16 @@
                                     <rect key="frame" x="8" y="220" width="337" height="48"/>
                                     <color key="backgroundColor" name="newblackcolorfounded"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="48" id="Qsl-9m-beu"/>
+                                        <constraint firstAttribute="height" constant="48" id="Qsl-9m-beu">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="82"/>
+                                        </constraint>
                                     </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Download">
                                         <color key="titleColor" name="whitedowncolorset"/>
                                     </state>
                                 </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ans-QU-TdF">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gn-6M-NTM">
                                     <rect key="frame" x="8" y="220" width="337" height="48"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
@@ -117,7 +130,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-8u-EBW">
                                             <rect key="frame" x="2" y="2" width="333" height="588.33333333333337"/>
-                                            <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</mutableString>
+                                            <string key="text">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" name="newblackcolorfounded"/>
                                             <nil key="highlightedColor"/>
@@ -132,17 +145,14 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="lightercoloruidrag"/>
                             <constraints>
+                                <constraint firstItem="2gn-6M-NTM" firstAttribute="trailing" secondItem="tIs-W5-CbQ" secondAttribute="trailing" id="3by-yH-Bjd"/>
                                 <constraint firstItem="xgO-S2-ULX" firstAttribute="leading" secondItem="PPJ-hh-wWA" secondAttribute="leading" id="4Dj-re-8aN"/>
                                 <constraint firstAttribute="trailing" secondItem="3hl-V0-Tux" secondAttribute="trailing" constant="8" id="DVT-4d-hnJ">
                                     <variation key="heightClass=regular-widthClass=regular" constant="14"/>
                                 </constraint>
                                 <constraint firstAttribute="trailing" secondItem="PPJ-hh-wWA" secondAttribute="trailing" constant="8" id="FLc-Zv-79A"/>
-                                <constraint firstItem="ans-QU-TdF" firstAttribute="top" secondItem="tIs-W5-CbQ" secondAttribute="top" id="J2E-1J-BSA"/>
-                                <constraint firstItem="ans-QU-TdF" firstAttribute="trailing" secondItem="tIs-W5-CbQ" secondAttribute="trailing" id="NVs-AQ-Uyk"/>
-                                <constraint firstItem="ans-QU-TdF" firstAttribute="bottom" secondItem="tIs-W5-CbQ" secondAttribute="bottom" id="Ndc-7y-gW6"/>
-                                <constraint firstItem="ans-QU-TdF" firstAttribute="leading" secondItem="tIs-W5-CbQ" secondAttribute="leading" id="RcH-gk-fIx"/>
                                 <constraint firstAttribute="bottom" secondItem="xgO-S2-ULX" secondAttribute="bottom" constant="2" id="WRy-bR-Ow8"/>
                                 <constraint firstItem="PPJ-hh-wWA" firstAttribute="top" secondItem="tIs-W5-CbQ" secondAttribute="bottom" constant="16" id="Wes-cI-qDI"/>
                                 <constraint firstItem="3hl-V0-Tux" firstAttribute="top" secondItem="Ggh-pl-I3i" secondAttribute="top" constant="8" id="fFI-iJ-ecR">
@@ -151,11 +161,14 @@
                                 <constraint firstItem="3hl-V0-Tux" firstAttribute="leading" secondItem="Ggh-pl-I3i" secondAttribute="leading" constant="8" id="gRm-XY-GvS">
                                     <variation key="heightClass=regular-widthClass=regular" constant="14"/>
                                 </constraint>
+                                <constraint firstItem="2gn-6M-NTM" firstAttribute="bottom" secondItem="tIs-W5-CbQ" secondAttribute="bottom" id="h3G-38-cZ2"/>
                                 <constraint firstItem="xgO-S2-ULX" firstAttribute="trailing" secondItem="PPJ-hh-wWA" secondAttribute="trailing" id="maa-bs-S1G"/>
                                 <constraint firstAttribute="trailing" secondItem="tIs-W5-CbQ" secondAttribute="trailing" constant="8" id="meo-DS-nIG"/>
                                 <constraint firstItem="tIs-W5-CbQ" firstAttribute="top" secondItem="3hl-V0-Tux" secondAttribute="bottom" constant="12" id="muG-CF-QTb"/>
+                                <constraint firstItem="2gn-6M-NTM" firstAttribute="top" secondItem="tIs-W5-CbQ" secondAttribute="top" id="oeR-M2-O88"/>
                                 <constraint firstItem="tIs-W5-CbQ" firstAttribute="leading" secondItem="Ggh-pl-I3i" secondAttribute="leading" constant="8" id="tvC-84-54E"/>
                                 <constraint firstItem="PPJ-hh-wWA" firstAttribute="leading" secondItem="Ggh-pl-I3i" secondAttribute="leading" constant="8" id="wkU-gq-zcT"/>
+                                <constraint firstItem="2gn-6M-NTM" firstAttribute="leading" secondItem="tIs-W5-CbQ" secondAttribute="leading" id="xAk-j3-scE"/>
                                 <constraint firstItem="xgO-S2-ULX" firstAttribute="top" secondItem="PPJ-hh-wWA" secondAttribute="bottom" constant="4" id="z0o-SI-l6X"/>
                             </constraints>
                         </view>
@@ -178,19 +191,23 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="VPB-g3-snr" firstAttribute="leading" secondItem="a05-V3-igV" secondAttribute="leading" constant="20" id="450-R6-qJ0">
-                    <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                 </constraint>
                 <constraint firstItem="lcN-GX-SsK" firstAttribute="top" secondItem="VPB-g3-snr" secondAttribute="bottom" id="A1R-xd-WW2"/>
-                <constraint firstItem="lcN-GX-SsK" firstAttribute="leading" secondItem="a05-V3-igV" secondAttribute="leading" constant="20" id="KCG-fH-QeS"/>
+                <constraint firstItem="lcN-GX-SsK" firstAttribute="leading" secondItem="a05-V3-igV" secondAttribute="leading" constant="20" id="KCG-fH-QeS">
+                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                </constraint>
                 <constraint firstAttribute="bottom" secondItem="00O-nu-9Gu" secondAttribute="bottom" id="Nmm-7t-vdR"/>
                 <constraint firstAttribute="bottom" secondItem="lcN-GX-SsK" secondAttribute="bottom" id="Nzr-W1-AcL"/>
                 <constraint firstItem="00O-nu-9Gu" firstAttribute="top" secondItem="7ml-d1-OyU" secondAttribute="top" id="O9D-6B-GhC"/>
                 <constraint firstItem="00O-nu-9Gu" firstAttribute="leading" secondItem="a05-V3-igV" secondAttribute="leading" id="Qnt-wj-QHr"/>
                 <constraint firstItem="VPB-g3-snr" firstAttribute="top" secondItem="a05-V3-igV" secondAttribute="top" id="Qti-fM-jsJ"/>
-                <constraint firstItem="a05-V3-igV" firstAttribute="trailing" secondItem="lcN-GX-SsK" secondAttribute="trailing" constant="20" id="e1E-Nz-iSH"/>
+                <constraint firstItem="a05-V3-igV" firstAttribute="trailing" secondItem="lcN-GX-SsK" secondAttribute="trailing" constant="20" id="e1E-Nz-iSH">
+                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                </constraint>
                 <constraint firstItem="a05-V3-igV" firstAttribute="trailing" secondItem="00O-nu-9Gu" secondAttribute="trailing" id="f5V-T7-Fdi"/>
                 <constraint firstItem="a05-V3-igV" firstAttribute="trailing" secondItem="VPB-g3-snr" secondAttribute="trailing" constant="20" id="hiU-7a-BiI">
-                    <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                 </constraint>
             </constraints>
             <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
@@ -198,7 +215,11 @@
     </objects>
     <resources>
         <image name="buttonBackRoadWays" width="48" height="48"/>
+        <image name="ipadOrientationViewImageShadow" width="1024" height="1366"/>
         <image name="modsImageBackgroundMedic" width="375" height="812"/>
+        <namedColor name="lightercoloruidrag">
+            <color red="0.88235294117647056" green="1" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="newblackcolorfounded">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

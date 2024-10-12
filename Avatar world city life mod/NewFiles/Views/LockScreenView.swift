@@ -7,23 +7,19 @@
 
 import UIKit
 
-class LockScreenView: UIViewController {
+class LockScreenView: UIViewBase {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var lockImageView: UIImageView!
+    
+    var isDark: Bool = false {
+        didSet {
+            self.lockImageView.image = UIImage(named: self.isDark ? "darkKnightLocksDots" : "greenLockDocsPermanent")
+        }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        applyBlur(self.contentView, isBlack: false)
     }
-    */
-
 }

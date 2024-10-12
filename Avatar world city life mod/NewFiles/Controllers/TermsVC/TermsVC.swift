@@ -9,21 +9,26 @@ import UIKit
 
 class TermsVC: UIViewController {
 
+    @IBOutlet weak var scrollBGView: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var largeTitleLabel: UILabel!
+    @IBOutlet weak var termsTitleLabel: UILabel!
+    @IBOutlet weak var termsDetailLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.backButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 22, style: .semiBold)
+        self.largeTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .semiBold)
+        self.termsTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 22, style: .semiBold)
+        self.termsDetailLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 28 : 16, style: .regular)
+        
+        self.scrollBGView.layer.cornerRadius = IS_IPAD ? 46 : 24
+        self.backButton.layer.cornerRadius = IS_IPAD ? 41 : 24
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
-
 }
