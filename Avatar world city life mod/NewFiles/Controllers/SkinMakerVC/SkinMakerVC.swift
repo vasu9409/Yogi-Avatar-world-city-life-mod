@@ -9,21 +9,24 @@ import UIKit
 
 class SkinMakerVC: UIViewController {
 
+    @IBOutlet weak var btnVerificationView: UIView!
+    @IBOutlet weak var btnPreviewView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnAddSkin(_ sender: Any) {
     }
-    */
-
+    @IBAction func btnNoSkinAdd(_ sender: Any) {
+    }
+    @IBAction func btnRight(_ sender: Any) {
+    }
+    @IBAction func btnLeft(_ sender: Any) {
+    }
+    @IBAction func btnAddNew(_ sender: Any) {
+    }
+    @IBAction func btnBack(_ sender: Any) {
+    }
 }

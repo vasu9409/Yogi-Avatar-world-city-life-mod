@@ -41,6 +41,8 @@
 		597CD0EC2CA9477100D8BF2B /* gilroyLightGroundKey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0E12CA9477100D8BF2B /* gilroyLightGroundKey.ttf */; };
 		597CD0F32CA94AF400D8BF2B /* ModsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597CD0F12CA94AF400D8BF2B /* ModsTableCell.swift */; };
 		597CD0F42CA94AF400D8BF2B /* ModsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */; };
+		5984E23B2CBBF4E3004E94F2 /* SkinMakerPreviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5984E2392CBBF4E3004E94F2 /* SkinMakerPreviewVC.xib */; };
+		5984E23C2CBBF4E3004E94F2 /* SkinMakerPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984E2382CBBF4E3004E94F2 /* SkinMakerPreviewVC.swift */; };
 		59FB6FBF2CBA64040058AD3E /* DeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FBD2CBA64040058AD3E /* DeleteVC.swift */; };
 		59FB6FC02CBA64040058AD3E /* DeleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FB6FBE2CBA64040058AD3E /* DeleteVC.xib */; };
 		59FB6FC32CBA640B0058AD3E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FC12CBA640B0058AD3E /* SearchVC.swift */; };
@@ -98,6 +100,8 @@
 		597CD0E52CA9477100D8BF2B /* gilroyIntegerThink.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gilroyIntegerThink.ttf; sourceTree = "<group>"; };
 		597CD0F12CA94AF400D8BF2B /* ModsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsTableCell.swift; sourceTree = "<group>"; };
 		597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModsTableCell.xib; sourceTree = "<group>"; };
+		5984E2382CBBF4E3004E94F2 /* SkinMakerPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinMakerPreviewVC.swift; sourceTree = "<group>"; };
+		5984E2392CBBF4E3004E94F2 /* SkinMakerPreviewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinMakerPreviewVC.xib; sourceTree = "<group>"; };
 		59FB6FBD2CBA64040058AD3E /* DeleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVC.swift; sourceTree = "<group>"; };
 		59FB6FBE2CBA64040058AD3E /* DeleteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteVC.xib; sourceTree = "<group>"; };
 		59FB6FC12CBA640B0058AD3E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 		597CD0C32CA92C9800D8BF2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5984E23A2CBBF4E3004E94F2 /* SkinMakerPreview */,
 				597CD0B92CA9213A00D8BF2B /* HomeVC */,
 				597CD0CD2CA9355F00D8BF2B /* ModsVC */,
 				5966E0D32CB6D50400294C90 /* ModsDetailsVC */,
@@ -323,6 +328,15 @@
 				597CD0F22CA94AF400D8BF2B /* ModsTableCell.xib */,
 			);
 			path = ModsTableCell;
+			sourceTree = "<group>";
+		};
+		5984E23A2CBBF4E3004E94F2 /* SkinMakerPreview */ = {
+			isa = PBXGroup;
+			children = (
+				5984E2382CBBF4E3004E94F2 /* SkinMakerPreviewVC.swift */,
+				5984E2392CBBF4E3004E94F2 /* SkinMakerPreviewVC.xib */,
+			);
+			path = SkinMakerPreview;
 			sourceTree = "<group>";
 		};
 		59FB6FB82CBA61B80058AD3E /* PrivacyVC */ = {
@@ -558,6 +572,7 @@
 				597CD0D12CA9358500D8BF2B /* ModsVCViewController.xib in Resources */,
 				965E1E582CBBD8340051888C /* SearchCell.xib in Resources */,
 				59FB6FCC2CBA641C0058AD3E /* TermsVC.xib in Resources */,
+				5984E23B2CBBF4E3004E94F2 /* SkinMakerPreviewVC.xib in Resources */,
 				59FB6FD72CBA7CCE0058AD3E /* LockScreenView.xib in Resources */,
 				59FB6FD02CBA64240058AD3E /* PrivacyVC.xib in Resources */,
 				597CD0BD2CA9214700D8BF2B /* HomeVC.xib in Resources */,
@@ -605,6 +620,7 @@
 				597CD0C62CA92CDC00D8BF2B /* AppFunctions.swift in Sources */,
 				590EFABF2CB3860600AF7986 /* SettingsVC.swift in Sources */,
 				590EFAC42CB3863300AF7986 /* SettingsCell.swift in Sources */,
+				5984E23C2CBBF4E3004E94F2 /* SkinMakerPreviewVC.swift in Sources */,
 				B89FFD672AAA34F400DD71EF /* AppDelegate.swift in Sources */,
 				59FB6FBF2CBA64040058AD3E /* DeleteVC.swift in Sources */,
 				965E1E572CBBD8340051888C /* SearchCell.swift in Sources */,
