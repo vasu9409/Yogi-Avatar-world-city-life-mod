@@ -1,6 +1,0 @@
-framework module Pods_Avatar_world_city_life_mod {
-  umbrella header "Pods-Avatar world city life mod-umbrella.h"
-
-  export *
-  module * { export * }
-}
