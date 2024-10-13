@@ -24,6 +24,7 @@ class HomeVC: UIViewController {
         self.setupUI()
         self.setupTableView()
         self.isLockedCell = false
+        
     }
     
     private func setupUI() {
@@ -96,3 +97,5 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
+

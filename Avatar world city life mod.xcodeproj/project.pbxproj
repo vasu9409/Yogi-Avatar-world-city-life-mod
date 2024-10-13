@@ -12,6 +12,7 @@
 		590EFAC02CB3860600AF7986 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590EFABE2CB3860600AF7986 /* SettingsVC.xib */; };
 		590EFAC42CB3863300AF7986 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590EFAC22CB3863300AF7986 /* SettingsCell.swift */; };
 		590EFAC52CB3863300AF7986 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590EFAC32CB3863300AF7986 /* SettingsCell.xib */; };
+		592411582CBBB90600904E2E /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592411572CBBB90600904E2E /* LinearProgressView.swift */; };
 		59265E7A2CBA932100D6569C /* HouseIdeasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59265E782CBA932100D6569C /* HouseIdeasVC.swift */; };
 		59265E7B2CBA932100D6569C /* HouseIdeasVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59265E792CBA932100D6569C /* HouseIdeasVC.xib */; };
 		59265E7F2CBA93AA00D6569C /* HouseIdeasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59265E7D2CBA93AA00D6569C /* HouseIdeasCell.swift */; };
@@ -158,6 +159,7 @@
 		590EFABE2CB3860600AF7986 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		590EFAC22CB3863300AF7986 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		590EFAC32CB3863300AF7986 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		592411572CBBB90600904E2E /* LinearProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
 		59265E782CBA932100D6569C /* HouseIdeasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseIdeasVC.swift; sourceTree = "<group>"; };
 		59265E792CBA932100D6569C /* HouseIdeasVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseIdeasVC.xib; sourceTree = "<group>"; };
 		59265E7D2CBA93AA00D6569C /* HouseIdeasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseIdeasCell.swift; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 				59FB6FD52CBA7CCE0058AD3E /* LockScreenView.swift */,
 				59FB6FD62CBA7CCE0058AD3E /* LockScreenView.xib */,
 				59FB6FD92CBA7D010058AD3E /* BaseView.swift */,
+				592411572CBBB90600904E2E /* LinearProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1267,6 +1270,7 @@
 				B89FFDE72AAA635C00DD71EF /* BaseController_AW.swift in Sources */,
 				59FB6FC32CBA640B0058AD3E /* SearchVC.swift in Sources */,
 				597CD0C12CA9258100D8BF2B /* HomeTVC.swift in Sources */,
+				592411582CBBB90600904E2E /* LinearProgressView.swift in Sources */,
 				5966E0DB2CB6DC0500294C90 /* PopUPView.swift in Sources */,
 				B8FE40A62AAF4B5F0070D716 /* ModsContentModel_AW.swift in Sources */,
 				B815D4372AED9339003A1344 /* LoadingView_AW.swift in Sources */,
