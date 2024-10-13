@@ -51,7 +51,7 @@ class ModsDetailsVC: UIViewController {
         let interval: TimeInterval = 0.02 // Small interval for smooth animation
         var elapsedTime: TimeInterval = 0
         let duration: TimeInterval = 7.0
-        let timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] timer in
+        _ = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] timer in
             guard let self = self else { return }
             elapsedTime += interval
             let progressPercentage = CGFloat(elapsedTime / duration)

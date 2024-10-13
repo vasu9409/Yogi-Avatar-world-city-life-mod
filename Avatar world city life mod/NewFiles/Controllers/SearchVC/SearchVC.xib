@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchVC" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
             <connections>
+                <outlet property="exitButton" destination="mbd-v4-fR6" id="0PI-gT-lE7"/>
+                <outlet property="searchButton" destination="n66-F4-7pR" id="zrt-CA-zns"/>
+                <outlet property="searchTextField" destination="Za9-fm-aqM" id="n4T-yL-oBh"/>
+                <outlet property="searchVIewBG" destination="1EC-P0-QOW" id="4he-X5-mMX"/>
+                <outlet property="tableView" destination="XZE-zs-cli" id="d2c-S9-c2e"/>
                 <outlet property="view" destination="FLK-MA-hhB" id="7DS-eJ-btl"/>
             </connections>
         </placeholder>
@@ -18,26 +24,82 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modsImageBackgroundMedic" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-At-7aL">
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modsImageBackgroundMedic" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-At-7aL">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <variation key="heightClass=regular-widthClass=regular" image="ipadOrientationViewImageShadow"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EC-P0-QOW">
-                    <rect key="frame" x="20" y="59" width="353" height="50"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EC-P0-QOW">
+                    <rect key="frame" x="20" y="59" width="353" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n66-F4-7pR">
+                            <rect key="frame" x="28" y="12" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="n66-F4-7pR" secondAttribute="height" id="ffc-iE-jQ8"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="simpleSearchBoxbynew"/>
+                            <connections>
+                                <action selector="searchButton:" destination="-1" eventType="touchUpInside" id="zqo-i2-Tc0"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Za9-fm-aqM">
+                            <rect key="frame" x="64" y="14.666666666666673" width="239" height="18.666666666666671"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="whitedowncolorset"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbd-v4-fR6">
+                            <rect key="frame" x="313" y="12" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="mbd-v4-fR6" secondAttribute="height" id="6nk-GQ-jit"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="closenewoutfitsblur"/>
+                            <connections>
+                                <action selector="exitButton:" destination="-1" eventType="touchUpInside" id="DIA-T5-AS6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="newblackcolorfounded"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="XgU-Th-c2m">
+                        <constraint firstItem="n66-F4-7pR" firstAttribute="top" secondItem="1EC-P0-QOW" secondAttribute="top" constant="12" id="1O8-up-uL9">
+                            <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                        </constraint>
+                        <constraint firstItem="Za9-fm-aqM" firstAttribute="centerY" secondItem="1EC-P0-QOW" secondAttribute="centerY" id="4Yt-l1-IGq"/>
+                        <constraint firstItem="Za9-fm-aqM" firstAttribute="leading" secondItem="n66-F4-7pR" secondAttribute="trailing" constant="12" id="CCb-If-huL">
+                            <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                        </constraint>
+                        <constraint firstAttribute="bottom" secondItem="n66-F4-7pR" secondAttribute="bottom" constant="12" id="EVP-Kq-64t">
+                            <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                        </constraint>
+                        <constraint firstItem="mbd-v4-fR6" firstAttribute="top" secondItem="1EC-P0-QOW" secondAttribute="top" constant="12" id="OwC-nn-PCt">
+                            <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="48" id="XgU-Th-c2m">
                             <variation key="heightClass=regular-widthClass=regular" constant="84"/>
+                        </constraint>
+                        <constraint firstAttribute="bottom" secondItem="mbd-v4-fR6" secondAttribute="bottom" constant="12" id="feR-q1-9DE">
+                            <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                        </constraint>
+                        <constraint firstItem="mbd-v4-fR6" firstAttribute="leading" secondItem="Za9-fm-aqM" secondAttribute="trailing" constant="10" id="uTr-vS-Rgk">
+                            <variation key="heightClass=regular-widthClass=regular" constant="18"/>
+                        </constraint>
+                        <constraint firstItem="n66-F4-7pR" firstAttribute="leading" secondItem="1EC-P0-QOW" secondAttribute="leading" constant="28" id="wyb-52-ZY0">
+                            <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="mbd-v4-fR6" secondAttribute="trailing" constant="16" id="yD5-lv-A2I">
+                            <variation key="heightClass=regular-widthClass=regular" constant="28"/>
                         </constraint>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XZE-zs-cli">
-                    <rect key="frame" x="20" y="121" width="353" height="731"/>
+                    <rect key="frame" x="20" y="115" width="353" height="737"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="eG9-Av-Cyr"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="eG9-Av-Cyr" firstAttribute="trailing" secondItem="BfJ-At-7aL" secondAttribute="trailing" id="4Yx-jy-Gej"/>
                 <constraint firstItem="eG9-Av-Cyr" firstAttribute="trailing" secondItem="XZE-zs-cli" secondAttribute="trailing" constant="20" id="Bzi-ps-KVr"/>
@@ -55,15 +117,23 @@
                 <constraint firstItem="XZE-zs-cli" firstAttribute="leading" secondItem="eG9-Av-Cyr" secondAttribute="leading" constant="20" id="kmm-at-bTd">
                     <variation key="heightClass=regular-widthClass=regular" constant="220"/>
                 </constraint>
-                <constraint firstItem="XZE-zs-cli" firstAttribute="top" secondItem="1EC-P0-QOW" secondAttribute="bottom" constant="12" id="xj6-PD-e7A">
-                    <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                <constraint firstItem="XZE-zs-cli" firstAttribute="top" secondItem="1EC-P0-QOW" secondAttribute="bottom" constant="8" id="xj6-PD-e7A">
+                    <variation key="heightClass=regular-widthClass=regular" constant="14"/>
                 </constraint>
             </constraints>
             <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="closenewoutfitsblur" width="42" height="42"/>
         <image name="ipadOrientationViewImageShadow" width="1024" height="1366"/>
         <image name="modsImageBackgroundMedic" width="375" height="812"/>
+        <image name="simpleSearchBoxbynew" width="42" height="42"/>
+        <namedColor name="newblackcolorfounded">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whitedowncolorset">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import IQKeyboardManagerSwift
+import IQKeyboardManager
 import AVFoundation
 import Reachability
 
@@ -14,7 +14,6 @@ import Reachability
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    private var appCoordinator: AppCoordinator_AW?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -29,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            self.appCoordinator = AppCoordinator_AW(window: window)
 //        }
         
-        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared().isEnabled = true
         
         return true
     }

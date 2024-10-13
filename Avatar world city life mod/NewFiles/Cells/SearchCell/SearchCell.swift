@@ -9,15 +9,14 @@ import UIKit
 
 class SearchCell: UITableViewCell {
 
+    @IBOutlet weak var seachBgView: UIView!
+    @IBOutlet weak var seachNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.seachNameLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 18 , style: .semiBold)
+        self.seachBgView.layer.cornerRadius = IS_IPAD ? 41 : 26
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

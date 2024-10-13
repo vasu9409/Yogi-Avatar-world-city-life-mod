@@ -3,22 +3,57 @@ PODS:
   - Applio (1.0.8):
     - Alamofire
   - Blurberry (0.1.0)
+  - IQKeyboardManager (6.5.19)
+  - lottie-ios (4.5.0)
+  - MBProgressHUD (1.2.0)
+  - ReachabilitySwift (5.2.3)
+  - Realm (10.52.1):
+    - Realm/Headers (= 10.52.1)
+  - Realm/Headers (10.52.1)
+  - RealmSwift (10.52.1):
+    - Realm (= 10.52.1)
+  - SnapKit (5.7.1)
+  - SwiftyDropbox (10.1.0)
 
 DEPENDENCIES:
   - Applio
   - Blurberry
+  - IQKeyboardManager
+  - lottie-ios
+  - MBProgressHUD
+  - ReachabilitySwift
+  - Realm
+  - RealmSwift
+  - SnapKit
+  - SwiftyDropbox
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Applio
     - Blurberry
+    - IQKeyboardManager
+    - lottie-ios
+    - MBProgressHUD
+    - ReachabilitySwift
+    - Realm
+    - RealmSwift
+    - SnapKit
+    - SwiftyDropbox
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   Applio: b7bc51eae8df271f7098fd85216eba9b101a8319
   Blurberry: 361c1a4778ea0c46da25716b03d1344a4cf8fe01
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  lottie-ios: a881093fab623c467d3bce374367755c272bdd59
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  ReachabilitySwift: 7f151ff156cea1481a8411701195ac6a984f4979
+  Realm: 5b0f6fe519911831fff94e6e6fba8fd404fa20ed
+  RealmSwift: 6963a458f4f5f3f0df5cca69dece5c802c7b7cad
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SwiftyDropbox: a023f55cb1bd8a81bb48c33eea529cd71faf8e29
 
-PODFILE CHECKSUM: aa77d85fb98db885a12ed3650b943c163844b67b
+PODFILE CHECKSUM: 9a7a9cca9ad63c729367c472daae5ba3c89bf28a
 
-COCOAPODS: 1.15.0
+COCOAPODS: 1.15.2

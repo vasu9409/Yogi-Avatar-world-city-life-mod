@@ -38,7 +38,9 @@ class ModsVCViewController: UIViewController {
     }
     
     @IBAction func searchButton(_ sender: Any) {
-        
+        let ctrl = SearchVC()
+        ctrl.modalPresentationStyle = .overFullScreen
+        self.present(ctrl, animated: false)
     }
     
     private func setupUI() {
