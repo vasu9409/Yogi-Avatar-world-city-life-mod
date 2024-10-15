@@ -28,5 +28,6 @@ class SkinMakerVC: UIViewController {
     @IBAction func btnAddNew(_ sender: Any) {
     }
     @IBAction func btnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

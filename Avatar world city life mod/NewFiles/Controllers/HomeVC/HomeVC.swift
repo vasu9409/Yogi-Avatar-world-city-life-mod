@@ -16,14 +16,23 @@ class HomeVC: UIViewController {
     var homeSecurityArrayOFObjects: [String] = ["modsJarsetup", "houseIdeasMadeButton", "rocketcrashdownside", "exportSettingWheelDot"]
     var homeFoundNameArrNews: [String] = ["Mods", "House ideas", "Skin maker", "Settings"]
     
+    private var dropbox: DBManager_AW { .shared }
     var isLockedCell: Bool = false
+    let viewModel: EditorSetupViewModel_AW = EditorSetupViewModel_AW()
+    var characterPriviewModel_AW: CharacterPriviewModel_AW?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.loadContent_AW(with: self.dropbox.contentManager.fetchEditorContent_AW())
+        viewModel.makeSelected_AW(type: .body)
+        
         self.setupUI()
         self.setupTableView()
         self.isLockedCell = false
+        
+        guard let preview = characterPriviewModel_AW else { return }
+        viewModel.loadSelectedContent_AW(with: preview.content)
         
     }
     

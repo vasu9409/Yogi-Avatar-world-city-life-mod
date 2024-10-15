@@ -36,7 +36,7 @@
                                     </constraint>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="rightNewGoSide"/>
+                                <state key="normal" image="housefindrightround"/>
                                 <connections>
                                     <action selector="arrowButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J8D-Qo-OCR"/>
                                 </connections>
@@ -121,8 +121,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="housefindrightround" width="129" height="82"/>
         <image name="newStromheartStone" width="24" height="24"/>
-        <image name="rightNewGoSide" width="25" height="24"/>
         <namedColor name="lightercoloruidrag">
             <color red="0.88235294117647056" green="1" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

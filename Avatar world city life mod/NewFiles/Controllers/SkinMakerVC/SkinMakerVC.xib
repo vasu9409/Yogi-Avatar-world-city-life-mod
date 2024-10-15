@@ -150,7 +150,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="buttonBackRoadWays"/>
+                                    <state key="normal" image="rightuniquechevrondelta"/>
                                     <connections>
                                         <action selector="btnRight:" destination="-1" eventType="touchUpInside" id="HdM-Ok-mfz"/>
                                     </connections>
@@ -165,6 +165,7 @@
                                     <variation key="heightClass=regular-widthClass=regular" constant="82"/>
                                 </constraint>
                                 <constraint firstItem="FZo-rl-tfM" firstAttribute="top" secondItem="eJo-sl-Zin" secondAttribute="top" id="hC3-ey-9ep"/>
+                                <constraint firstAttribute="width" secondItem="eJo-sl-Zin" secondAttribute="height" id="vJi-Mr-Ief"/>
                             </constraints>
                         </view>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jh4-31-7Zj">
@@ -187,6 +188,7 @@
                                 <constraint firstAttribute="width" constant="48" id="a4a-VU-6TP">
                                     <variation key="heightClass=regular-widthClass=regular" constant="82"/>
                                 </constraint>
+                                <constraint firstAttribute="width" secondItem="Jh4-31-7Zj" secondAttribute="height" id="aX3-Lh-9uK"/>
                                 <constraint firstItem="jt2-nT-3aJ" firstAttribute="leading" secondItem="Jh4-31-7Zj" secondAttribute="leading" id="eNf-6d-yw4"/>
                                 <constraint firstAttribute="trailing" secondItem="jt2-nT-3aJ" secondAttribute="trailing" id="qtS-vc-PTS"/>
                             </constraints>
@@ -219,7 +221,6 @@
                             <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                         </constraint>
                         <constraint firstItem="eJo-sl-Zin" firstAttribute="centerY" secondItem="YeK-Gw-JtD" secondAttribute="centerY" id="XDv-0h-Qdz"/>
-                        <constraint firstItem="Jh4-31-7Zj" firstAttribute="width" secondItem="Jh4-31-7Zj" secondAttribute="height" id="aX3-Lh-9uK"/>
                         <constraint firstItem="YeK-Gw-JtD" firstAttribute="top" secondItem="xeo-av-4NH" secondAttribute="top" constant="10" id="fen-ho-WUn"/>
                         <constraint firstItem="YeK-Gw-JtD" firstAttribute="leading" secondItem="Jh4-31-7Zj" secondAttribute="leading" id="hqB-lw-tUK"/>
                         <constraint firstAttribute="trailing" secondItem="eJo-sl-Zin" secondAttribute="trailing" constant="20" id="kTJ-Lx-JHS"/>
@@ -227,7 +228,6 @@
                         <constraint firstItem="Jh4-31-7Zj" firstAttribute="leading" secondItem="xeo-av-4NH" secondAttribute="leading" constant="20" id="u9L-Qs-Jyg">
                             <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                         </constraint>
-                        <constraint firstItem="eJo-sl-Zin" firstAttribute="width" secondItem="eJo-sl-Zin" secondAttribute="height" id="vJi-Mr-Ief"/>
                     </constraints>
                 </view>
             </subviews>
@@ -262,6 +262,7 @@
         <image name="buttonBackRoadWays" width="48" height="48"/>
         <image name="ipadOrientationViewImageShadow" width="1024" height="1366"/>
         <image name="modsImageBackgroundMedic" width="375" height="812"/>
+        <image name="rightuniquechevrondelta" width="96" height="96"/>
         <namedColor name="lightercoloruidrag">
             <color red="0.88235294117647056" green="1" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
