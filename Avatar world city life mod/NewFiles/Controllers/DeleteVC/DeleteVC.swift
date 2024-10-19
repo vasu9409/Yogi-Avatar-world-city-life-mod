@@ -22,7 +22,7 @@ class DeleteVC: UIViewController {
         
         applyBlur(self.view)
     }
-
+    
     @IBAction func deleteButton(_ sender: Any) {
         
     }

@@ -7,6 +7,7 @@
 
 import Applio
 import UIKit
+import SwiftyDropbox
 
 class HomeVC: UIViewController {
     
@@ -21,19 +22,80 @@ class HomeVC: UIViewController {
     let viewModel: EditorSetupViewModel_AW = EditorSetupViewModel_AW()
     var characterPriviewModel_AW: CharacterPriviewModel_AW?
     
+    private var dropBox: DBManager_AW { .shared }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel.loadContent_AW(with: self.dropbox.contentManager.fetchEditorContent_AW())
-        viewModel.makeSelected_AW(type: .body)
         
         self.setupUI()
         self.setupTableView()
         self.isLockedCell = false
         
-        guard let preview = characterPriviewModel_AW else { return }
-        viewModel.loadSelectedContent_AW(with: preview.content)
+//        self.fetchDataFromDropbox()
+    }
+    
+    func fetchDataFromDropbox() {
+        DBManager_AW.shared.connect_AW { client in
+            guard client != nil else {
+                print("Failed to connect to Dropbox")
+                return
+            }
+            
+            let folderPath = "/content"
+            self.fetchFolderContents(folderPath)
+        }
+    }
+    
+    func fetchFolderContents(_ folderPath: String) {
+        DBManager_AW.shared.listFolder_AW(path: folderPath) { result in
+            switch result {
+            case .success(let folderContents):
+                for i in folderContents {
+                    self.downloadJsonFile(i.path + "/content.json", i.name)
+                }
+//                self.handleFolderContents(folderContents, parentPath: folderPath)
+            case .failure(let error):
+                print("Failed to fetch folder contents: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func downloadJsonFile(_ filePath: String,_ name: String) {
+        DBManager_AW.shared.downloadFile_AW(path: filePath) { result in
+            switch result {
+            case .success(let jsonData):
+                if let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print("================  \(name)  =================")
+                    print("Downloaded JSON content: \n\(jsonString)")
+                    print("================  END  ================")
+                }
+                
+                if let savedPath = self.saveJsonToDevice(jsonData, fileName: name) {
+                    print("\nJSON file saved at: \(savedPath)\n")
+                }
+            case .failure(let error):
+                print("Failed to download JSON file: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func saveJsonToDevice(_ data: Data, fileName: String) -> String? {
+        let fileManager = FileManager.default
+        guard let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            print("Failed to access document directory")
+            return nil
+        }
         
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        
+        do {
+            try data.write(to: fileURL)
+            
+            return fileURL.path
+        } catch {
+            print("Failed to save file: \(error.localizedDescription)")
+            return nil
+        }
     }
     
     private func setupUI() {
@@ -107,4 +169,39 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+struct DropboxFile {
+    let name: String
+    let isFolder: Bool
+    let path: String
+    
+    init(entry: Files.Metadata) {
+        self.name = entry.name
+        self.isFolder = entry is Files.FolderMetadata
+        self.path = entry.pathLower ?? ""
+    }
+}
 
+
+extension DBManager_AW {
+    
+    func listFolder_AW(path: String, completion: @escaping (Result<[DropboxFile], Error>) -> Void) {
+        client?.files.listFolder(path: path).response { result, error in
+            if let error = error {
+                completion(.failure(error))
+            } else if let result = result {
+                let files = result.entries.map { DropboxFile(entry: $0) }
+                completion(.success(files))
+            }
+        }
+    }
+    
+    func downloadFile_AW(path: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        client?.files.download(path: path).response { response, error in
+            if let error = error {
+                completion(.failure(error))
+            } else if let response = response {
+                completion(.success(response.1))
+            }
+        }
+    }
+}

@@ -17,6 +17,10 @@ class ModsDetailsVC: UIViewController {
     @IBOutlet weak var downloadingView: LinearProgressBar!
     @IBOutlet weak var downloadButton: UIButton!
     
+    var modsDetailsMode: E8V?
+    var detailsMode: The8Ua8Onb?
+    var largeTitle: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,12 +33,23 @@ class ModsDetailsVC: UIViewController {
         self.scrollViewBGView.layer.cornerRadius = IS_IPAD ? 46 : 24
         self.downloadButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         self.downloadingView.layer.cornerRadius = IS_IPAD ? 41 : 24
-        
-        
+        self.downloadingView.isHidden = true
         
 //        https://stackoverflow.com/questions/67126979/how-to-animate-custom-progress-bar-properly-swift
+        
+        self.largeTitleLabel.text = self.largeTitle
+        
+        if let data = self.detailsMode {
+            self.detailTitleLabel.text = data.title
+            self.detailDescriptionLabel.text = data.description
+        }
+        
+        if let data = self.modsDetailsMode {
+            self.detailTitleLabel.text = data.title
+            self.detailDescriptionLabel.text = data.description
+        }
     }
-
+    
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

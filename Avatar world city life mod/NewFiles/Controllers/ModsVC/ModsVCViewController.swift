@@ -20,9 +20,12 @@ class ModsVCViewController: UIViewController {
     var categoryNameArray: [String] = ["All", "New", "Favourites", "New"]
     var selectedcategoryName: String = "All"
     
+    var modsDataModel: [E8V] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.fetchModsData()
         self.setupUI()
         self.setupTableViewAndCollectionView()
         
@@ -41,6 +44,19 @@ class ModsVCViewController: UIViewController {
         let ctrl = SearchVC()
         ctrl.modalPresentationStyle = .overFullScreen
         self.present(ctrl, animated: false)
+    }
+    
+    func fetchModsData() {
+        let jsonFilePath = filesPath.first { $0.lastPathComponent == ContentType_AW.mod.rawValue }
+        
+        if let files: Mods = FileSession_AW.shared.getModelFromFile_AW(from: jsonFilePath!) {
+            self.modsDataModel.removeAll()
+            for (_, value) in files.the7Rqpw.e8V {
+                
+                self.modsDataModel.append(value)
+                
+            }
+        }
     }
     
     private func setupUI() {
@@ -63,16 +79,20 @@ class ModsVCViewController: UIViewController {
 
 extension ModsVCViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.modsDataModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModsTableCell", for: indexPath) as? ModsTableCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         
+        cell.nameLabel.text = self.modsDataModel[indexPath.row].title
+        
         cell.isArrowButtonTapped = { [weak self] in
             guard let self else { return }
             let ctrl = ModsDetailsVC()
+            ctrl.largeTitle = "Mods"
+            ctrl.modsDetailsMode = self.modsDataModel[indexPath.row]
             self.navigationController?.pushViewController(ctrl, animated: true)
         }
         
@@ -115,18 +135,9 @@ extension ModsVCViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let labelWidth = self.calculateCellWidth(text: self.categoryNameArray[indexPath.row], collectionView: collectionView)
+        let labelWidth = calculateCellWidth(text: self.categoryNameArray[indexPath.row], collectionView: collectionView)
         // Return the maximum of the cell's width and the label's required width
         return CGSize(width: labelWidth, height: collectionView.frame.height)
-    }
-    
-    private func calculateCellWidth(text: String, collectionView: UICollectionView) -> CGFloat {
-        let label = UILabel()
-        label.text = text
-        label.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 20, style: .bold)
-        label.sizeToFit()
-        let cellWidth = label.frame.width + 50
-        return cellWidth
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

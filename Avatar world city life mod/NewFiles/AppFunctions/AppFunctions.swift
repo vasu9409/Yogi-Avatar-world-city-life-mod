@@ -16,3 +16,12 @@ func applyBlur(_ view: UIView, isBlack: Bool = true) {
     view.backgroundColor = isBlack ? UIColor.black.withAlphaComponent(0.5) : .clear
     view.insertSubview(blurEffectView, at: 0)
 }
+
+func calculateCellWidth(text: String, collectionView: UICollectionView) -> CGFloat {
+    let label = UILabel()
+    label.text = text
+    label.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 20, style: .bold)
+    label.sizeToFit()
+    let cellWidth = label.frame.width + 50
+    return cellWidth
+}

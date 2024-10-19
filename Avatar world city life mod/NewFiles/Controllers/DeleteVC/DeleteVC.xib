@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,13 +26,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6v-2p-wBr">
-                            <rect key="frame" x="20" y="328" width="353" height="196"/>
+                            <rect key="frame" x="20" y="326" width="353" height="200"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iar-Z0-XEF">
-                                    <rect key="frame" x="0.0" y="10" width="353" height="48"/>
+                                    <rect key="frame" x="0.0" y="10" width="353" height="52"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure to delete?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLP-3H-m0B">
-                                            <rect key="frame" x="26" y="16" width="291" height="16"/>
+                                            <rect key="frame" x="26" y="16" width="291" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" name="newblackcolorfounded"/>
                                             <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                                     </subviews>
                                     <color key="backgroundColor" name="lightercoloruidrag"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="48" id="BgW-j8-hp5">
+                                        <constraint firstAttribute="height" constant="52" id="BgW-j8-hp5">
                                             <variation key="heightClass=regular-widthClass=regular" constant="88"/>
                                         </constraint>
                                         <constraint firstItem="fLP-3H-m0B" firstAttribute="leading" secondItem="Iar-Z0-XEF" secondAttribute="leading" constant="26" id="Bp2-TL-zIV">
@@ -56,7 +56,7 @@
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PEG-rt-BbY">
-                                    <rect key="frame" x="0.0" y="74" width="353" height="112"/>
+                                    <rect key="frame" x="0.0" y="78" width="353" height="112"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebr-Ka-3gU">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="52"/>
@@ -99,7 +99,9 @@
                                 <constraint firstAttribute="bottom" secondItem="PEG-rt-BbY" secondAttribute="bottom" constant="10" id="5wg-XI-1vF"/>
                                 <constraint firstAttribute="trailing" secondItem="Iar-Z0-XEF" secondAttribute="trailing" id="7lk-Hi-uDm"/>
                                 <constraint firstItem="Iar-Z0-XEF" firstAttribute="top" secondItem="t6v-2p-wBr" secondAttribute="top" constant="10" id="H63-y9-jQP"/>
-                                <constraint firstItem="PEG-rt-BbY" firstAttribute="top" secondItem="Iar-Z0-XEF" secondAttribute="bottom" constant="16" id="J2i-8T-KNw"/>
+                                <constraint firstItem="PEG-rt-BbY" firstAttribute="top" secondItem="Iar-Z0-XEF" secondAttribute="bottom" constant="16" id="J2i-8T-KNw">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="27"/>
+                                </constraint>
                                 <constraint firstAttribute="trailing" secondItem="PEG-rt-BbY" secondAttribute="trailing" id="lVG-wH-PQB"/>
                                 <constraint firstItem="Iar-Z0-XEF" firstAttribute="leading" secondItem="t6v-2p-wBr" secondAttribute="leading" id="vMO-pZ-Kbq"/>
                                 <constraint firstItem="PEG-rt-BbY" firstAttribute="leading" secondItem="t6v-2p-wBr" secondAttribute="leading" id="wTe-iV-Qu0"/>

@@ -21,12 +21,12 @@ class PrivacyVC: UIViewController {
         // Do any additional setup after loading the view.
         
         self.backButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 22, style: .semiBold)
-        self.largeTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .semiBold)
+        self.largeTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
         self.termsTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 22, style: .semiBold)
         self.termsDetailLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 28 : 16, style: .regular)
         
         self.scrollBGView.layer.cornerRadius = IS_IPAD ? 46 : 24
-        self.backButton.layer.cornerRadius = IS_IPAD ? 41 : 24
+        self.backButton.layer.cornerRadius = IS_IPAD ? 42 : 25
     }
     
     @IBAction func backButton(_ sender: Any) {

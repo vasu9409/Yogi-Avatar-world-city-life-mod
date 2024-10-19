@@ -7,17 +7,17 @@
 
 import Foundation
 enum ContentType_AW: String, CaseIterable {
-    case  unknown = "unknown",
+    case  unknown = "66ebf80676cb8",
           content = "content",
-          mod = "mod",
-          houseIdeas = "houseIdeas"
+          mod = "66ebf80665d2f",
+          houseIdeas = "66ebf80c744ca"
     
     init?(rawValue: String) {
         switch rawValue {
-        case "unknown": self = .unknown
+        case "66ebf80676cb8": self = .unknown
         case "content": self = .content
-        case "mod": self = .mod
-        case "houseIdeas": self = .houseIdeas
+        case "66ebf80665d2f": self = .mod
+        case "66ebf80c744ca": self = .houseIdeas
         default: return nil
         }
     }
@@ -28,9 +28,9 @@ enum ContentType_AW: String, CaseIterable {
         case .content:
             return .content
         case .houseIdeas:
-            return .houseIdeas
+            return .content
         case .mod:
-            return  .mods
+            return  .content
         case .unknown:
             return .content
         }

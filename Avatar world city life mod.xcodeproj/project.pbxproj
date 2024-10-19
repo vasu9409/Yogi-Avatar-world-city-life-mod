@@ -86,6 +86,14 @@
 		59FB6FDA2CBA7D010058AD3E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB6FD92CBA7D010058AD3E /* BaseView.swift */; };
 		965E1E572CBBD8340051888C /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E1E552CBBD8340051888C /* SearchCell.swift */; };
 		965E1E582CBBD8340051888C /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 965E1E562CBBD8340051888C /* SearchCell.xib */; };
+		966F6D0E2CC3C3530094940F /* HouseIdeas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F6D0D2CC3C3530094940F /* HouseIdeas.swift */; };
+		966F6D102CC3CF8F0094940F /* Mods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F6D0F2CC3CF8F0094940F /* Mods.swift */; };
+		966F6D122CC3DC5C0094940F /* EditorContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F6D112CC3DC5C0094940F /* EditorContent.swift */; };
+		96C91FE32CC39CF500C0C929 /* Coordinators_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C91FE22CC39CF500C0C929 /* Coordinators_AW.swift */; };
+		96C91FE72CC39D7E00C0C929 /* PreloaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C91FE52CC39D7E00C0C929 /* PreloaderVC.swift */; };
+		96C91FE82CC39D7E00C0C929 /* PreloaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96C91FE62CC39D7E00C0C929 /* PreloaderVC.xib */; };
+		96C91FEC2CC39DF300C0C929 /* ContentService_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C91FEA2CC39DF300C0C929 /* ContentService_AW.swift */; };
+		96C91FED2CC39DF300C0C929 /* ServiceHolder_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C91FEB2CC39DF300C0C929 /* ServiceHolder_AW.swift */; };
 		B82C401A2AF15F2500401575 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = B82C40192AF15F2500401575 /* animation.json */; };
 		B89FFD672AAA34F400DD71EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FFD662AAA34F400DD71EF /* AppDelegate.swift */; };
 		B89FFD6E2AAA34F400DD71EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89FFD6C2AAA34F400DD71EF /* Main.storyboard */; };
@@ -173,6 +181,14 @@
 		59FB6FD92CBA7D010058AD3E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		965E1E552CBBD8340051888C /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		965E1E562CBBD8340051888C /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		966F6D0D2CC3C3530094940F /* HouseIdeas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseIdeas.swift; sourceTree = "<group>"; };
+		966F6D0F2CC3CF8F0094940F /* Mods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mods.swift; sourceTree = "<group>"; };
+		966F6D112CC3DC5C0094940F /* EditorContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorContent.swift; sourceTree = "<group>"; };
+		96C91FE22CC39CF500C0C929 /* Coordinators_AW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinators_AW.swift; sourceTree = "<group>"; };
+		96C91FE52CC39D7E00C0C929 /* PreloaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderVC.swift; sourceTree = "<group>"; };
+		96C91FE62CC39D7E00C0C929 /* PreloaderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreloaderVC.xib; sourceTree = "<group>"; };
+		96C91FEA2CC39DF300C0C929 /* ContentService_AW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentService_AW.swift; sourceTree = "<group>"; };
+		96C91FEB2CC39DF300C0C929 /* ServiceHolder_AW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHolder_AW.swift; sourceTree = "<group>"; };
 		B815D4312AED1C50003A1344 /* Avatar world city life mod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Avatar world city life mod.entitlements"; sourceTree = "<group>"; };
 		B815D4332AED1C8F003A1344 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B82C40192AF15F2500401575 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
@@ -375,6 +391,7 @@
 				597CD0C82CA92E7F00D8BF2B /* AppColors */,
 				597CD0C72CA92E7700D8BF2B /* AppConstants */,
 				597CD0C42CA92CA300D8BF2B /* AppFunctions */,
+				96C91FE92CC39DF300C0C929 /* Services */,
 				597CD0C32CA92C9800D8BF2B /* Controllers */,
 				594335B52CBE15410060D66D /* Utilities */,
 				594335CB2CBE15990060D66D /* Models */,
@@ -404,12 +421,13 @@
 		597CD0C32CA92C9800D8BF2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5984E23A2CBBF4E3004E94F2 /* SkinMakerPreview */,
+				96C91FE42CC39D6E00C0C929 /* PreloaderVC */,
 				597CD0B92CA9213A00D8BF2B /* HomeVC */,
 				597CD0CD2CA9355F00D8BF2B /* ModsVC */,
 				5966E0D32CB6D50400294C90 /* ModsDetailsVC */,
 				59265E772CBA931500D6569C /* HouseIdeasVC */,
 				59FB6FBA2CBA61CC0058AD3E /* SkinMakerVC */,
+				5984E23A2CBBF4E3004E94F2 /* SkinMakerPreview */,
 				590EFABC2CB385F900AF7986 /* SettingsVC */,
 				59FB6FBB2CBA631A0058AD3E /* SearchVC */,
 				59FB6FBC2CBA63F20058AD3E /* DeleteVC */,
@@ -560,6 +578,34 @@
 			path = SearchCell;
 			sourceTree = "<group>";
 		};
+		966F6D0C2CC3C3440094940F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				966F6D0D2CC3C3530094940F /* HouseIdeas.swift */,
+				966F6D0F2CC3CF8F0094940F /* Mods.swift */,
+				966F6D112CC3DC5C0094940F /* EditorContent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96C91FE42CC39D6E00C0C929 /* PreloaderVC */ = {
+			isa = PBXGroup;
+			children = (
+				96C91FE52CC39D7E00C0C929 /* PreloaderVC.swift */,
+				96C91FE62CC39D7E00C0C929 /* PreloaderVC.xib */,
+			);
+			path = PreloaderVC;
+			sourceTree = "<group>";
+		};
+		96C91FE92CC39DF300C0C929 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				96C91FEA2CC39DF300C0C929 /* ContentService_AW.swift */,
+				96C91FEB2CC39DF300C0C929 /* ServiceHolder_AW.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B815D4322AED1C8F003A1344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,7 +645,9 @@
 			children = (
 				B815D4312AED1C50003A1344 /* Avatar world city life mod.entitlements */,
 				B89FFD662AAA34F400DD71EF /* AppDelegate.swift */,
+				96C91FE22CC39CF500C0C929 /* Coordinators_AW.swift */,
 				B89FFD7A2AAA368D00DD71EF /* Resource */,
+				966F6D0C2CC3C3440094940F /* Model */,
 				597CD0B82CA91BE900D8BF2B /* NewFiles */,
 			);
 			path = "Avatar world city life mod";
@@ -748,6 +796,7 @@
 				594335E12CBE196D0060D66D /* CharacterEditorImage_AW.xib in Resources */,
 				594335E22CBE196D0060D66D /* CategoryCollectionViewCell.xib in Resources */,
 				594335E32CBE196D0060D66D /* ContentCollectionViewCell.xib in Resources */,
+				96C91FE82CC39D7E00C0C929 /* PreloaderVC.xib in Resources */,
 				594335E42CBE196D0060D66D /* EditorSetupViewController_AW.xib in Resources */,
 				B89FFD6E2AAA34F400DD71EF /* Main.storyboard in Resources */,
 				5966E0D72CB6D51D00294C90 /* ModsDetailsVC.xib in Resources */,
@@ -763,12 +812,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				59265E7A2CBA932100D6569C /* HouseIdeasVC.swift in Sources */,
+				966F6D102CC3CF8F0094940F /* Mods.swift in Sources */,
 				5966E0D62CB6D51D00294C90 /* ModsDetailsVC.swift in Sources */,
 				59FB6FD82CBA7CCE0058AD3E /* LockScreenView.swift in Sources */,
 				597CD0F32CA94AF400D8BF2B /* ModsTableCell.swift in Sources */,
 				59FB6FCF2CBA64240058AD3E /* PrivacyVC.swift in Sources */,
+				96C91FEC2CC39DF300C0C929 /* ContentService_AW.swift in Sources */,
 				59FB6FDA2CBA7D010058AD3E /* BaseView.swift in Sources */,
 				597CD0CA2CA92E8800D8BF2B /* AppColors.swift in Sources */,
+				966F6D0E2CC3C3530094940F /* HouseIdeas.swift in Sources */,
 				597CD0D82CA93A7C00D8BF2B /* CategoryCell.swift in Sources */,
 				59FB6FC32CBA640B0058AD3E /* SearchVC.swift in Sources */,
 				597CD0C12CA9258100D8BF2B /* HomeTVC.swift in Sources */,
@@ -779,6 +831,7 @@
 				594335B92CBE15410060D66D /* ApkStoreManager_AW.swift in Sources */,
 				594335BA2CBE15410060D66D /* ReachabilityManager_AW.swift in Sources */,
 				594335BB2CBE15410060D66D /* FileSession_AW.swift in Sources */,
+				96C91FE72CC39D7E00C0C929 /* PreloaderVC.swift in Sources */,
 				594335BC2CBE15410060D66D /* Keys_AW.swift in Sources */,
 				594335BD2CBE15410060D66D /* ContentManager_AW.swift in Sources */,
 				594335BE2CBE15410060D66D /* DBManager_AW.swift in Sources */,
@@ -800,12 +853,15 @@
 				594335CE2CBE15990060D66D /* EditorContentData_AW.swift in Sources */,
 				594335CF2CBE15990060D66D /* CharacterContentType_AW.swift in Sources */,
 				594335D02CBE15990060D66D /* Category_AW.swift in Sources */,
+				96C91FE32CC39CF500C0C929 /* Coordinators_AW.swift in Sources */,
 				597CD0D42CA935AF00D8BF2B /* GilroyAppConstFontsTexture.swift in Sources */,
 				597CD0C62CA92CDC00D8BF2B /* AppFunctions.swift in Sources */,
 				590EFABF2CB3860600AF7986 /* SettingsVC.swift in Sources */,
 				590EFAC42CB3863300AF7986 /* SettingsCell.swift in Sources */,
 				5984E23C2CBBF4E3004E94F2 /* SkinMakerPreviewVC.swift in Sources */,
+				966F6D122CC3DC5C0094940F /* EditorContent.swift in Sources */,
 				B89FFD672AAA34F400DD71EF /* AppDelegate.swift in Sources */,
+				96C91FED2CC39DF300C0C929 /* ServiceHolder_AW.swift in Sources */,
 				59FB6FBF2CBA64040058AD3E /* DeleteVC.swift in Sources */,
 				965E1E572CBBD8340051888C /* SearchCell.swift in Sources */,
 				597CD0CC2CA9344500D8BF2B /* AppConstants.swift in Sources */,
@@ -958,7 +1014,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Avatar world city life mod/Avatar world city life mod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = B748YP7MZU;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Avatar world city life mod/Resource/Info.plist";
@@ -975,7 +1031,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "app.soft-company.development";
+				PRODUCT_BUNDLE_IDENTIFIER = com.avatar.mods.vasu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -994,7 +1050,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Avatar world city life mod/Avatar world city life mod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = B748YP7MZU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Avatar world city life mod/Resource/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Downloading content to Photo Library";
@@ -1010,7 +1066,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "app.soft-company.development";
+				PRODUCT_BUNDLE_IDENTIFIER = com.avatar.mods.vasu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

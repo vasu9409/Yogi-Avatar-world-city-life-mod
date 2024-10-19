@@ -37,7 +37,7 @@ class SearchVC: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.registerNib(for: "SearchCell")
-        
+        self.tableView.separatorStyle = .none
     }
     
     @objc func textFieldEditing() {

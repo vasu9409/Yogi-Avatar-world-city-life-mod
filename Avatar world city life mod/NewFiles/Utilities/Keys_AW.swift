@@ -16,9 +16,7 @@ struct Keys_AW {
     }
     
     enum Path_AW: String {
-        case houseIdeas = "houseideas",
-             mods = "mods",
-             content = "content"
+        case content = "content"
         
         var contentPath: String {
             .init(format: "/%@/%@.json", rawValue, rawValue)

@@ -31,9 +31,9 @@ final class ContentManager_AW: NSObject {
     
     var editorContentArray: [EditorContentDataModel_AW] = []
     
-    func serialize_AW(data: Data, for contentType: ContentType_AW) {
+    func serialize_AW(data: Data, for contentType: String) {
         switch contentType {
-        case .content: 
+        case "66ebf80665d2f":
             var array: [EditorContentData_AW] = []
             let categories = try? JSONDecoder().decode(AvatarCategories_AW.self, from: data)
 
@@ -46,17 +46,17 @@ final class ContentManager_AW: NSObject {
                 }
             }
             FileSession_AW.shared.saveEditorDropBoxContent_AW(with: array)
-        case .houseIdeas:
+        case "66ebf80c744ca":
             guard FileSession_AW.shared.getHouseIdeasDropBoxContent_AW().isEmpty else { return }
            
-            getContentModel_AW(with: contentType, data: data) { listElement in
+            getContentModel_AW(with: .houseIdeas, data: data) { listElement in
                 FileSession_AW.shared.saveHouseIdeasDropBoxContent_AW(with: listElement ?? [])
                 
             }
-        case .mod:
+        case "66ebf80676cb8":
             guard FileSession_AW.shared.getModsDropBoxContent_AW().isEmpty else { return }
            
-            getContentModel_AW(with: contentType, data: data) { listElement in
+            getContentModel_AW(with: .mod, data: data) { listElement in
                 FileSession_AW.shared.saveModsDropBoxContent_AW(with: listElement ?? [])
                 
             }

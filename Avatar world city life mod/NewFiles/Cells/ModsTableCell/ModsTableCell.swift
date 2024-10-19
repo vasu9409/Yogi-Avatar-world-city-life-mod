@@ -27,6 +27,8 @@ class ModsTableCell: UITableViewCell {
         self.cellImageView.layer.cornerRadius = IS_IPAD ? 52 : 18
         self.heartButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         
+        self.nameLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
+        
         // heartuncheckbroken - unfill heart
         // newStromheartStone - fill
     }

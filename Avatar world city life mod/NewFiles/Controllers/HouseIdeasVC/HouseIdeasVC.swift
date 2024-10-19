@@ -17,17 +17,19 @@ class HouseIdeasVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var catCollectionView: UICollectionView!
     
-    
     var isForMods: Bool = false
     
     var categoryNameArray: [String] = ["All", "New", "Favourites", "New"]
     var selectedcategoryName: String = "All"
     
+    var houseIdeaDataModel: [The8Ua8Onb] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupUI()
-        self.setupTableViewAndCollectionView()
+        self.fetchModsData()
+        self.setupCollectionView()
         
         self.menuButtonView.clipsToBounds = true
         self.searchButtonView.clipsToBounds = true
@@ -44,11 +46,24 @@ class HouseIdeasVC: UIViewController {
         
     }
     
+    func fetchModsData() {
+        let jsonFilePath = filesPath.first { $0.lastPathComponent == ContentType_AW.houseIdeas.rawValue }
+        
+        if let files: HouseIdeas = FileSession_AW.shared.getModelFromFile_AW(from: jsonFilePath!) {
+            self.houseIdeaDataModel.removeAll()
+            for (_, value) in files.um3Jdnw.the8Ua8Onb {
+                
+                self.houseIdeaDataModel.append(value)
+                
+            }
+        }
+    }
+    
     private func setupUI() {
         self.modsTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
     }
     
-    private func setupTableViewAndCollectionView() {
+    private func setupCollectionView() {
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
@@ -65,7 +80,10 @@ class HouseIdeasVC: UIViewController {
 extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.categoryNameArray.count
+        if collectionView == self.catCollectionView {
+            return self.categoryNameArray.count
+        }
+        return self.houseIdeaDataModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,6 +99,14 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HouseIdeasCell", for: indexPath) as? HouseIdeasCell else { return UICollectionViewCell() }
             
+            cell.ideaTitleName.text = self.houseIdeaDataModel[indexPath.row].title
+            
+            cell.isheartButtonTapped = { [weak self] in
+                guard let self else { return }
+                let ctrl = ModsDetailsVC()
+                self.navigationController?.pushViewController(ctrl, animated: true)
+            }
+            
             return cell
         }
     }
@@ -89,7 +115,12 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         
         if collectionView == self.catCollectionView {
             self.selectedcategoryName = self.categoryNameArray[indexPath.row]
-            self.collectionView.reloadData()
+            self.catCollectionView.reloadData()
+        } else {
+            let ctrl = ModsDetailsVC()
+            ctrl.largeTitle = "House ideas"
+            ctrl.detailsMode = self.houseIdeaDataModel[indexPath.row]
+            self.navigationController?.pushViewController(ctrl, animated: true)
         }
         
     }
@@ -97,21 +128,12 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == self.catCollectionView {
-            let labelWidth = self.calculateCellWidth(text: self.categoryNameArray[indexPath.row], collectionView: collectionView)
+            let labelWidth = calculateCellWidth(text: self.categoryNameArray[indexPath.row], collectionView: collectionView)
             // Return the maximum of the cell's width and the label's required width
             return CGSize(width: labelWidth, height: collectionView.frame.height)
         } else {
             return CGSize(width: (collectionView.frame.width - (IS_IPAD ? 16 : 8)) / 2, height: IS_IPAD ? 368 : 216)
         }
-    }
-    
-    private func calculateCellWidth(text: String, collectionView: UICollectionView) -> CGFloat {
-        let label = UILabel()
-        label.text = text
-        label.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 20, style: .bold)
-        label.sizeToFit()
-        let cellWidth = label.frame.width + 50
-        return cellWidth
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

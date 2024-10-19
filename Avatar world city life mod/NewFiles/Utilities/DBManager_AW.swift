@@ -21,7 +21,7 @@ final class DBManager_AW: NSObject {
     }
     
     private var progressSubject = PassthroughSubject<String, Never>()
-    private var client: DropboxClient?
+    var client: DropboxClient?
     
 }
 
@@ -30,12 +30,12 @@ final class DBManager_AW: NSObject {
 extension DBManager_AW {
     
     
-   func connect_AW(completion: ((DropboxClient?) -> Void)? = nil) {
+    func connect_AW(completion: ((DropboxClient?) -> Void)? = nil) {
         print("DBManager_AW - connect_AW!")
         
         UserDefaults
             .standard
-            .setValue("ehWLalzhnYgAAAAAAAAAASY8qFK08QaYMUQF-8V_X0-lpo2WaI4-UXsbndw0W97u",
+            .setValue("230EfwOzUA4AAAAAAAAAAX1huz1beG9_FqyWNawL9N2lS8DvsofqB1oMgkuogf6S",
                       forKey: "refresh_token")
         
         let connect_AWionBlock: (_ accessToken: String) -> Void = {
@@ -91,7 +91,7 @@ extension DBManager_AW {
             completion()
             return
         }
-
+        
         
         let fetchBlock: (DropboxClient) -> Void = { [unowned self] client in
             self.fetchModels_AW(with: client, completion: completion)
@@ -109,36 +109,57 @@ extension DBManager_AW {
                                 completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
         
-        for type in ContentType_AW.allCases {
-            dispatchGroup.enter()
-            fetchModelsData_AW(contentType: type, client: client) {
-                dispatchGroup.leave()
+        var path: [DropboxFile] = [] // Initialize path array
+        
+        // Fetch Dropbox folder contents
+        dispatchGroup.enter() // Add dispatch enter before starting Dropbox fetching
+        client.files.listFolder(path: "/content").response { result, error in
+            if let error = error {
+                print("Error fetching folder contents: \(error.localizedDescription)")
+                dispatchGroup.leave() // Leave even if there's an error
+            } else if let result = result {
+                let files = result.entries.map { DropboxFile(entry: $0) }
+                path.removeAll() // Clear path array before updating
+                path.append(contentsOf: files) // Append all files to path
+                
+                // Now, fetch models data for each content type
+                for type in path {
+                    dispatchGroup.enter() // Enter the dispatch group for each content type
+                    self.fetchModelsData_AW(contentType: type, client: client) {
+                        dispatchGroup.leave() // Leave after fetching models for each type
+                    }
+                }
+                
+                dispatchGroup.leave() // Leave after fetching Dropbox contents
             }
         }
         
-        dispatchGroup.notify(queue: .main) { completion() }
+        // Notify when all tasks are done
+        dispatchGroup.notify(queue: .main) {
+            completion()
+        }
     }
     
-    private func fetchModelsData_AW(contentType: ContentType_AW, client: DropboxClient, completion: @escaping () -> Void) {
-        let path = contentType.associatedPath.contentPath
+    private func fetchModelsData_AW(contentType: DropboxFile, client: DropboxClient, completion: @escaping () -> Void) {
+        let path = contentType
         let dispatchGroup = DispatchGroup()
         var modelData: Data?
         dispatchGroup.enter()
         
-        getFile_AW(client: client, with: path) {  data in
+        getFile_AW(client: client, with: path.path + "/content.json") {  data in
             modelData = data
             dispatchGroup.leave()
         }
-
+        
         dispatchGroup.notify(queue: .global(qos: .userInitiated)) {
             [unowned self] in
-            contentManager.serialize_AW(data: modelData ?? Data(), for: contentType)
+            contentManager.serialize_AW(data: modelData ?? Data(), for: contentType.name)
             completion()
         }
     }
     
     func fetchContent_AW(for contentType: ContentType_AW,
-                      completion: @escaping () -> Void) {
+                         completion: @escaping () -> Void) {
         guard InternetManager_AW.shared.checkInternetConnectivity_AW() else {
             completion()
             return
@@ -148,7 +169,7 @@ extension DBManager_AW {
             let path = contentType.associatedPath.contentPath
             getFile_AW(client: client, with: path) { [unowned self] data in
                 guard let data else { completion(); return }
-                contentManager.serialize_AW(data: data, for: contentType)
+                contentManager.serialize_AW(data: data, for: contentType.rawValue)
                 completion()
             }
         }
@@ -229,16 +250,16 @@ extension DBManager_AW {
     }
     
     func fetchEditorContent_AWData(for serializedData: [EditorContentData_AW],
-                                with client: DropboxClient,
-                                completion: @escaping () -> Void) {
+                                   with client: DropboxClient,
+                                   completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
         var taskCount = 0
-
+        
         if !serializedData.isEmpty {
             progressSubject.send("\(taskCount)/\(serializedData.count)")
         }
-
-
+        
+        
         for serialized in serializedData {
             dispatchGroup.enter()
             contentManager.storeEditorContentWithModel_AW(with: EditorContentDataModel_AW(id: serialized.id,
@@ -246,40 +267,40 @@ extension DBManager_AW {
                                                                                           type: serialized.type,
                                                                                           imgPath: serialized.imgPath,
                                                                                           isSelected: false))
-
+            
             fetchData_AW(for: serialized, client: client) { [weak self] in
                 taskCount += 1
                 self?.progressSubject.send("\(taskCount)/\(serializedData.count)")
                 dispatchGroup.leave()
             }
         }
-
+        
         dispatchGroup.notify(queue: .main) { completion() }
     }
     
     func fetchData_AW(for model: EditorContentData_AW, client: DropboxClient, completion: @escaping () -> Void) {
-
+        
         let pathKey = Keys_AW.Path_AW.content
         let path = pathKey.getPathContent_AW(forMarkup: model.imgPath)
         let previewImgPath = pathKey.getPathContent_AW(forMarkup: model.previewImgPath)
-
+        
         let dispatchGroup = DispatchGroup()
         var imgData: Data?
         var imgPreviewData: Data?
-
+        
         dispatchGroup.enter()
         getFile_AW(client: client, with: path) { data in
             print("🔵", data)
             imgData = data
             dispatchGroup.leave()
         }
-
+        
         dispatchGroup.enter()
         getFile_AW(client: client, with: previewImgPath) { data in
             imgPreviewData = data
             dispatchGroup.leave()
         }
-
+        
         dispatchGroup.notify(queue: .global(qos: .userInitiated)) {
             [unowned self] in
             contentManager.storeEditorContent_AW(for: model, imgData: imgData, previewImgData: imgPreviewData)
@@ -351,7 +372,7 @@ extension DBManager_AW {
     }
     
     func getPath_MTW(for contentType: ContentType_AW, imgPath: String) -> String {
-         String(format: "/%@/%@", contentType.associatedPath.rawValue, imgPath)
+        String(format: "/%@/%@", contentType.associatedPath.rawValue, imgPath)
     }
     
     func isAllModelsUploaded_AW() -> Bool {
@@ -362,8 +383,9 @@ extension DBManager_AW {
 
 // MARK: - Private API
 
+
 private extension DBManager_AW {
-    
+    //
     func connect_AWoDropbox(with accessToken: String) -> DropboxClient {
         let client = DropboxClient(accessToken: accessToken)
         
@@ -396,8 +418,8 @@ private extension DBManager_AW {
     }
     
     func getFile_AW(client: DropboxClient,
-                 with path: String,
-                 completion: @escaping (Data?) -> Void) {
+                    with path: String,
+                    completion: @escaping (Data?) -> Void) {
         client.files.download(path: path).response { response, error in
             if let error {
                 print("🛑\(path)",error.description)
@@ -408,8 +430,8 @@ private extension DBManager_AW {
     }
     
     func getLink_AW(client: DropboxClient,
-                 path: String,
-                 completion: @escaping (String, Files.Metadata?) -> Void) {
+                    path: String,
+                    completion: @escaping (String, Files.Metadata?) -> Void) {
         client.files.getTemporaryLink(path: path).response { response, error in
             if let error { print(error.description) }
             
@@ -417,3 +439,4 @@ private extension DBManager_AW {
         }
     }
 }
+

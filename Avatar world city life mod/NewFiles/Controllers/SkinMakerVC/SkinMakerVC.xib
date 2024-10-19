@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,8 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SkinMakerVC" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
             <connections>
+                <outlet property="AddNewButton" destination="R7p-GZ-UMI" id="PFc-AC-fRV"/>
+                <outlet property="addNewSkinButton" destination="Jof-rL-Yry" id="ZaL-6g-CkU"/>
+                <outlet property="backButtonView" destination="5P7-G6-jc2" id="NSC-ox-Tzt"/>
                 <outlet property="btnPreviewView" destination="xeo-av-4NH" id="d2Y-l6-ulE"/>
                 <outlet property="btnVerificationView" destination="m33-cu-arZ" id="QJV-CR-HAO"/>
+                <outlet property="largeTitleLabel" destination="KRZ-Ow-zAv" id="6EF-GY-9fJ"/>
+                <outlet property="newxtButton" destination="eJo-sl-Zin" id="Esb-lI-4hr"/>
+                <outlet property="noskinaddedButton" destination="byY-hQ-jrM" id="Odi-YL-fsv"/>
+                <outlet property="previeouseButotn" destination="Jh4-31-7Zj" id="vJC-55-hI9"/>
                 <outlet property="view" destination="gnW-dI-vOc" id="6s1-i7-Aay"/>
             </connections>
         </placeholder>
@@ -35,10 +42,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P7-G6-jc2">
-                            <rect key="frame" x="0.0" y="1" width="48" height="48"/>
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                             <subviews>
                                 <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hb-2s-2Kx">
-                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="buttonBackRoadWays"/>
@@ -50,9 +57,6 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="6hb-2s-2Kx" secondAttribute="bottom" id="E10-hz-8jj"/>
-                                <constraint firstAttribute="width" constant="48" id="Xan-tc-9mI">
-                                    <variation key="heightClass=regular-widthClass=regular" constant="82"/>
-                                </constraint>
                                 <constraint firstAttribute="width" secondItem="5P7-G6-jc2" secondAttribute="height" id="bj6-7a-hma"/>
                                 <constraint firstItem="6hb-2s-2Kx" firstAttribute="leading" secondItem="5P7-G6-jc2" secondAttribute="leading" id="eHU-1y-HRa"/>
                                 <constraint firstAttribute="trailing" secondItem="6hb-2s-2Kx" secondAttribute="trailing" id="et6-qX-iDJ"/>
@@ -62,7 +66,9 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="5P7-G6-jc2" firstAttribute="top" secondItem="4Qe-3h-xoM" secondAttribute="top" id="C8d-f5-a4o"/>
                         <constraint firstItem="5P7-G6-jc2" firstAttribute="centerY" secondItem="4Qe-3h-xoM" secondAttribute="centerY" id="NJq-EQ-lyI"/>
+                        <constraint firstAttribute="bottom" secondItem="5P7-G6-jc2" secondAttribute="bottom" id="Plt-9p-OKN"/>
                         <constraint firstItem="KRZ-Ow-zAv" firstAttribute="centerX" secondItem="4Qe-3h-xoM" secondAttribute="centerX" id="UYV-if-XGe"/>
                         <constraint firstItem="5P7-G6-jc2" firstAttribute="leading" secondItem="4Qe-3h-xoM" secondAttribute="leading" id="crs-v2-b90"/>
                         <constraint firstAttribute="height" constant="50" id="owQ-hk-DNc">
@@ -75,12 +81,12 @@
                     <rect key="frame" x="0.0" y="109" width="393" height="709"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nbq-7e-hAn">
-                            <rect key="frame" x="20" y="293.66666666666669" width="353" height="122"/>
+                            <rect key="frame" x="20" y="289.66666666666669" width="353" height="130"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g52-1D-BRI">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="112"/>
+                                <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g52-1D-BRI">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="120"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byY-hQ-jrM">
+                                        <button clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byY-hQ-jrM">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="52"/>
                                             <color key="backgroundColor" name="lightercoloruidrag"/>
                                             <constraints>
@@ -96,8 +102,8 @@
                                                 <action selector="btnNoSkinAdd:" destination="-1" eventType="touchUpInside" id="GUL-a8-rBj"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jof-rL-Yry">
-                                            <rect key="frame" x="0.0" y="60" width="353" height="52"/>
+                                        <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jof-rL-Yry">
+                                            <rect key="frame" x="0.0" y="68" width="353" height="52"/>
                                             <color key="backgroundColor" name="newblackcolorfounded"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="52" id="QTG-MB-FOM">
@@ -113,7 +119,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <variation key="heightClass=regular-widthClass=regular" spacing="8"/>
+                                    <variation key="heightClass=regular-widthClass=regular" spacing="27"/>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,10 +150,10 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-sl-Zin">
-                            <rect key="frame" x="325" y="296.66666666666669" width="48" height="48"/>
+                            <rect key="frame" x="323" y="295.66666666666669" width="50" height="50"/>
                             <subviews>
                                 <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-rl-tfM">
-                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="rightuniquechevrondelta"/>
@@ -161,18 +167,18 @@
                                 <constraint firstAttribute="trailing" secondItem="FZo-rl-tfM" secondAttribute="trailing" id="8UU-Hf-37q"/>
                                 <constraint firstAttribute="bottom" secondItem="FZo-rl-tfM" secondAttribute="bottom" id="HDS-tE-9KL"/>
                                 <constraint firstItem="FZo-rl-tfM" firstAttribute="leading" secondItem="eJo-sl-Zin" secondAttribute="leading" id="PQl-HF-yL9"/>
-                                <constraint firstAttribute="width" constant="48" id="RXo-W6-QFd">
-                                    <variation key="heightClass=regular-widthClass=regular" constant="82"/>
+                                <constraint firstAttribute="width" constant="50" id="RXo-W6-QFd">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="84"/>
                                 </constraint>
                                 <constraint firstItem="FZo-rl-tfM" firstAttribute="top" secondItem="eJo-sl-Zin" secondAttribute="top" id="hC3-ey-9ep"/>
                                 <constraint firstAttribute="width" secondItem="eJo-sl-Zin" secondAttribute="height" id="vJi-Mr-Ief"/>
                             </constraints>
                         </view>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jh4-31-7Zj">
-                            <rect key="frame" x="20" y="296.66666666666669" width="48" height="48"/>
+                            <rect key="frame" x="20" y="295.66666666666669" width="50" height="50"/>
                             <subviews>
                                 <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-nT-3aJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="buttonBackRoadWays"/>
@@ -185,7 +191,7 @@
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="jt2-nT-3aJ" secondAttribute="bottom" id="05V-He-xjL"/>
                                 <constraint firstItem="jt2-nT-3aJ" firstAttribute="top" secondItem="Jh4-31-7Zj" secondAttribute="top" id="14e-sR-mzS"/>
-                                <constraint firstAttribute="width" constant="48" id="a4a-VU-6TP">
+                                <constraint firstAttribute="width" constant="50" id="a4a-VU-6TP">
                                     <variation key="heightClass=regular-widthClass=regular" constant="82"/>
                                 </constraint>
                                 <constraint firstAttribute="width" secondItem="Jh4-31-7Zj" secondAttribute="height" id="aX3-Lh-9uK"/>

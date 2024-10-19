@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6E726E4B-F5C2-4E30-9FB9-985C7D5913A5"
+            uuid = "9F36B20D-2E0B-457F-B817-4C3B16241DA7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Avatar world city life mod/NewFiles/Utilities/FileSession_AW.swift"
+            filePath = "Avatar world city life mod/NewFiles/Controllers/HomeVC/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "getModelFromFile_AW(from:)"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "fetchFolderContents(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

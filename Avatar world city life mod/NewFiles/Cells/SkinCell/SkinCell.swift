@@ -9,11 +9,14 @@ import UIKit
 
 class SkinCell: UICollectionViewCell {
 
+    @IBOutlet weak var skinImageBGView: UIView!
     @IBOutlet weak var previewImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.previewImageView.layer.cornerRadius = self.previewImageView.frame.width / 2
+        
+        self.skinImageBGView.layer.cornerRadius = IS_IPAD ? 80 : 50
+        self.previewImageView.layer.cornerRadius = IS_IPAD ? 80 : 50
     }
 
 }
