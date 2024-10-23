@@ -25,3 +25,25 @@ func calculateCellWidth(text: String, collectionView: UICollectionView) -> CGFlo
     let cellWidth = label.frame.width + 50
     return cellWidth
 }
+
+extension UIViewController {
+
+    func loadImageFromFile(at path: String) -> Data {
+        // Create the URL from the path
+        let fileURL = URL(fileURLWithPath: path)
+        
+        // Check if the file exists at the given URL
+        if FileManager.default.fileExists(atPath: fileURL.path) {
+            // Try to load the image data
+            do {
+                let imageData = try Data(contentsOf: fileURL)
+                return imageData
+            } catch {
+                return Data()
+            }
+        } else {
+            return Data()
+        }
+    }
+
+}

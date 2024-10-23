@@ -37,6 +37,9 @@ class AppCoordinator_AW {
         let navigationController = UINavigationController(rootViewController: vc)
         self.viewController = navigationController
         navigationController.setNavigationBarHidden(true, animated: false)
+        
+        UserDefaults.isFirstOnboardCompleted = true
+        
         self.window.rootViewController = navigationController
     }
 }
@@ -58,7 +61,6 @@ extension AppCoordinator_AW {
         let contentService = ContentService_AW()
         serviceHolder.add_AW(ContentService_AW.self, for: contentService)
     }
-    
     
     private func cleanServices_AW() {
        

@@ -12,5 +12,9 @@
 		<string>gilroyStringSemiBold.ttf</string>
 		<string>gilroyIntegerThink.ttf</string>
 	</array>
+	<key>UISupportsDocumentBrowser</key>
+	<true/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need access to save images to your photo library.</string>
 </dict>
 </plist>

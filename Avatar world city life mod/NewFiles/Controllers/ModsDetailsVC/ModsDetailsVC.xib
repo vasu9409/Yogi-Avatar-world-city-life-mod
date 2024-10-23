@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +16,7 @@
                 <outlet property="detailTitleLabel" destination="BI1-ol-dxI" id="3Ex-Dj-Ggf"/>
                 <outlet property="downloadButton" destination="tIs-W5-CbQ" id="OOr-hE-H65"/>
                 <outlet property="downloadingView" destination="2gn-6M-NTM" id="Hj8-Oe-WEf"/>
+                <outlet property="heartButton" destination="91Q-ck-vIG" id="8jB-oV-0dl"/>
                 <outlet property="largeTitleLabel" destination="5hO-vz-G78" id="LR9-2Z-4m8"/>
                 <outlet property="scrollViewBGView" destination="Ggh-pl-I3i" id="JBW-Cs-EkX"/>
                 <outlet property="view" destination="7ml-d1-OyU" id="koE-JB-1Jc"/>
@@ -82,14 +83,29 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggh-pl-I3i">
                             <rect key="frame" x="0.0" y="20" width="353" height="915.33333333333337"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-V0-Tux">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-V0-Tux">
                                     <rect key="frame" x="8" y="8" width="337" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="3Xd-Ug-Hnt">
                                             <variation key="heightClass=regular-widthClass=regular" constant="340"/>
                                         </constraint>
                                     </constraints>
                                 </imageView>
+                                <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91Q-ck-vIG">
+                                    <rect key="frame" x="12" y="12" width="48" height="48"/>
+                                    <color key="backgroundColor" name="newblackcolorfounded"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="kEZ-tg-cmH">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="82"/>
+                                        </constraint>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="newStromheartStone"/>
+                                    <connections>
+                                        <action selector="heartButton:" destination="-1" eventType="touchUpInside" id="9zC-Wt-rUf"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-W5-CbQ">
                                     <rect key="frame" x="8" y="220" width="337" height="48"/>
                                     <color key="backgroundColor" name="newblackcolorfounded"/>
@@ -147,6 +163,7 @@
                             </subviews>
                             <color key="backgroundColor" name="lightercoloruidrag"/>
                             <constraints>
+                                <constraint firstItem="91Q-ck-vIG" firstAttribute="leading" secondItem="3hl-V0-Tux" secondAttribute="leading" constant="4" id="1rT-hT-N6U"/>
                                 <constraint firstItem="2gn-6M-NTM" firstAttribute="trailing" secondItem="tIs-W5-CbQ" secondAttribute="trailing" constant="-15" id="3by-yH-Bjd">
                                     <variation key="heightClass=regular-widthClass=regular" constant="-26"/>
                                 </constraint>
@@ -155,10 +172,12 @@
                                     <variation key="heightClass=regular-widthClass=regular" constant="14"/>
                                 </constraint>
                                 <constraint firstAttribute="trailing" secondItem="PPJ-hh-wWA" secondAttribute="trailing" constant="8" id="FLc-Zv-79A"/>
+                                <constraint firstItem="91Q-ck-vIG" firstAttribute="top" secondItem="3hl-V0-Tux" secondAttribute="top" constant="4" id="SB0-Ei-A07"/>
                                 <constraint firstAttribute="bottom" secondItem="xgO-S2-ULX" secondAttribute="bottom" constant="10" id="WRy-bR-Ow8">
                                     <variation key="heightClass=regular-widthClass=regular" constant="18"/>
                                 </constraint>
                                 <constraint firstItem="PPJ-hh-wWA" firstAttribute="top" secondItem="tIs-W5-CbQ" secondAttribute="bottom" constant="16" id="Wes-cI-qDI"/>
+                                <constraint firstItem="91Q-ck-vIG" firstAttribute="width" secondItem="91Q-ck-vIG" secondAttribute="height" id="bkt-1I-D2O"/>
                                 <constraint firstItem="3hl-V0-Tux" firstAttribute="top" secondItem="Ggh-pl-I3i" secondAttribute="top" constant="8" id="fFI-iJ-ecR">
                                     <variation key="heightClass=regular-widthClass=regular" constant="14"/>
                                 </constraint>
@@ -227,6 +246,7 @@
         <image name="buttonBackRoadWays" width="48" height="48"/>
         <image name="ipadOrientationViewImageShadow" width="1024" height="1366"/>
         <image name="modsImageBackgroundMedic" width="375" height="812"/>
+        <image name="newStromheartStone" width="24" height="24"/>
         <namedColor name="lightercoloruidrag">
             <color red="0.88235294117647056" green="1" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

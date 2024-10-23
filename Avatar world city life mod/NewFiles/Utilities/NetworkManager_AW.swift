@@ -83,9 +83,13 @@ private extension NetworkManager_AW {
         if let error { print(error.localizedDescription) }
         
         
-        if let jsonDict = try! JSONSerialization.jsonObject(with: data ?? Data())
-            as? [String: Any] {
-            print(jsonDict)
+        do {
+            if let jsonDict = try JSONSerialization.jsonObject(with: data ?? Data())
+                as? [String: Any] {
+                print(jsonDict)
+            }
+        } catch {
+            print(error)
         }
         
         do {

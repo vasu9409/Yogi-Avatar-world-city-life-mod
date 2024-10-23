@@ -17,10 +17,14 @@ class ModsVCViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
         
-    var categoryNameArray: [String] = ["All", "New", "Favourites", "New"]
+    var categoryNameArray: [String] = ["All", "New", "Favourites", "Popular"]
     var selectedcategoryName: String = "All"
     
     var modsDataModel: [E8V] = []
+    var favouritesArray: [E8V] = []
+    var filterArray: [E8V] = []
+    
+    let localFolderPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path + "/content"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,15 +51,17 @@ class ModsVCViewController: UIViewController {
     }
     
     func fetchModsData() {
-        let jsonFilePath = filesPath.first { $0.lastPathComponent == ContentType_AW.mod.rawValue }
+        let jsonFilePath = localFolderPath + "/" + ContentType_AW.mod.rawValue + "/" + "content.json"
         
-        if let files: Mods = FileSession_AW.shared.getModelFromFile_AW(from: jsonFilePath!) {
+        if let files: Mods = FileSession_AW.shared.getModelFromFile_AW(from: URL(fileURLWithPath: jsonFilePath)) {
             self.modsDataModel.removeAll()
             for (_, value) in files.the7Rqpw.e8V {
                 
                 self.modsDataModel.append(value)
                 
             }
+            
+            self.filterArray = self.modsDataModel
         }
     }
     
@@ -79,34 +85,48 @@ class ModsVCViewController: UIViewController {
 
 extension ModsVCViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.modsDataModel.count
+        return self.filterArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModsTableCell", for: indexPath) as? ModsTableCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         
-        cell.nameLabel.text = self.modsDataModel[indexPath.row].title
+        cell.nameLabel.text = self.filterArray[indexPath.row].title
+        
+        let imagePath = self.localFolderPath + "/" + ContentType_AW.mod.rawValue + "/" + self.modsDataModel[indexPath.row].the00Ika
+        cell.cellImageView.image = UIImage(data: self.loadImageFromFile(at: imagePath))
+        
+        if self.favouritesArray.contains(where: { $0.the00Ika == self.filterArray[indexPath.row].the00Ika}) {
+            cell.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
+        } else {
+            cell.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
+        }
         
         cell.isArrowButtonTapped = { [weak self] in
             guard let self else { return }
             let ctrl = ModsDetailsVC()
             ctrl.largeTitle = "Mods"
-            ctrl.modsDetailsMode = self.modsDataModel[indexPath.row]
+            ctrl.modsDetailsMode = self.filterArray[indexPath.row]
             self.navigationController?.pushViewController(ctrl, animated: true)
         }
         
         cell.isheartButtonTapped = { [weak self] in
             guard let self else { return }
-            let ctrl = ModsDetailsVC()
-            self.navigationController?.pushViewController(ctrl, animated: true)
+            if let index = self.favouritesArray.firstIndex(where: { $0.the00Ika == self.filterArray[indexPath.row].the00Ika }) {
+                self.favouritesArray.remove(at: index)
+            } else {
+                self.favouritesArray.append(self.filterArray[indexPath.row])
+            }
+            
+            self.tableView.reloadData()
         }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return IS_IPAD ? 368 : 216
+        return IS_IPAD ? 408 : 246
     }
 }
 
@@ -121,6 +141,7 @@ extension ModsVCViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         cell.catNameLabel.text = self.categoryNameArray[indexPath.row]
         
+        
         cell.selected(self.selectedcategoryName == self.categoryNameArray[indexPath.row])
         
         return cell
@@ -131,6 +152,23 @@ extension ModsVCViewController: UICollectionViewDelegate, UICollectionViewDataSo
         self.selectedcategoryName = self.categoryNameArray[indexPath.row]
         self.collectionView.reloadData()
         
+        switch self.categoryNameArray[indexPath.row] {
+        case "All" :
+            self.filterArray = self.modsDataModel
+            break
+        case "New" :
+            self.filterArray = self.modsDataModel.filter { $0.isNew }
+            break
+        case "Favourites" :
+            self.filterArray = self.favouritesArray
+            break
+        case "Popular" :
+            self.filterArray = self.modsDataModel.filter { $0.isPopular }
+            break
+        default : break
+        }
+        
+        self.tableView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -27,6 +27,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.setupUI()
         self.setupTableView()
         self.isLockedCell = false
@@ -189,6 +190,7 @@ extension DBManager_AW {
             if let error = error {
                 completion(.failure(error))
             } else if let result = result {
+                
                 let files = result.entries.map { DropboxFile(entry: $0) }
                 completion(.success(files))
             }

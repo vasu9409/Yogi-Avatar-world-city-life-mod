@@ -8,19 +8,19 @@
 import Foundation
 import UIKit
 
-final class CharacterEditorImage_AW: UIView {
+final class CharacterEditorImage_AW: UIViewBase {
     
-    @IBOutlet weak var bodyImageView: CachedImageView_AW!
-    @IBOutlet weak var shoesImageView: CachedImageView_AW!
-    @IBOutlet weak var hairImageView: CachedImageView_AW!
-    @IBOutlet weak var eyesImageView: CachedImageView_AW!
-    @IBOutlet weak var noseImageView: CachedImageView_AW!
-    @IBOutlet weak var eyebrowsImageView: CachedImageView_AW!
-    @IBOutlet weak var mouthImageView: CachedImageView_AW!
-    @IBOutlet weak var hatsImageView: CachedImageView_AW!
-    @IBOutlet weak var shirtImageView: CachedImageView_AW!
-    @IBOutlet weak var trousersImageView: CachedImageView_AW!
-    @IBOutlet weak var hairsBack: CachedImageView_AW!
+    @IBOutlet weak var bodyImageView: UIImageView!
+    @IBOutlet weak var shoesImageView: UIImageView!
+    @IBOutlet weak var hairImageView: UIImageView!
+    @IBOutlet weak var eyesImageView: UIImageView!
+    @IBOutlet weak var noseImageView: UIImageView!
+    @IBOutlet weak var eyebrowsImageView: UIImageView!
+    @IBOutlet weak var mouthImageView: UIImageView!
+    @IBOutlet weak var hatsImageView: UIImageView!
+    @IBOutlet weak var shirtImageView: UIImageView!
+    @IBOutlet weak var trousersImageView: UIImageView!
+    @IBOutlet weak var hairsBack: UIImageView!
 
     
     var contents: [EditorContentDataModel_AW] = []
@@ -47,72 +47,72 @@ final class CharacterEditorImage_AW: UIView {
     }
     
     func setupContents_AW(contents: [EditorContentDataModel_AW]) {
-        self.contents = contents
-        
-        let selectedContents = contents.filter { $0.isSelected == true }
-        
-        selectedContents.forEach { [weak self] editorContent in
-            switch editorContent.type {
-            case .shoes:
-                self?.shoesImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .hair:
-                self?.hairImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .eyes:
-                self?.eyesImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .nose:
-                self?.noseImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .brows:
-                self?.eyebrowsImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .mouth:
-                self?.mouthImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .headdress:
-                self?.hatsImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .top:
-                self?.shirtImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .trousers:
-                self?.trousersImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .body:
-                self?.bodyImageView.getPdfImage_AW(with: editorContent.imgData )
-            case .hairBack:
-                self?.hairsBack.getPdfImage_AW(with: editorContent.imgData)
-            }
-        }
+//        self.contents = contents
+//        
+//        let selectedContents = contents.filter { $0.isSelected == true }
+//        
+//        selectedContents.forEach { [weak self] editorContent in
+//            switch editorContent.type {
+//            case .shoes:
+//                self?.shoesImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .hair:
+//                self?.hairImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .eyes:
+//                self?.eyesImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .nose:
+//                self?.noseImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .brows:
+//                self?.eyebrowsImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .mouth:
+//                self?.mouthImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .headdress:
+//                self?.hatsImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .top:
+//                self?.shirtImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .trousers:
+//                self?.trousersImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .body:
+//                self?.bodyImageView.getPdfImage_AW(with: editorContent.imgData )
+//            case .hairBack:
+//                self?.hairsBack.getPdfImage_AW(with: editorContent.imgData)
+//            }
+//        }
     }
     
    
     func changeStatus_AW(with content: EditorContentDataModel_AW) {
-        if let index = self.contents.firstIndex(where: {$0.type == content.type}) {
-            self.contents.remove(at: index)
-            if self.contents.count < index {
-                self.contents[index] = content
-            }
-        }
-        
-        switch content.type {
-            
-        case .shoes:
-            self.shoesImageView.getPdfImage_AW(with: content.imgData )
-        case .hair:
-            self.hairImageView.getPdfImage_AW(with: content.imgData )
-        case .eyes:
-            self.eyesImageView.getPdfImage_AW(with: content.imgData )
-        case .nose:
-            self.noseImageView.getPdfImage_AW(with: content.imgData )
-        case .brows:
-            self.eyebrowsImageView.getPdfImage_AW(with: content.imgData )
-        case .mouth:
-            self.mouthImageView.getPdfImage_AW(with: content.imgData )
-        case .headdress:
-            self.hatsImageView.getPdfImage_AW(with: content.imgData )
-        case .top:
-            self.shirtImageView.getPdfImage_AW(with: content.imgData )
-        case .trousers:
-            self.trousersImageView.getPdfImage_AW(with: content.imgData )
-        case .body:
-            self.bodyImageView.getPdfImage_AW(with: content.imgData )
-        case .hairBack:
-            self.hairsBack.getPdfImage_AW(with: content.imgData)
-        }
+//        if let index = self.contents.firstIndex(where: {$0.type == content.type}) {
+//            self.contents.remove(at: index)
+//            if self.contents.count < index {
+//                self.contents[index] = content
+//            }
+//        }
+//        
+//        switch content.type {
+//            
+//        case .shoes:
+//            self.shoesImageView.getPdfImage_AW(with: content.imgData )
+//        case .hair:
+//            self.hairImageView.getPdfImage_AW(with: content.imgData )
+//        case .eyes:
+//            self.eyesImageView.getPdfImage_AW(with: content.imgData )
+//        case .nose:
+//            self.noseImageView.getPdfImage_AW(with: content.imgData )
+//        case .brows:
+//            self.eyebrowsImageView.getPdfImage_AW(with: content.imgData )
+//        case .mouth:
+//            self.mouthImageView.getPdfImage_AW(with: content.imgData )
+//        case .headdress:
+//            self.hatsImageView.getPdfImage_AW(with: content.imgData )
+//        case .top:
+//            self.shirtImageView.getPdfImage_AW(with: content.imgData )
+//        case .trousers:
+//            self.trousersImageView.getPdfImage_AW(with: content.imgData )
+//        case .body:
+//            self.bodyImageView.getPdfImage_AW(with: content.imgData )
+//        case .hairBack:
+//            self.hairsBack.getPdfImage_AW(with: content.imgData)
+//        }
     }
     
     private func takeScreenshot_AW(of view: UIView) -> UIImage? {

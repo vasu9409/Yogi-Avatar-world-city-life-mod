@@ -16,6 +16,7 @@
 		59265E7B2CBA932100D6569C /* HouseIdeasVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59265E792CBA932100D6569C /* HouseIdeasVC.xib */; };
 		59265E7F2CBA93AA00D6569C /* HouseIdeasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59265E7D2CBA93AA00D6569C /* HouseIdeasCell.swift */; };
 		59265E802CBA93AA00D6569C /* HouseIdeasCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59265E7E2CBA93AA00D6569C /* HouseIdeasCell.xib */; };
+		59334D8F2CC89DD0009488E1 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59334D8E2CC89DD0009488E1 /* UserDefaults.swift */; };
 		594335B62CBE15410060D66D /* StoreManager_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594335B32CBE15410060D66D /* StoreManager_AW.swift */; };
 		594335B72CBE15410060D66D /* NetworkManager_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594335B12CBE15410060D66D /* NetworkManager_AW.swift */; };
 		594335B82CBE15410060D66D /* ContentType_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594335AC2CBE15410060D66D /* ContentType_AW.swift */; };
@@ -111,6 +112,7 @@
 		59265E792CBA932100D6569C /* HouseIdeasVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseIdeasVC.xib; sourceTree = "<group>"; };
 		59265E7D2CBA93AA00D6569C /* HouseIdeasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseIdeasCell.swift; sourceTree = "<group>"; };
 		59265E7E2CBA93AA00D6569C /* HouseIdeasCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseIdeasCell.xib; sourceTree = "<group>"; };
+		59334D8E2CC89DD0009488E1 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		594335AA2CBE15410060D66D /* ApkStoreManager_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApkStoreManager_AW.swift; sourceTree = "<group>"; };
 		594335AB2CBE15410060D66D /* ContentManager_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager_AW.swift; sourceTree = "<group>"; };
 		594335AC2CBE15410060D66D /* ContentType_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType_AW.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				594335B22CBE15410060D66D /* ReachabilityManager_AW.swift */,
 				594335B32CBE15410060D66D /* StoreManager_AW.swift */,
 				594335B42CBE15410060D66D /* StoreManagerCharacters_AW.swift */,
+				59334D8E2CC89DD0009488E1 /* UserDefaults.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				594335EA2CBE196D0060D66D /* CachedImageView_AW.swift in Sources */,
 				594335BF2CBE15410060D66D /* InternetManager_AW.swift in Sources */,
 				594335C02CBE15410060D66D /* StoreManagerCharacters_AW.swift in Sources */,
+				59334D8F2CC89DD0009488E1 /* UserDefaults.swift in Sources */,
 				5966E0DB2CB6DC0500294C90 /* PopUPView.swift in Sources */,
 				597CD0D02CA9358500D8BF2B /* ModsVCViewController.swift in Sources */,
 				594335C52CBE15670060D66D /* SkinCell.swift in Sources */,

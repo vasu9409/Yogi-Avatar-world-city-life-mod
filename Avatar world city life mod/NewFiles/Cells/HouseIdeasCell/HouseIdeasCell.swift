@@ -19,11 +19,11 @@ class HouseIdeasCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.mainBGView.layer.cornerRadius = IS_IPAD ? 52 : 18
-        self.cellImageVIew.layer.cornerRadius = IS_IPAD ? 52 : 18
+        self.mainBGView.layer.cornerRadius = IS_IPAD ? 52 : 28
+        self.cellImageVIew.layer.cornerRadius = IS_IPAD ? 52 : 24
         self.heartButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         
-        self.ideaTitleName.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
+        self.ideaTitleName.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 18, style: .bold)
     }
     
     @IBAction func heartButton(_ sender: Any) {

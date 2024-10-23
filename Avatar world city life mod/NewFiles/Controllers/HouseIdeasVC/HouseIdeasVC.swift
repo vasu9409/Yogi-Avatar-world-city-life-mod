@@ -7,6 +7,8 @@
 
 import UIKit
 
+let localFolderPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path + "/content"
+
 class HouseIdeasVC: UIViewController {
 
     @IBOutlet weak var searchButtonView: UIView!
@@ -19,10 +21,12 @@ class HouseIdeasVC: UIViewController {
     
     var isForMods: Bool = false
     
-    var categoryNameArray: [String] = ["All", "New", "Favourites", "New"]
+    var categoryNameArray: [String] = ["All", "New", "Favourites", "Top"]
     var selectedcategoryName: String = "All"
     
     var houseIdeaDataModel: [The8Ua8Onb] = []
+    var favouritesArray: [The8Ua8Onb] = []
+    var filterArray: [The8Ua8Onb] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,15 +51,18 @@ class HouseIdeasVC: UIViewController {
     }
     
     func fetchModsData() {
-        let jsonFilePath = filesPath.first { $0.lastPathComponent == ContentType_AW.houseIdeas.rawValue }
+        let jsonFilePath = localFolderPath + "/" + ContentType_AW.houseIdeas.rawValue + "/" + "content.json"
         
-        if let files: HouseIdeas = FileSession_AW.shared.getModelFromFile_AW(from: jsonFilePath!) {
+        
+        if let files: HouseIdeas = FileSession_AW.shared.getModelFromFile_AW(from: URL(fileURLWithPath: jsonFilePath)) {
             self.houseIdeaDataModel.removeAll()
             for (_, value) in files.um3Jdnw.the8Ua8Onb {
                 
                 self.houseIdeaDataModel.append(value)
                 
             }
+            
+            self.filterArray = self.houseIdeaDataModel
         }
     }
     
@@ -83,7 +90,7 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         if collectionView == self.catCollectionView {
             return self.categoryNameArray.count
         }
-        return self.houseIdeaDataModel.count
+        return self.filterArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -99,12 +106,29 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HouseIdeasCell", for: indexPath) as? HouseIdeasCell else { return UICollectionViewCell() }
             
-            cell.ideaTitleName.text = self.houseIdeaDataModel[indexPath.row].title
+            cell.ideaTitleName.text = self.filterArray[indexPath.row].title
+            
+            if self.favouritesArray.contains(where: { $0.the1477 == self.filterArray[indexPath.row].the1477}) {
+                cell.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
+            } else {
+                cell.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
+            }
+            
+            
+            let imagePath = localFolderPath + "/" + ContentType_AW.houseIdeas.rawValue + "/" + self.filterArray[indexPath.row].the1477
+            cell.cellImageVIew.image = UIImage(data: self.loadImageFromFile(at: imagePath))
             
             cell.isheartButtonTapped = { [weak self] in
                 guard let self else { return }
-                let ctrl = ModsDetailsVC()
-                self.navigationController?.pushViewController(ctrl, animated: true)
+                if let index = self.favouritesArray.firstIndex(where: { $0.the1477 == self.filterArray[indexPath.row].the1477 }) {
+                    self.favouritesArray.remove(at: index)
+                    cell.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
+                } else {
+                    self.favouritesArray.append(self.filterArray[indexPath.row])
+                    cell.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
+                }
+                
+                self.collectionView.reloadData()
             }
             
             return cell
@@ -116,10 +140,30 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         if collectionView == self.catCollectionView {
             self.selectedcategoryName = self.categoryNameArray[indexPath.row]
             self.catCollectionView.reloadData()
+            
+            switch self.categoryNameArray[indexPath.row] {
+            case "All" :
+                self.filterArray = self.houseIdeaDataModel
+                break
+            case "New" :
+                self.filterArray = self.houseIdeaDataModel.filter { $0.isNew }
+                break
+            case "Favourites" :
+                self.filterArray = self.favouritesArray
+                break
+            case "Top" :
+                self.filterArray = self.houseIdeaDataModel.filter { $0.isTop }
+                break
+            default : break
+            }
+            
+            self.collectionView.reloadData()
+            
+            
         } else {
             let ctrl = ModsDetailsVC()
             ctrl.largeTitle = "House ideas"
-            ctrl.detailsMode = self.houseIdeaDataModel[indexPath.row]
+            ctrl.detailsMode = self.filterArray[indexPath.row]
             self.navigationController?.pushViewController(ctrl, animated: true)
         }
         

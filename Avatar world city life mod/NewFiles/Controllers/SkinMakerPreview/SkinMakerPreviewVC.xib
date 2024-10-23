@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="categoryCollectionView" destination="ePx-Cg-eld" id="K4W-md-Boj"/>
                 <outlet property="editingPictureView" destination="Jni-CN-SjT" id="1gf-QU-Pih"/>
+                <outlet property="largeTitleLabel" destination="td2-Kh-2QI" id="wo2-Kn-6oi"/>
                 <outlet property="themeCollectionView" destination="PKC-3D-9Yd" id="wNm-oo-1Il"/>
                 <outlet property="view" destination="uUy-PL-7bH" id="xh0-lk-0RW"/>
             </connections>
@@ -57,15 +58,40 @@
                                 <constraint firstAttribute="bottom" secondItem="MOU-ds-gc2" secondAttribute="bottom" id="wud-1v-yuH"/>
                             </constraints>
                         </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtH-ch-vpp">
+                            <rect key="frame" x="301" y="0.0" width="52" height="52"/>
+                            <subviews>
+                                <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jni-1z-WPO">
+                                    <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="checkFinishedEditingButtonBlack"/>
+                                    <connections>
+                                        <action selector="btnSave:" destination="-1" eventType="touchUpInside" id="HrD-iw-I5u"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ZtH-ch-vpp" secondAttribute="height" id="dnd-8F-cfy"/>
+                                <constraint firstItem="jni-1z-WPO" firstAttribute="leading" secondItem="ZtH-ch-vpp" secondAttribute="leading" id="mTt-ll-KhT"/>
+                                <constraint firstAttribute="bottom" secondItem="jni-1z-WPO" secondAttribute="bottom" id="nVY-9q-Px3"/>
+                                <constraint firstItem="jni-1z-WPO" firstAttribute="top" secondItem="ZtH-ch-vpp" secondAttribute="top" id="wdc-L8-eVg"/>
+                                <constraint firstAttribute="trailing" secondItem="jni-1z-WPO" secondAttribute="trailing" id="zO5-ja-KDM"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="td2-Kh-2QI" firstAttribute="centerX" secondItem="QhV-l5-TFM" secondAttribute="centerX" id="52n-ul-VAc"/>
+                        <constraint firstItem="ZtH-ch-vpp" firstAttribute="top" secondItem="QhV-l5-TFM" secondAttribute="top" id="5iV-rG-BaF"/>
                         <constraint firstItem="8rC-tN-IqB" firstAttribute="top" secondItem="QhV-l5-TFM" secondAttribute="top" id="5yN-gI-aga"/>
                         <constraint firstItem="8rC-tN-IqB" firstAttribute="leading" secondItem="QhV-l5-TFM" secondAttribute="leading" id="BYB-SI-T3g"/>
                         <constraint firstItem="8rC-tN-IqB" firstAttribute="centerY" secondItem="QhV-l5-TFM" secondAttribute="centerY" id="KLC-8T-rT6"/>
+                        <constraint firstAttribute="bottom" secondItem="ZtH-ch-vpp" secondAttribute="bottom" id="TKj-gU-hUW"/>
                         <constraint firstAttribute="bottom" secondItem="8rC-tN-IqB" secondAttribute="bottom" id="WiF-Zx-7l8"/>
                         <constraint firstItem="td2-Kh-2QI" firstAttribute="centerY" secondItem="QhV-l5-TFM" secondAttribute="centerY" id="bIF-tT-2HD"/>
+                        <constraint firstAttribute="trailing" secondItem="ZtH-ch-vpp" secondAttribute="trailing" id="cYd-ci-6FA"/>
                         <constraint firstAttribute="height" constant="52" id="o3T-kn-SKM">
                             <variation key="heightClass=regular-widthClass=regular" constant="84"/>
                         </constraint>
@@ -101,7 +127,7 @@
                         <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jni-CN-SjT">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jni-CN-SjT" customClass="CharacterEditorImage_AW" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="175" width="393" height="543"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
@@ -138,6 +164,7 @@
     </objects>
     <resources>
         <image name="buttonBackRoadWays" width="48" height="48"/>
+        <image name="checkFinishedEditingButtonBlack" width="83" height="82"/>
         <image name="ipadOrientationViewImageShadow" width="1024" height="1366"/>
         <image name="modsImageBackgroundMedic" width="375" height="812"/>
         <namedColor name="newblackcolorfounded">

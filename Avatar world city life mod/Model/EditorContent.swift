@@ -39,15 +39,15 @@ struct Z3D: Codable {
 // MARK: - Accessory
 struct Accessory: Codable {
     let isNew, isTop: Bool
-    let the2RwLV: String
+    let previewImage: String
     let the278Ttts: The278Ttts
-    let the227Pbhq: String
+    let imageOriginal: String
 
     enum CodingKeys: String, CodingKey {
         case isNew, isTop
-        case the2RwLV = "2rw-lv"
+        case previewImage = "2rw-lv"
         case the278Ttts = "278ttts_"
-        case the227Pbhq = "227pbhq"
+        case imageOriginal = "227pbhq"
     }
 }
 

@@ -26,17 +26,25 @@ class SkinMakerVC: UIViewController {
         }
     }
     
+    var skinAdded: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.isShowVerification = (self.skinAdded.count == 0)
         
         self.largeTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
         self.AddNewButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
         self.noskinaddedButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
         self.addNewSkinButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
         
-        self.isShowVerification = true
-        
         self.setupUI()
+        
+        
+        
+        
+        
+        
     }
     
     @IBAction func btnAddSkin(_ sender: Any) {

@@ -15,6 +15,7 @@ class ModsDetailsVC: UIViewController {
     @IBOutlet weak var detailTitleLabel: UILabel!
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var downloadingView: LinearProgressBar!
+    @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var downloadButton: UIButton!
     
     var modsDetailsMode: E8V?
@@ -30,10 +31,12 @@ class ModsDetailsVC: UIViewController {
         
         self.downloadButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 22, style: .semiBold)
         
-        self.scrollViewBGView.layer.cornerRadius = IS_IPAD ? 46 : 24
+        self.scrollViewBGView.layer.cornerRadius = IS_IPAD ? 52 : 28
         self.downloadButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         self.downloadingView.layer.cornerRadius = IS_IPAD ? 41 : 24
+        self.detailImageView.layer.cornerRadius = IS_IPAD ? 52 : 24
         self.downloadingView.isHidden = true
+        self.heartButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         
 //        https://stackoverflow.com/questions/67126979/how-to-animate-custom-progress-bar-properly-swift
         
@@ -42,16 +45,27 @@ class ModsDetailsVC: UIViewController {
         if let data = self.detailsMode {
             self.detailTitleLabel.text = data.title
             self.detailDescriptionLabel.text = data.description
+            let imagePath = localFolderPath + "/" + ContentType_AW.houseIdeas.rawValue + "/" + data.the1477
+            self.detailImageView.image = UIImage(data: self.loadImageFromFile(at: imagePath))
         }
         
         if let data = self.modsDetailsMode {
             self.detailTitleLabel.text = data.title
             self.detailDescriptionLabel.text = data.description
+            let imagePath = localFolderPath + "/" + ContentType_AW.mod.rawValue + "/" + data.the00Ika
+            self.detailImageView.image = UIImage(data: self.loadImageFromFile(at: imagePath))
         }
+        
+        self.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
+        self.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .selected)
     }
     
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func heartButton(_ sender: Any) {
+        
     }
     
     func setupProgress() {

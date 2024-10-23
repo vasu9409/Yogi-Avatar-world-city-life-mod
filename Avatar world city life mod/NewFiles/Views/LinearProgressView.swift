@@ -97,7 +97,7 @@ class LinearProgressBar: UIView {
         
         // Apply corner radius and update progress layer frame
         progressLayer.frame = CGRect(x: innerRect.origin.x, y: innerRect.origin.y, width: progressWidth, height: innerRect.height)
-        progressLayer.cornerRadius = innerRect.height / 2
+        progressLayer.cornerRadius = innerRect.height / 2 + 1
         progressLayer.masksToBounds = true
 
         // Update percentageLabel text
@@ -105,7 +105,7 @@ class LinearProgressBar: UIView {
         percentageLabel.text = "\(percentage)%"
 
         // Change the label color if progress is more than 45%
-        if progress > 0.45 {
+        if progress > 0.49 {
             percentageLabel.textColor = UIColor(named: "whitedowncolorset")
         } else {
             percentageLabel.textColor = UIColor(named: "newblackcolorfounded")
