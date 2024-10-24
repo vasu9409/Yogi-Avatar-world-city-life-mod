@@ -12,6 +12,7 @@ import RealmSwift
 class SkinMakerVC: UIViewController {
     
 
+    @IBOutlet weak var deleteButton: UIView!
     @IBOutlet weak var imageSkinView: UIImageView!
     @IBOutlet weak var backButtonView: UIView!
     @IBOutlet weak var AddNewButton: UIButton!
@@ -59,8 +60,8 @@ class SkinMakerVC: UIViewController {
         
         if self.savedSkins.count > 1 {
             
-            self.newxtButton.isHidden = true
-            self.previeouseButotn.isHidden = true
+            self.newxtButton.isHidden = false
+            self.previeouseButotn.isHidden = false
             
         } else {
             
@@ -69,11 +70,13 @@ class SkinMakerVC: UIViewController {
             
         }
         
+        self.deleteButton.isHidden = true
+        
         if self.savedSkins.count > 0 {
             for imageData in self.savedSkins {
                 self.imageDataArray.append(imageData.data ?? Data())
             }
-            
+            self.deleteButton.isHidden = false
             self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
         }
         
@@ -81,6 +84,10 @@ class SkinMakerVC: UIViewController {
     
     @IBAction func deleteButton(_ sender: Any) {
         
+        let ctrl = DeleteVC()
+        ctrl.modalPresentationStyle = .overFullScreen
+        ctrl.savedSkins = self.savedSkins[self.currentIndex]
+        self.present(ctrl, animated: false)
     }
     
     @IBAction func btnAddSkin(_ sender: Any) {
@@ -89,9 +96,7 @@ class SkinMakerVC: UIViewController {
     }
     
     @IBAction func btnNoSkinAdd(_ sender: Any) {
-        let ctrl = DeleteVC()
-        ctrl.savedSkins = self.savedSkins[self.currentIndex]
-        self.present(ctrl, animated: false)
+
     }
     
     @IBAction func btnRight(_ sender: Any) {

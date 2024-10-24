@@ -8,6 +8,10 @@
 import RealmSwift
 import UIKit
 
+protocol ShowSkinAppliedVCDelegate: AnyObject {
+    func didShowSkinApplied()
+}
+
 class ShowSkinApplied: UIViewController {
     
     @IBOutlet weak var backButtonView: UIView!
@@ -29,11 +33,21 @@ class ShowSkinApplied: UIViewController {
         self.btnDownload.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
         
         self.btnDownload.layer.cornerRadius = IS_IPAD ? 41 : 24
+//        self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 41 : 24
         self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 41 : 24
+        
+        
         
         self.downloadingLinearView.isHidden = true
         
         self.btnPreviewView.image = self.selectedImage
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.btnDownload.isHidden = false
+        self.downloadingLinearView.isHidden = true
     }
     
     
@@ -76,6 +90,8 @@ class ShowSkinApplied: UIViewController {
             
             let ctrl = PopUPView()
             ctrl.nameLabelText = nameLabelText
+            ctrl.delegate = self
+            ctrl.modalPresentationStyle = .overFullScreen
             self.present(ctrl, animated: false, completion: nil)
             
         } catch {
@@ -83,19 +99,29 @@ class ShowSkinApplied: UIViewController {
             nameLabelText = "Download is failed"
             
             let ctrl = PopUPView()
+            ctrl.modalPresentationStyle = .overFullScreen
             ctrl.nameLabelText = nameLabelText
+            ctrl.delegate = self
             self.present(ctrl, animated: false, completion: nil)
         }
     }
     
     func setupProgress() {
         
-        self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 23 : 13
+        self.downloadingLinearView.isHidden = false
+        self.btnDownload.isHidden = true
+        
+        
+        self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 35 : 20
+        self.downloadingLinearView.cornerRadius = IS_IPAD ? 35 : 20
+        self.downloadingLinearView.clipsToBounds = true
         self.downloadingLinearView.barColor = UIColor(named: "newblackcolorfounded")!
         self.downloadingLinearView.borderColor = UIColor(named: "lightercoloruidrag")!
-        self.downloadingLinearView.borderWidth = 3
+        self.downloadingLinearView.borderWidth = IS_IPAD ? 4 : 7
         self.downloadingLinearView.spacing = 0
         self.downloadingLinearView.innerSpacing = 0
+        self.downloadingLinearView.progress = 0
+        
         
         let interval: TimeInterval = 0.02 // Small interval for smooth animation
         var elapsedTime: TimeInterval = 0
@@ -114,6 +140,19 @@ class ShowSkinApplied: UIViewController {
                 timer.invalidate()  // Stop the timer when it reaches 100%
                 
                 self.saveImageToRealm()
+            }
+        }
+    }
+}
+
+extension ShowSkinApplied: ShowSkinAppliedVCDelegate{
+    
+    func didShowSkinApplied() {
+        for controller in self.navigationController?.viewControllers ?? [] {
+            if let specificVC = controller as? SkinMakerVC {
+                // Navigate to this view controller
+                self.navigationController?.popToViewController(specificVC, animated: true)
+                break
             }
         }
     }

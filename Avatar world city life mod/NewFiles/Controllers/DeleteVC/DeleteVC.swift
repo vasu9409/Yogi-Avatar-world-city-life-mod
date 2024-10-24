@@ -24,12 +24,18 @@ class DeleteVC: UIViewController {
         super.viewDidLoad()
         
         
-        self.titleBackView.layer.cornerRadius = IS_IPAD ? 44 : 26
+        self.titleBackView.layer.cornerRadius = IS_IPAD ? 40 : 22
         self.titleBackView.clipsToBounds = true
-        self.cancelButton.layer.cornerRadius = IS_IPAD ? 44 : 26
+        self.cancelButton.layer.cornerRadius = IS_IPAD ? 40 : 22
         self.cancelButton.clipsToBounds = true
-        self.deleteButton.layer.cornerRadius = IS_IPAD ? 44 : 26
+        self.deleteButton.layer.cornerRadius = IS_IPAD ? 40 : 22
         self.deleteButton.clipsToBounds = true
+        
+        self.titleMSGLabe.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 22, style: .semiBold)
+        self.cancelButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 20, style: .Medium)
+        self.deleteButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 20, style: .Medium)
+        
+        
         
         applyBlur(self.view)
     }

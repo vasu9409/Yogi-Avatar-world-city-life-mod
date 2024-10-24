@@ -46,6 +46,7 @@ class SkinMakerPreviewVC: UIViewController {
         self.themeCollectionView.dataSource = self
         self.themeCollectionView.registerNib(for: "SkinCell")
         
+        self.assignFirstTime()
     }
     
     @IBAction func btnBack(_ sender: Any) {
@@ -312,6 +313,40 @@ extension SkinMakerPreviewVC: UICollectionViewDelegate, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: (IS_IPAD ? 100 : 16), bottom: 0, right: (IS_IPAD ? 100 : 16))
+    }
+    
+    func assignFirstTime() {
+        
+        let shoesImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Shoes" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.shoesImageView.image = UIImage(data: self.loadImageFromFile(at: shoesImage) )
+
+        let eyesImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Eyes" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.eyesImageView.image = UIImage(data: self.loadImageFromFile(at: eyesImage) )
+        
+        let bodyImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Body" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.bodyImageView.image = UIImage(data: self.loadImageFromFile(at: bodyImage) )
+        
+        let mouthImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Mouth" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.mouthImageView.image = UIImage(data: self.loadImageFromFile(at: mouthImage) )
+        
+        let clothesImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Clothes" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.shirtImageView.image = UIImage(data: self.loadImageFromFile(at: clothesImage) )
+        
+        let hairImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Hair" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.hairImageView.image = UIImage(data: self.loadImageFromFile(at: hairImage) )
+        
+        let browsImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Brows" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.eyebrowsImageView.image = UIImage(data: self.loadImageFromFile(at: browsImage) )
+        
+        let headdressImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Headdress" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.hairsBack.image = UIImage(data: self.loadImageFromFile(at: headdressImage) )
+        
+        let faceImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Face" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.noseImageView.image = UIImage(data: self.loadImageFromFile(at: faceImage) )
+        
+        let accessoryImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Accessory" }).first?.data.imageOriginal ?? "")
+        self.editingPictureView.hatsImageView.image = UIImage(data: self.loadImageFromFile(at: accessoryImage) )
+        
     }
 }
 

@@ -16,6 +16,7 @@
                 <outlet property="backButtonView" destination="5P7-G6-jc2" id="NSC-ox-Tzt"/>
                 <outlet property="btnPreviewView" destination="xeo-av-4NH" id="d2Y-l6-ulE"/>
                 <outlet property="btnVerificationView" destination="m33-cu-arZ" id="QJV-CR-HAO"/>
+                <outlet property="deleteButton" destination="6Xn-Ch-BE7" id="Usf-JO-wXO"/>
                 <outlet property="imageSkinView" destination="hFt-Cz-bVP" id="Tu9-JI-HzP"/>
                 <outlet property="largeTitleLabel" destination="KRZ-Ow-zAv" id="6EF-GY-9fJ"/>
                 <outlet property="newxtButton" destination="eJo-sl-Zin" id="Esb-lI-4hr"/>

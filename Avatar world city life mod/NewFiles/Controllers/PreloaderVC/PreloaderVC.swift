@@ -126,6 +126,14 @@ class PreloaderVC: UIViewController {
             if self.elapsedTime <= self.maxDuration {
                 self.updateProgress()
                 
+                guard InternetManager_AW.shared.checkInternetConnectivity_AW() else {
+                    self.noInternetFound(true)
+                    self.timer?.invalidate()
+                    self.timer = nil
+                    self.leanerarProgressView.progress = 0.0
+                    return
+                }
+                
             } else {
                 self.timer?.invalidate()
                 self.timer = nil

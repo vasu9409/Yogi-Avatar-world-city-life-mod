@@ -16,6 +16,7 @@
                 <outlet property="btnPreviewView" destination="qnh-b2-Dga" id="Toc-7u-PGF"/>
                 <outlet property="downloadingLinearView" destination="p6B-Hb-jWB" id="GzY-Jg-XeP"/>
                 <outlet property="largeTitleLabel" destination="lvX-ki-vK7" id="FXN-ha-ZdL"/>
+                <outlet property="view" destination="fMe-TW-27j" id="o9J-qM-3kR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -90,7 +91,7 @@
                                 <constraint firstItem="qnh-b2-Dga" firstAttribute="top" secondItem="0k1-wD-P2k" secondAttribute="top" id="gWY-C1-Kge"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QG-aC-J4a">
+                        <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QG-aC-J4a">
                             <rect key="frame" x="20" y="641" width="353" height="52"/>
                             <color key="backgroundColor" name="newblackcolorfounded"/>
                             <constraints>
@@ -106,7 +107,7 @@
                                 <action selector="btnDownload:" destination="-1" eventType="touchUpInside" id="aF4-em-LZs"/>
                             </connections>
                         </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-Hb-jWB" customClass="LinearProgressBar" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-Hb-jWB" customClass="LinearProgressBar" customModule="Avatar_world_city_life_mod" customModuleProvider="target">
                             <rect key="frame" x="20" y="641" width="353" height="52"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>

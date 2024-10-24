@@ -13,6 +13,7 @@ class PopUPView: UIViewController {
     @IBOutlet weak var nameBackView: UIView!
     @IBOutlet weak var popupnameLabel: UILabel!
     
+    weak var delegate: ShowSkinAppliedVCDelegate?
     var nameLabelText: String = ""
     
     override func viewDidLoad() {
@@ -21,14 +22,16 @@ class PopUPView: UIViewController {
         self.nameBackView.layer.cornerRadius = IS_IPAD ? 44 : 24
         applyBlur(self.view)
         
+        self.popupnameLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 20, style: .bold)
+        
         self.popupnameLabel.text = self.nameLabelText
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-            self.dismiss(animated: false) {
-                if let homeViewController = self.navigationController?.viewControllers.first(where: { $0 is SkinMakerVC }) {
-                    self.navigationController?.popToViewController(SkinMakerVC(), animated: true)
-                }
-            }
+        
+        self.dismiss(animated: false)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.delegate?.didShowSkinApplied()
         })
+        
     }
 }
