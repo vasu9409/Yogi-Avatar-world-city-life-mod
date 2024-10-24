@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +16,7 @@
                 <outlet property="backButtonView" destination="5P7-G6-jc2" id="NSC-ox-Tzt"/>
                 <outlet property="btnPreviewView" destination="xeo-av-4NH" id="d2Y-l6-ulE"/>
                 <outlet property="btnVerificationView" destination="m33-cu-arZ" id="QJV-CR-HAO"/>
+                <outlet property="imageSkinView" destination="hFt-Cz-bVP" id="Tu9-JI-HzP"/>
                 <outlet property="largeTitleLabel" destination="KRZ-Ow-zAv" id="6EF-GY-9fJ"/>
                 <outlet property="newxtButton" destination="eJo-sl-Zin" id="Esb-lI-4hr"/>
                 <outlet property="noskinaddedButton" destination="byY-hQ-jrM" id="Odi-YL-fsv"/>
@@ -63,9 +64,34 @@
                                 <constraint firstItem="6hb-2s-2Kx" firstAttribute="top" secondItem="5P7-G6-jc2" secondAttribute="top" id="krX-WA-72J"/>
                             </constraints>
                         </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xn-Ch-BE7">
+                            <rect key="frame" x="303" y="0.0" width="50" height="50"/>
+                            <subviews>
+                                <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1l-TK-j0f">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="deleteButton"/>
+                                    <connections>
+                                        <action selector="deleteButton:" destination="-1" eventType="touchUpInside" id="9MG-Rt-QH4"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="l1l-TK-j0f" secondAttribute="trailing" id="0ZI-Hk-Nw6"/>
+                                <constraint firstAttribute="bottom" secondItem="l1l-TK-j0f" secondAttribute="bottom" id="9h7-Fn-oyn"/>
+                                <constraint firstAttribute="width" secondItem="6Xn-Ch-BE7" secondAttribute="height" id="c0Y-wU-feI"/>
+                                <constraint firstItem="l1l-TK-j0f" firstAttribute="top" secondItem="6Xn-Ch-BE7" secondAttribute="top" id="gY0-wD-nb7"/>
+                                <constraint firstItem="l1l-TK-j0f" firstAttribute="leading" secondItem="6Xn-Ch-BE7" secondAttribute="leading" id="sQf-C6-A6T"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="6Xn-Ch-BE7" firstAttribute="top" secondItem="4Qe-3h-xoM" secondAttribute="top" id="2V1-rX-Wpg"/>
+                        <constraint firstAttribute="bottom" secondItem="6Xn-Ch-BE7" secondAttribute="bottom" id="389-8b-XdB"/>
+                        <constraint firstAttribute="trailing" secondItem="6Xn-Ch-BE7" secondAttribute="trailing" id="5XU-hv-kHx"/>
                         <constraint firstItem="5P7-G6-jc2" firstAttribute="top" secondItem="4Qe-3h-xoM" secondAttribute="top" id="C8d-f5-a4o"/>
                         <constraint firstItem="5P7-G6-jc2" firstAttribute="centerY" secondItem="4Qe-3h-xoM" secondAttribute="centerY" id="NJq-EQ-lyI"/>
                         <constraint firstAttribute="bottom" secondItem="5P7-G6-jc2" secondAttribute="bottom" id="Plt-9p-OKN"/>
@@ -147,7 +173,18 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeK-Gw-JtD">
                             <rect key="frame" x="20" y="10" width="353" height="621"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hFt-Cz-bVP">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="621"/>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="hFt-Cz-bVP" secondAttribute="trailing" id="0Vo-0m-bvB"/>
+                                <constraint firstAttribute="bottom" secondItem="hFt-Cz-bVP" secondAttribute="bottom" id="4CN-HI-aoj"/>
+                                <constraint firstItem="hFt-Cz-bVP" firstAttribute="leading" secondItem="YeK-Gw-JtD" secondAttribute="leading" id="QJm-9u-YCX"/>
+                                <constraint firstItem="hFt-Cz-bVP" firstAttribute="top" secondItem="YeK-Gw-JtD" secondAttribute="top" id="g4A-3J-eCr"/>
+                            </constraints>
                         </view>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-sl-Zin">
                             <rect key="frame" x="323" y="295.66666666666669" width="50" height="50"/>
@@ -266,6 +303,7 @@
     </objects>
     <resources>
         <image name="buttonBackRoadWays" width="48" height="48"/>
+        <image name="deleteButton" width="83" height="82"/>
         <image name="ipadOrientationViewImageShadow" width="1024" height="1366"/>
         <image name="modsImageBackgroundMedic" width="375" height="812"/>
         <image name="rightuniquechevrondelta" width="96" height="96"/>

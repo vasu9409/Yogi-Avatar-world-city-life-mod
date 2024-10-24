@@ -1,6 +1,11 @@
 
 
 import UIKit
+import RealmSwift
+
+protocol DeleteVCDelegate: AnyObject {
+    func didDelete()
+}
 
 class DeleteVC: UIViewController {
 
@@ -8,6 +13,12 @@ class DeleteVC: UIViewController {
     @IBOutlet weak var titleMSGLabe: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
+    
+    
+    var savedSkins: ListElementObject?
+    
+    var imageDataArray: [Data] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +35,33 @@ class DeleteVC: UIViewController {
     }
     
     @IBAction func deleteButton(_ sender: Any) {
+        self.didDelete()
         
     }
     
     @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: false)
+    }
+    
+    func didDelete() {
         
+        
+        do {
+            let realm = try Realm()
+            
+            // Find the object(s) with the matching title
+            let objectsToDelete = realm.objects(ListElementObject.self).filter("title == %@", self.savedSkins?.title ?? "")
+            
+            // Perform deletion inside a write transaction
+            try realm.write {
+                realm.delete(objectsToDelete)
+            }
+            
+            self.dismiss(animated: false)
+        } catch {
+            print("Error deleting data from Realm: \(error)")
+            self.dismiss(animated: false)
+        }
+
     }
 }

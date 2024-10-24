@@ -157,7 +157,7 @@ class PreloaderVC: UIViewController {
                 self.findAllFoldersContentsCount()
                 
                 
-                self.downloadJsonFile("/content//content.json", "content.json", folderName: "66ebf80676cb8")
+                self.downloadJsonFile("/content/66ebf80676cb8/content.json", "content.json", folderName: "66ebf80676cb8")
                 self.downloadJsonFile("/content/66ebf80c744ca/content.json", "content.json", folderName: "66ebf80c744ca")
                 self.downloadJsonFile("/content/66ebf80665d2f/content.json", "content.json", folderName: "66ebf80665d2f")
                 
@@ -249,7 +249,7 @@ class PreloaderVC: UIViewController {
                         }
                     }
                 } else {
-                    self.maxDuration = 2.0 // 12.0
+                    self.maxDuration = 5.0 // 12.0
                     self.startProgressTimer()
                 }
             }

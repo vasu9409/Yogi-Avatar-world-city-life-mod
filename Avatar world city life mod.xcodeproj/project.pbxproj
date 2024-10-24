@@ -45,6 +45,8 @@
 		594335E82CBE196D0060D66D /* EditorSetupViewModel_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594335DF2CBE196D0060D66D /* EditorSetupViewModel_AW.swift */; };
 		594335E92CBE196D0060D66D /* CharacterEditorImage_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594335D52CBE196D0060D66D /* CharacterEditorImage_AW.swift */; };
 		594335EA2CBE196D0060D66D /* CachedImageView_AW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594335DB2CBE196D0060D66D /* CachedImageView_AW.swift */; };
+		595628282CC9EE2C00716D5B /* ShowSkinApplied.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595628272CC9EE2C00716D5B /* ShowSkinApplied.xib */; };
+		595628292CC9EE2C00716D5B /* ShowSkinApplied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595628262CC9EE2C00716D5B /* ShowSkinApplied.swift */; };
 		5966E0D62CB6D51D00294C90 /* ModsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966E0D42CB6D51D00294C90 /* ModsDetailsVC.swift */; };
 		5966E0D72CB6D51D00294C90 /* ModsDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5966E0D52CB6D51D00294C90 /* ModsDetailsVC.xib */; };
 		5966E0DB2CB6DC0500294C90 /* PopUPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966E0D92CB6DC0500294C90 /* PopUPView.swift */; };
@@ -141,6 +143,8 @@
 		594335DD2CBE196D0060D66D /* EditorSetupViewController_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSetupViewController_AW.swift; sourceTree = "<group>"; };
 		594335DE2CBE196D0060D66D /* EditorSetupViewController_AW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditorSetupViewController_AW.xib; sourceTree = "<group>"; };
 		594335DF2CBE196D0060D66D /* EditorSetupViewModel_AW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSetupViewModel_AW.swift; sourceTree = "<group>"; };
+		595628262CC9EE2C00716D5B /* ShowSkinApplied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSkinApplied.swift; sourceTree = "<group>"; };
+		595628272CC9EE2C00716D5B /* ShowSkinApplied.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowSkinApplied.xib; sourceTree = "<group>"; };
 		5966E0D42CB6D51D00294C90 /* ModsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsDetailsVC.swift; sourceTree = "<group>"; };
 		5966E0D52CB6D51D00294C90 /* ModsDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModsDetailsVC.xib; sourceTree = "<group>"; };
 		5966E0D92CB6DC0500294C90 /* PopUPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUPView.swift; sourceTree = "<group>"; };
@@ -353,6 +357,15 @@
 			path = EditorSetup;
 			sourceTree = "<group>";
 		};
+		595628252CC9EE1E00716D5B /* ShowSkinApplied */ = {
+			isa = PBXGroup;
+			children = (
+				595628262CC9EE2C00716D5B /* ShowSkinApplied.swift */,
+				595628272CC9EE2C00716D5B /* ShowSkinApplied.xib */,
+			);
+			path = ShowSkinApplied;
+			sourceTree = "<group>";
+		};
 		595E5E772CAB0E5E0072F776 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +437,7 @@
 		597CD0C32CA92C9800D8BF2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				595628252CC9EE1E00716D5B /* ShowSkinApplied */,
 				96C91FE42CC39D6E00C0C929 /* PreloaderVC */,
 				597CD0B92CA9213A00D8BF2B /* HomeVC */,
 				597CD0CD2CA9355F00D8BF2B /* ModsVC */,
@@ -793,6 +807,7 @@
 				597CD0EB2CA9477100D8BF2B /* gilroyDoubleBold.ttf in Resources */,
 				597CD0EC2CA9477100D8BF2B /* gilroyLightGroundKey.ttf in Resources */,
 				B89FFD702AAA34F500DD71EF /* Assets.xcassets in Resources */,
+				595628282CC9EE2C00716D5B /* ShowSkinApplied.xib in Resources */,
 				597CD0D92CA93A7C00D8BF2B /* CategoryCell.xib in Resources */,
 				59FB6FC02CBA64040058AD3E /* DeleteVC.xib in Resources */,
 				5966E0DC2CB6DC0500294C90 /* PopUPView.xib in Resources */,
@@ -855,6 +870,7 @@
 				594335CC2CBE15990060D66D /* ContentListDataModel_AW.swift in Sources */,
 				594335CD2CBE15990060D66D /* CategoriesModel.swift in Sources */,
 				594335CE2CBE15990060D66D /* EditorContentData_AW.swift in Sources */,
+				595628292CC9EE2C00716D5B /* ShowSkinApplied.swift in Sources */,
 				594335CF2CBE15990060D66D /* CharacterContentType_AW.swift in Sources */,
 				594335D02CBE15990060D66D /* Category_AW.swift in Sources */,
 				96C91FE32CC39CF500C0C929 /* Coordinators_AW.swift in Sources */,

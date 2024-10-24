@@ -53,39 +53,27 @@ class SkinMakerPreviewVC: UIViewController {
     }
     
     @IBAction func btnSave(_ sender: Any) {
-        guard let image = editingPictureView.toImage() else { return }
+        guard let image = self.editingPictureView.toImage() else { return }
         
-        // Convert UIImage to PNG data
-        guard let pngData = image.pngData() else { return }
+        let ctrl = ShowSkinApplied()
+        ctrl.selectedImage = image
+        self.navigationController?.pushViewController(ctrl, animated: true)
         
-        do {
-            
-            let realm = try Realm()
-            
-            // Create a new Person object
-            let newPerson = ListElementObject()
-            newPerson.data = pngData
-            // Save the new person object to Realm
-            try realm.write {
-                realm.add(newPerson)
-            }
-            
-        } catch {
-            
-        }
         
-        // Save the PNG data to the photo library using the Photos framework
-        PHPhotoLibrary.shared().performChanges({
-            // Request to add the PNG image to the photo library
-            let request = PHAssetCreationRequest.forAsset()
-            request.addResource(with: .photo, data: pngData, options: nil)
-        }) { success, error in
-            if success {
-                print("Image saved successfully with transparency.")
-            } else {
-                print("Error saving image: \(error?.localizedDescription ?? "Unknown error")")
-            }
-        }
+//        // Save the PNG data to the photo library using the Photos framework
+//        PHPhotoLibrary.shared().performChanges({
+//            // Request to add the PNG image to the photo library
+//            let request = PHAssetCreationRequest.forAsset()
+//            request.addResource(with: .photo, data: pngData, options: nil)
+//        }) { success, error in
+//            if success {
+//                print("Image saved successfully with transparency.")
+//            } else {
+//                print("Error saving image: \(error?.localizedDescription ?? "Unknown error")")
+//            }
+//        }
+        
+        
     }
   
     func fetchModsData() {
@@ -187,6 +175,15 @@ extension SkinMakerPreviewVC: UICollectionViewDelegate, UICollectionViewDelegate
                 
                 cell.skinImageBGView.backgroundColor = (selectedStyle == indexPath.row) ? UIColor(named: "newblackcolorfounded") : UIColor(named: "lightercoloruidrag")
 //            }
+            
+            if self.selectedDictionaryData[self.selectedcategoryName] as? String == self.filterArray[indexPath.row].type {
+                if self.selectedDictionaryData[self.selectedcategoryName] as? Int == indexPath.row {
+                    
+                    cell.skinImageBGView.backgroundColor = UIColor(named: "newblackcolorfounded")
+                } else {
+                    cell.skinImageBGView.backgroundColor = UIColor(named: "lightercoloruidrag")
+                }
+            }
             
             return cell
         }

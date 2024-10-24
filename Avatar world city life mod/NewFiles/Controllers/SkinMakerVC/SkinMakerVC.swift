@@ -5,10 +5,14 @@
 //  Created by Vasu Savaliya on 12/10/24.
 //
 
+
 import UIKit
+import RealmSwift
 
 class SkinMakerVC: UIViewController {
+    
 
+    @IBOutlet weak var imageSkinView: UIImageView!
     @IBOutlet weak var backButtonView: UIView!
     @IBOutlet weak var AddNewButton: UIButton!
     @IBOutlet weak var largeTitleLabel: UILabel!
@@ -26,12 +30,16 @@ class SkinMakerVC: UIViewController {
         }
     }
     
-    var skinAdded: [String] = []
+    var savedSkins: [ListElementObject] = []
+    
+    var imageDataArray: [Data] = []
+    
+    var currentIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.isShowVerification = (self.skinAdded.count == 0)
+        self.isShowVerification = true
         
         self.largeTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
         self.AddNewButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
@@ -40,10 +48,38 @@ class SkinMakerVC: UIViewController {
         
         self.setupUI()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        self.currentIndex = 0
+        self.fetchAllSkinsData()
+        self.isShowVerification = (self.savedSkins.count == 0)
         
+        if self.savedSkins.count > 1 {
+            
+            self.newxtButton.isHidden = true
+            self.previeouseButotn.isHidden = true
+            
+        } else {
+            
+            self.newxtButton.isHidden = true
+            self.previeouseButotn.isHidden = true
+            
+        }
         
+        if self.savedSkins.count > 0 {
+            for imageData in self.savedSkins {
+                self.imageDataArray.append(imageData.data ?? Data())
+            }
+            
+            self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
+        }
         
+    }
+    
+    @IBAction func deleteButton(_ sender: Any) {
         
     }
     
@@ -53,15 +89,28 @@ class SkinMakerVC: UIViewController {
     }
     
     @IBAction func btnNoSkinAdd(_ sender: Any) {
-        
+        let ctrl = DeleteVC()
+        ctrl.savedSkins = self.savedSkins[self.currentIndex]
+        self.present(ctrl, animated: false)
     }
     
     @IBAction func btnRight(_ sender: Any) {
+        if currentIndex >= savedSkins.count - 1 {
+            
+        } else {
+            self.currentIndex += 1
+            self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
+        }
         
     }
     
     @IBAction func btnLeft(_ sender: Any) {
-        
+        if currentIndex <= 0 {
+            
+        } else {
+            self.currentIndex -= 1
+            self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
+        }
     }
     
     @IBAction func btnAddNew(_ sender: Any) {
@@ -84,5 +133,24 @@ class SkinMakerVC: UIViewController {
         
         self.btnPreviewView.layer.cornerRadius = IS_IPAD ? 44 : 26
         self.btnVerificationView.layer.cornerRadius = IS_IPAD ? 44 : 26
+    }
+    
+    func fetchAllSkinsData() {
+        self.savedSkins.removeAll()
+        do {
+            let realm = try Realm()
+            
+            // Fetch all objects of type ListElementObject
+            let allObjects = realm.objects(ListElementObject.self)
+            
+            
+            for object in allObjects {
+                
+                self.savedSkins.append(object)
+            }
+        } catch {
+            print("Error fetching data from Realm: \(error)")
+        }
+
     }
 }
