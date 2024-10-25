@@ -92,7 +92,7 @@ class ShowSkinApplied: UIViewController {
             ctrl.nameLabelText = nameLabelText
             ctrl.delegate = self
             ctrl.modalPresentationStyle = .overFullScreen
-            self.present(ctrl, animated: false, completion: nil)
+            self.present(ctrl, animated: false)
             
         } catch {
             print(error)
@@ -102,7 +102,7 @@ class ShowSkinApplied: UIViewController {
             ctrl.modalPresentationStyle = .overFullScreen
             ctrl.nameLabelText = nameLabelText
             ctrl.delegate = self
-            self.present(ctrl, animated: false, completion: nil)
+            self.present(ctrl, animated: false)
         }
     }
     
@@ -148,12 +148,14 @@ class ShowSkinApplied: UIViewController {
 extension ShowSkinApplied: ShowSkinAppliedVCDelegate{
     
     func didShowSkinApplied() {
-        for controller in self.navigationController?.viewControllers ?? [] {
-            if let specificVC = controller as? SkinMakerVC {
-                // Navigate to this view controller
-                self.navigationController?.popToViewController(specificVC, animated: true)
-                break
+        
+            for controller in self.navigationController?.viewControllers ?? [] {
+                if let specificVC = controller as? SkinMakerVC {
+                    // Navigate to this view controller
+                    self.navigationController?.popToViewController(specificVC, animated: true)
+                    break
+                }
             }
-        }
+        
     }
 }

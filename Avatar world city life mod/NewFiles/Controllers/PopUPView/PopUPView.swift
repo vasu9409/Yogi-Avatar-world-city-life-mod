@@ -27,11 +27,18 @@ class PopUPView: UIViewController {
         self.popupnameLabel.text = self.nameLabelText
         
         
-        self.dismiss(animated: false)
+        self.view.isUserInteractionEnabled = false
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.view.isUserInteractionEnabled = true
+            self.dismiss(animated: false)
             self.delegate?.didShowSkinApplied()
-        })
-        
+        }
     }
 }

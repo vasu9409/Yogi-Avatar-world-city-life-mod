@@ -54,31 +54,7 @@ class SkinMakerVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.currentIndex = 0
-        self.fetchAllSkinsData()
-        self.isShowVerification = (self.savedSkins.count == 0)
-        
-        if self.savedSkins.count > 1 {
-            
-            self.newxtButton.isHidden = false
-            self.previeouseButotn.isHidden = false
-            
-        } else {
-            
-            self.newxtButton.isHidden = true
-            self.previeouseButotn.isHidden = true
-            
-        }
-        
-        self.deleteButton.isHidden = true
-        
-        if self.savedSkins.count > 0 {
-            for imageData in self.savedSkins {
-                self.imageDataArray.append(imageData.data ?? Data())
-            }
-            self.deleteButton.isHidden = false
-            self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
-        }
+        self.clearAndFetchSkins()
         
     }
     
@@ -157,5 +133,34 @@ class SkinMakerVC: UIViewController {
             print("Error fetching data from Realm: \(error)")
         }
 
+    }
+    
+    func clearAndFetchSkins() {
+        self.savedSkins.removeAll()
+        self.currentIndex = 0
+        self.fetchAllSkinsData()
+        self.isShowVerification = (self.savedSkins.count == 0)
+        
+        if self.savedSkins.count > 1 {
+            
+            self.newxtButton.isHidden = false
+            self.previeouseButotn.isHidden = false
+            
+        } else {
+            
+            self.newxtButton.isHidden = true
+            self.previeouseButotn.isHidden = true
+            
+        }
+        
+        self.deleteButton.isHidden = true
+        
+        if self.savedSkins.count > 0 {
+            for imageData in self.savedSkins {
+                self.imageDataArray.append(imageData.data ?? Data())
+            }
+            self.deleteButton.isHidden = false
+            self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
+        }
     }
 }
