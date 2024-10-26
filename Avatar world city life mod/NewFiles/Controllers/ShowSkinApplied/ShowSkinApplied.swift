@@ -32,11 +32,8 @@ class ShowSkinApplied: UIViewController {
         self.largeTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
         self.btnDownload.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
         
-        self.btnDownload.layer.cornerRadius = IS_IPAD ? 41 : 24
-//        self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 41 : 24
-        self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 41 : 24
-        
-        
+        self.btnDownload.layer.cornerRadius = IS_IPAD ? 42 : 26
+        self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 42 : 26
         
         self.downloadingLinearView.isHidden = true
         
@@ -112,11 +109,12 @@ class ShowSkinApplied: UIViewController {
         self.btnDownload.isHidden = true
         
         
-        self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 35 : 20
-        self.downloadingLinearView.cornerRadius = IS_IPAD ? 35 : 20
+        self.downloadingLinearView.layer.cornerRadius = IS_IPAD ? 42 : 26
+        self.downloadingLinearView.cornerRadius = IS_IPAD ? 42 : 26
         self.downloadingLinearView.clipsToBounds = true
         self.downloadingLinearView.barColor = UIColor(named: "newblackcolorfounded")!
         self.downloadingLinearView.borderColor = UIColor(named: "lightercoloruidrag")!
+        self.downloadingLinearView.backgroundColor = UIColor(named: "lightercoloruidrag")!
         self.downloadingLinearView.borderWidth = IS_IPAD ? 4 : 7
         self.downloadingLinearView.spacing = 0
         self.downloadingLinearView.innerSpacing = 0

@@ -96,7 +96,7 @@
                             <color key="backgroundColor" name="newblackcolorfounded"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="52" id="Nac-ne-SgN">
-                                    <variation key="heightClass=regular-widthClass=regular" constant="88"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="84"/>
                                 </constraint>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

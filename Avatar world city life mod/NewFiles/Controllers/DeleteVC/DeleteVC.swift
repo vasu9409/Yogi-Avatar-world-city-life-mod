@@ -14,27 +14,24 @@ class DeleteVC: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
-    
+    weak var delegate: DeleteVCDelegate?
     var savedSkins: ListElementObject?
-    
-    var imageDataArray: [Data] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        self.titleBackView.layer.cornerRadius = IS_IPAD ? 40 : 22
+        self.titleBackView.layer.cornerRadius = IS_IPAD ? 42 : 26
         self.titleBackView.clipsToBounds = true
-        self.cancelButton.layer.cornerRadius = IS_IPAD ? 40 : 22
+        self.cancelButton.layer.cornerRadius = IS_IPAD ? 42 : 26
         self.cancelButton.clipsToBounds = true
-        self.deleteButton.layer.cornerRadius = IS_IPAD ? 40 : 22
+        self.deleteButton.layer.cornerRadius = IS_IPAD ? 42 : 26
         self.deleteButton.clipsToBounds = true
         
-        self.titleMSGLabe.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 22, style: .semiBold)
-        self.cancelButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 20, style: .Medium)
-        self.deleteButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 20, style: .Medium)
-        
+        self.titleMSGLabe.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 20, style: .semiBold)
+        self.cancelButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 18, style: .Medium)
+        self.deleteButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 18, style: .Medium)
         
         
         applyBlur(self.view)
@@ -51,7 +48,6 @@ class DeleteVC: UIViewController {
     
     func didDelete() {
         
-        
         do {
             let realm = try Realm()
             
@@ -61,6 +57,7 @@ class DeleteVC: UIViewController {
             // Perform deletion inside a write transaction
             try realm.write {
                 realm.delete(objectsToDelete)
+                self.delegate?.didDelete()
             }
             
             self.dismiss(animated: false)

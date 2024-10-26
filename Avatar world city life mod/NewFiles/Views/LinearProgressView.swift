@@ -105,10 +105,18 @@ class LinearProgressBar: UIView {
         percentageLabel.text = "\(percentage)%"
 
         // Change the label color if progress is more than 45%
+        
         if progress > 0.49 {
-            percentageLabel.textColor = UIColor(named: "whitedowncolorset")
+            if progress > 0.51 {
+                self.percentageLabel.textColor = UIColor(named: "whitedowncolorset")
+            } else {
+                UIView.animate(withDuration: 0.3) {
+                    self.percentageLabel.textColor = UIColor(named: "whitedowncolorset")
+                }
+            }
         } else {
             percentageLabel.textColor = UIColor(named: "newblackcolorfounded")
         }
+        
     }
 }

@@ -9,9 +9,8 @@
 import UIKit
 import RealmSwift
 
-class SkinMakerVC: UIViewController {
+class SkinMakerVC: UIViewController, DeleteVCDelegate {
     
-
     @IBOutlet weak var deleteButton: UIView!
     @IBOutlet weak var imageSkinView: UIImageView!
     @IBOutlet weak var backButtonView: UIView!
@@ -63,6 +62,7 @@ class SkinMakerVC: UIViewController {
         let ctrl = DeleteVC()
         ctrl.modalPresentationStyle = .overFullScreen
         ctrl.savedSkins = self.savedSkins[self.currentIndex]
+        ctrl.delegate = self
         self.present(ctrl, animated: false)
     }
     
@@ -76,21 +76,20 @@ class SkinMakerVC: UIViewController {
     }
     
     @IBAction func btnRight(_ sender: Any) {
-        if currentIndex >= savedSkins.count - 1 {
-            
-        } else {
+        if currentIndex < savedSkins.count - 1 {
             self.currentIndex += 1
             self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
+            self.updateNavigationButtons()
         }
         
     }
     
     @IBAction func btnLeft(_ sender: Any) {
-        if currentIndex <= 0 {
-            
-        } else {
+        
+        if currentIndex > 0 {
             self.currentIndex -= 1
             self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
+            self.updateNavigationButtons()
         }
     }
     
@@ -101,6 +100,10 @@ class SkinMakerVC: UIViewController {
     
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func didDelete() {
+        self.clearAndFetchSkins()
     }
     
     private func setupUI() {
@@ -120,15 +123,8 @@ class SkinMakerVC: UIViewController {
         self.savedSkins.removeAll()
         do {
             let realm = try Realm()
-            
-            // Fetch all objects of type ListElementObject
             let allObjects = realm.objects(ListElementObject.self)
-            
-            
-            for object in allObjects {
-                
-                self.savedSkins.append(object)
-            }
+            self.savedSkins = Array(allObjects)
         } catch {
             print("Error fetching data from Realm: \(error)")
         }
@@ -137,9 +133,11 @@ class SkinMakerVC: UIViewController {
     
     func clearAndFetchSkins() {
         self.savedSkins.removeAll()
+        self.imageDataArray.removeAll()
         self.currentIndex = 0
         self.fetchAllSkinsData()
         self.isShowVerification = (self.savedSkins.count == 0)
+        
         
         if self.savedSkins.count > 1 {
             
@@ -161,6 +159,16 @@ class SkinMakerVC: UIViewController {
             }
             self.deleteButton.isHidden = false
             self.imageSkinView.image = UIImage(data: self.imageDataArray[self.currentIndex])
+            
+            self.updateNavigationButtons()
         }
+    }
+    
+    private func updateNavigationButtons() {
+        // Hide left button if there's no previous image
+        self.previeouseButotn.isHidden = (currentIndex == 0)
+        
+        // Hide right button if there's no next image
+        self.newxtButton.isHidden = (currentIndex == savedSkins.count - 1)
     }
 }

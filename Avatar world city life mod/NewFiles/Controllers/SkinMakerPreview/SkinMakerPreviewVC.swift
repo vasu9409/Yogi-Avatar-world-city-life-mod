@@ -24,8 +24,6 @@ class SkinMakerPreviewVC: UIViewController {
     var categoryName = ["Shoes", "Eyes", "Body", "Mouth", "Clothes", "Hair", "Brows", "Headdress", "Face", "Accessory"]
     var selectedcategoryName: String = "Shoes"
     
-    var selectedStyle: Int = 0
-    
     var modsDataModel: [CustomEditorStroke] = []
     var filterArray: [CustomEditorStroke] = []
     
@@ -59,296 +57,152 @@ class SkinMakerPreviewVC: UIViewController {
         let ctrl = ShowSkinApplied()
         ctrl.selectedImage = image
         self.navigationController?.pushViewController(ctrl, animated: true)
-        
-        
-//        // Save the PNG data to the photo library using the Photos framework
-//        PHPhotoLibrary.shared().performChanges({
-//            // Request to add the PNG image to the photo library
-//            let request = PHAssetCreationRequest.forAsset()
-//            request.addResource(with: .photo, data: pngData, options: nil)
-//        }) { success, error in
-//            if success {
-//                print("Image saved successfully with transparency.")
-//            } else {
-//                print("Error saving image: \(error?.localizedDescription ?? "Unknown error")")
-//            }
-//        }
-        
-        
     }
-  
+
     func fetchModsData() {
         let jsonFilePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + "content.json"
         
         if let files: EditorContent = FileSession_AW.shared.getModelFromFile_AW(from: URL(fileURLWithPath: jsonFilePath)) {
             self.modsDataModel.removeAll()
             
-            for (_, value) in files.z3D.shoes {
-                let stroke = CustomEditorStroke(type: "Shoes", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.eyes {
-                let stroke = CustomEditorStroke(type: "Eyes", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.body {
-                let stroke = CustomEditorStroke(type: "Body", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.mouth {
-                let stroke = CustomEditorStroke(type: "Mouth", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.clothes {
-                let stroke = CustomEditorStroke(type: "Clothes", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.hair {
-                let stroke = CustomEditorStroke(type: "Hair", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.brows {
-                let stroke = CustomEditorStroke(type: "Brows", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.headdress {
-                let stroke = CustomEditorStroke(type: "Headdress", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.face {
-                let stroke = CustomEditorStroke(type: "Face", data: value)
-                self.modsDataModel.append(stroke)
-            }
-            
-            for (_, value) in files.z3D.accessory {
-                let stroke = CustomEditorStroke(type: "Accessory", data: value)
-                self.modsDataModel.append(stroke)
-            }
+            // Add strokes for each category
+            appendStrokes(for: "Shoes", from: files.z3D.shoes)
+            appendStrokes(for: "Eyes", from: files.z3D.eyes)
+            appendStrokes(for: "Body", from: files.z3D.body)
+            appendStrokes(for: "Mouth", from: files.z3D.mouth)
+            appendStrokes(for: "Clothes", from: files.z3D.clothes)
+            appendStrokes(for: "Hair", from: files.z3D.hair)
+            appendStrokes(for: "Brows", from: files.z3D.brows)
+            appendStrokes(for: "Headdress", from: files.z3D.headdress)
+            appendStrokes(for: "Face", from: files.z3D.face)
+            appendStrokes(for: "Accessory", from: files.z3D.accessory)
+        }
+    }
+    
+    private func appendStrokes(for type: String, from data: [String: Accessory]) {
+        for (_, value) in data {
+            let stroke = CustomEditorStroke(type: type, data: value)
+            self.modsDataModel.append(stroke)
         }
     }
 }
 
-
 extension SkinMakerPreviewVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.categoryCollectionView {
-            return self.categoryName.count
-        } else {
-            return self.filterArray.count // + 1
-        }
+        return collectionView == self.categoryCollectionView ? self.categoryName.count : self.filterArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView != self.themeCollectionView {
-            
-            // Category CollectionView
-            
+        if collectionView == self.categoryCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
-            
             cell.catNameLabel.text = self.categoryName[indexPath.row]
-            
             cell.selected(self.selectedcategoryName == self.categoryName[indexPath.row])
-            
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SkinCell", for: indexPath) as? SkinCell else { return UICollectionViewCell() }
             
-//            if indexPath.row == 0 {
-//                if selectedStyle == 0 {
-//                    cell.previewImageView.image = UIImage(named: "tagNoneSelectedSuffle")?.withTintColor(UIColor(named: "whitedowncolorset")!, renderingMode: .alwaysTemplate)
-//                    cell.skinImageBGView.backgroundColor = UIColor(named: "newblackcolorfounded")
-//                } else {
-//                    cell.previewImageView.image = UIImage(named: "tagNoneSelectedSuffle")?.withTintColor(UIColor(named: "newblackcolorfounded")!, renderingMode: .alwaysTemplate)
-//                    cell.skinImageBGView.backgroundColor = UIColor(named: "lightercoloruidrag")
-//                }
-//            } else {
-                let data = self.filterArray[indexPath.row] // - 1]
-                let imagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + data.data.previewImage
-                cell.previewImageView.image = UIImage(data: self.loadImageFromFile(at: imagePath))
-                
-                cell.skinImageBGView.backgroundColor = (selectedStyle == indexPath.row) ? UIColor(named: "newblackcolorfounded") : UIColor(named: "lightercoloruidrag")
-//            }
+            let data = self.filterArray[indexPath.row]
+            let imagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + data.data.previewImage
+            cell.previewImageView.image = UIImage(data: self.loadImageFromFile(at: imagePath))
             
-            if self.selectedDictionaryData[self.selectedcategoryName] as? String == self.filterArray[indexPath.row].type {
-                if self.selectedDictionaryData[self.selectedcategoryName] as? Int == indexPath.row {
-                    
-                    cell.skinImageBGView.backgroundColor = UIColor(named: "newblackcolorfounded")
-                } else {
-                    cell.skinImageBGView.backgroundColor = UIColor(named: "lightercoloruidrag")
-                }
-            }
+            cell.skinImageBGView.backgroundColor = (self.selectedcategoryName == self.filterArray[indexPath.row].type &&
+                                                     self.selectedDictionaryData[self.selectedcategoryName] as? Int == indexPath.row) ?
+                UIColor(named: "newblackcolorfounded") : UIColor(named: "lightercoloruidrag")
             
             return cell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == self.themeCollectionView {
-            return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
-        }
-        
-        
-        // Category CollectionView
-        let labelWidth = calculateCellWidth(text: self.categoryName[indexPath.row], collectionView: collectionView)
-        return CGSize(width: labelWidth, height: collectionView.frame.height)
+        return collectionView == self.themeCollectionView ?
+            CGSize(width: collectionView.frame.height, height: collectionView.frame.height) :
+            CGSize(width: calculateCellWidth(text: self.categoryName[indexPath.row], collectionView: collectionView), height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView != self.themeCollectionView {
-            // Category CollectionView
-            
+        if collectionView == self.categoryCollectionView {
             self.selectedcategoryName = self.categoryName[indexPath.row]
+            self.filterArray = self.modsDataModel.filter { $0.type == self.selectedcategoryName }
             self.categoryCollectionView.reloadData()
-            
-            switch self.categoryName[indexPath.row] {
-            case "Shoes" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Shoes" }
-                break
-            case "Eyes" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Eyes" }
-                break
-            case "Body" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Body" }
-                break
-            case "Mouth" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Mouth" }
-                break
-            case "Clothes" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Clothes" }
-                break
-            case "Hair" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Hair" }
-                break
-            case "Brows" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Brows" }
-                break
-            case "Headdress" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Headdress" }
-                break
-            case "Face" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Face" }
-                break
-            case "Accessory" :
-                self.filterArray = self.modsDataModel.filter { $0.type == "Accessory" }
-                break
-            
-            default : break
-                
-            }
-            
             self.themeCollectionView.reloadData()
         } else {
-            self.selectedStyle = indexPath.row
-            
-            
-            let imagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + self.filterArray[indexPath.row].data.imageOriginal // - 1].data.previewImage
+            let data = self.filterArray[indexPath.row]
+            let imagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + data.data.imageOriginal
             let editorContentImgData = self.loadImageFromFile(at: imagePath)
             
-            switch self.selectedcategoryName {
-            case "Shoes" :
-                self.selectedDictionaryData["Shoes"] = [indexPath.row]
-                self.editingPictureView.shoesImageView.image = UIImage(data: editorContentImgData )
-                break
-                
-            case "Eyes" :
-                self.selectedDictionaryData["Eyes"] = [indexPath.row]
-                self.editingPictureView.eyesImageView.image = UIImage(data: editorContentImgData )
-                break
-                
-            case "Body" :
-                self.selectedDictionaryData["Body"] = [indexPath.row]
-                self.editingPictureView.bodyImageView.image = UIImage(data: editorContentImgData )
-                break
-                
-            case "Mouth" :
-                self.selectedDictionaryData["Mouth"] = [indexPath.row]
-                self.editingPictureView.mouthImageView.image = UIImage(data: editorContentImgData )
-                break
-                
-            case "Clothes" :
-                self.selectedDictionaryData["Clothes"] = [indexPath.row]
-                self.editingPictureView.shirtImageView.image = UIImage(data: editorContentImgData )
-                break
-                
-            case "Hair" :
-                self.selectedDictionaryData["Hair"] = [indexPath.row]
-                self.editingPictureView.hairImageView.image = UIImage(data: editorContentImgData )
-                break
-                
-            case "Brows" :
-                self.selectedDictionaryData["Brows"] = [indexPath.row]
-                self.editingPictureView.eyebrowsImageView.image = UIImage(data: editorContentImgData )
-                break
-                
-            case "Headdress" :
-                self.selectedDictionaryData["Headdress"] = [indexPath.row]
-                self.editingPictureView.hairsBack.image = UIImage(data: editorContentImgData)
-                break
-                
-            case "Face" :
-                self.selectedDictionaryData["Face"] = [indexPath.row]
-                self.editingPictureView.noseImageView.image = UIImage(data: editorContentImgData )
-                break
-                
-            case "Accessory" :
-                self.selectedDictionaryData["Accessory"] = [indexPath.row]
-                self.editingPictureView.hatsImageView.image = UIImage(data: editorContentImgData )
-                break
+            self.selectedDictionaryData[self.selectedcategoryName] = indexPath.row
+            updateEditorImage(for: self.selectedcategoryName, with: editorContentImgData)
             
-            default : break
-                
-//                self.editingPictureView.trousersImageView.getPdfImage_AW(with: editorContentImgData )
-            }
+            self.themeCollectionView.reloadData()
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: (IS_IPAD ? 100 : 16), bottom: 0, right: (IS_IPAD ? 100 : 16))
     }
     
-    func assignFirstTime() {
-        
-        let shoesImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Shoes" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.shoesImageView.image = UIImage(data: self.loadImageFromFile(at: shoesImage) )
-
-        let eyesImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Eyes" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.eyesImageView.image = UIImage(data: self.loadImageFromFile(at: eyesImage) )
-        
-        let bodyImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Body" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.bodyImageView.image = UIImage(data: self.loadImageFromFile(at: bodyImage) )
-        
-        let mouthImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Mouth" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.mouthImageView.image = UIImage(data: self.loadImageFromFile(at: mouthImage) )
-        
-        let clothesImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Clothes" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.shirtImageView.image = UIImage(data: self.loadImageFromFile(at: clothesImage) )
-        
-        let hairImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Hair" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.hairImageView.image = UIImage(data: self.loadImageFromFile(at: hairImage) )
-        
-        let browsImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Brows" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.eyebrowsImageView.image = UIImage(data: self.loadImageFromFile(at: browsImage) )
-        
-        let headdressImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Headdress" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.hairsBack.image = UIImage(data: self.loadImageFromFile(at: headdressImage) )
-        
-        let faceImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Face" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.noseImageView.image = UIImage(data: self.loadImageFromFile(at: faceImage) )
-        
-        let accessoryImage = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + ((self.modsDataModel.filter { $0.type == "Accessory" }).first?.data.imageOriginal ?? "")
-        self.editingPictureView.hatsImageView.image = UIImage(data: self.loadImageFromFile(at: accessoryImage) )
-        
+    private func updateEditorImage(for category: String, with imageData: Data) {
+        switch category {
+        case "Shoes":
+            self.editingPictureView.shoesImageView.image = UIImage(data: imageData)
+        case "Eyes":
+            self.editingPictureView.eyesImageView.image = UIImage(data: imageData)
+        case "Body":
+            self.editingPictureView.bodyImageView.image = UIImage(data: imageData)
+        case "Mouth":
+            self.editingPictureView.mouthImageView.image = UIImage(data: imageData)
+        case "Clothes":
+            self.editingPictureView.shirtImageView.image = UIImage(data: imageData)
+        case "Hair":
+            self.editingPictureView.hairImageView.image = UIImage(data: imageData)
+        case "Brows":
+            self.editingPictureView.eyebrowsImageView.image = UIImage(data: imageData)
+        case "Headdress":
+            self.editingPictureView.hairsBack.image = UIImage(data: imageData)
+        case "Face":
+            self.editingPictureView.noseImageView.image = UIImage(data: imageData)
+        case "Accessory":
+            self.editingPictureView.hatsImageView.image = UIImage(data: imageData)
+        default:
+            break
+        }
     }
+    
+    func assignFirstTime() {
+        // Assign default images for the first time for all categories and set the first index (0) as selected
+        assignEditorImage(for: "Shoes")
+        assignEditorImage(for: "Eyes")
+        assignEditorImage(for: "Body")
+        assignEditorImage(for: "Mouth")
+        assignEditorImage(for: "Clothes")
+        assignEditorImage(for: "Hair")
+        assignEditorImage(for: "Brows")
+    }
+
+    private func assignEditorImage(for category: String) {
+        // Filter the mods data model based on the category
+        let filteredData = self.modsDataModel.filter({ $0.type == category })
+        
+        // Check if there is any data for the category
+        if let firstData = filteredData.first {
+            // Set the image for the first item
+            let imagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + firstData.data.imageOriginal
+            let imageData = self.loadImageFromFile(at: imagePath)
+            
+            // Update the editor with the image
+            updateEditorImage(for: category, with: imageData)
+            
+            // Set the selected index as 0 for the first time for this category
+            selectedDictionaryData[category] = 0
+            
+            // Reload the theme collection view if needed to reflect selection
+            self.themeCollectionView.reloadData()
+        }
+    }
+
 }
+
 
 extension UIView {
     // Function to create an image from a UIView
@@ -375,6 +229,25 @@ extension UIView {
             // Render the view's layer
             self.layer.render(in: ctx.cgContext)
         }
-        
     }
 }
+
+
+
+
+//    guard let image = self.editingPictureView.toImage() else { return }
+//
+//        // Save the PNG data to the photo library using the Photos framework
+//        PHPhotoLibrary.shared().performChanges({
+//            // Request to add the PNG image to the photo library
+//            let request = PHAssetCreationRequest.forAsset()
+//            request.addResource(with: .photo, data: pngData, options: nil)
+//        }) { success, error in
+//            if success {
+//                print("Image saved successfully with transparency.")
+//            } else {
+//                print("Error saving image: \(error?.localizedDescription ?? "Unknown error")")
+//            }
+//        }
+    
+    

@@ -26,7 +26,6 @@ class PopUPView: UIViewController {
         
         self.popupnameLabel.text = self.nameLabelText
         
-        
         self.view.isUserInteractionEnabled = false
         
         
@@ -37,8 +36,9 @@ class PopUPView: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.view.isUserInteractionEnabled = true
-            self.dismiss(animated: false)
-            self.delegate?.didShowSkinApplied()
+            self.dismiss(animated: false) {
+                self.delegate?.didShowSkinApplied()
+            }
         }
     }
 }
