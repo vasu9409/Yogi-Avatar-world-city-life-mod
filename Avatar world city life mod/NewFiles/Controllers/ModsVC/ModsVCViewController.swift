@@ -7,7 +7,17 @@
 
 import UIKit
 
-class ModsVCViewController: UIViewController {
+class ModsVCViewController: UIViewController, SearchVCDelegate {
+    func selectedFromSearch(mods: E8V?, houseMods: The8Ua8Onb?) {
+        if mods != nil {
+            let ctrl = ModsDetailsVC()
+            ctrl.largeTitle = "Mods"
+            ctrl.modsDetailsMode = mods
+            ctrl.isFromHouseMods = false
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+    }
+    
     
     @IBOutlet weak var searchButtonView: UIView!
     @IBOutlet weak var menuButtonView: UIView!
@@ -21,8 +31,10 @@ class ModsVCViewController: UIViewController {
     var selectedcategoryName: String = "All"
     
     var modsDataModel: [E8V] = []
-    var favouritesArray: [E8V] = []
+//    var favouritesArray: [E8V] = []
     var filterArray: [E8V] = []
+    
+    var scrollPositions: [String: CGPoint] = [:]
     
     let localFolderPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path + "/content"
     
@@ -40,6 +52,12 @@ class ModsVCViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
     @IBAction func menuButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -47,6 +65,9 @@ class ModsVCViewController: UIViewController {
     @IBAction func searchButton(_ sender: Any) {
         let ctrl = SearchVC()
         ctrl.modalPresentationStyle = .overFullScreen
+        ctrl.isFromHouseMods = false
+        ctrl.modsFilterArray = self.filterArray
+        ctrl.delegate = self
         self.present(ctrl, animated: false)
     }
     
@@ -97,7 +118,7 @@ extension ModsVCViewController: UITableViewDelegate, UITableViewDataSource {
         let imagePath = self.localFolderPath + "/" + ContentType_AW.mod.rawValue + "/" + self.modsDataModel[indexPath.row].the00Ika
         cell.cellImageView.image = UIImage(data: self.loadImageFromFile(at: imagePath))
         
-        if self.favouritesArray.contains(where: { $0.the00Ika == self.filterArray[indexPath.row].the00Ika}) {
+        if UserDefaults.AvatarModsFavData.contains(where: { $0.the00Ika == self.filterArray[indexPath.row].the00Ika}) {
             cell.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
         } else {
             cell.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
@@ -108,15 +129,20 @@ extension ModsVCViewController: UITableViewDelegate, UITableViewDataSource {
             let ctrl = ModsDetailsVC()
             ctrl.largeTitle = "Mods"
             ctrl.modsDetailsMode = self.filterArray[indexPath.row]
+            ctrl.isFromHouseMods = false
             self.navigationController?.pushViewController(ctrl, animated: true)
         }
         
         cell.isheartButtonTapped = { [weak self] in
             guard let self else { return }
-            if let index = self.favouritesArray.firstIndex(where: { $0.the00Ika == self.filterArray[indexPath.row].the00Ika }) {
-                self.favouritesArray.remove(at: index)
+            
+            if !(UserDefaults.AvatarModsFavData.contains(where: { $0.the00Ika == self.filterArray[indexPath.row].the00Ika })) {
+                
+                UserDefaults.AvatarModsFavData.append(self.filterArray[indexPath.row])
+                UserDefaults.standard.synchronize()
             } else {
-                self.favouritesArray.append(self.filterArray[indexPath.row])
+                UserDefaults.AvatarModsFavData.removeAll(where: { ($0.the00Ika == self.filterArray[indexPath.row].the00Ika) })
+                UserDefaults.standard.synchronize()
             }
             
             self.tableView.reloadData()
@@ -141,35 +167,72 @@ extension ModsVCViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         cell.catNameLabel.text = self.categoryNameArray[indexPath.row]
         
-        
         cell.selected(self.selectedcategoryName == self.categoryNameArray[indexPath.row])
         
         return cell
     }
     
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        
+//        scrollPositions[selectedcategoryName] = tableView.contentOffset
+//        
+//        self.selectedcategoryName = self.categoryNameArray[indexPath.row]
+//        self.collectionView.reloadData()
+//        
+//        switch self.categoryNameArray[indexPath.row] {
+//        case "All" :
+//            self.filterArray = self.modsDataModel
+//            break
+//        case "New" :
+//            self.filterArray = self.modsDataModel.filter { $0.isNew }
+//            break
+//        case "Favourites" :
+//            self.filterArray = self.favouritesArray
+//            break
+//        case "Popular" :
+//            self.filterArray = self.modsDataModel.filter { $0.isPopular }
+//            break
+//        default : break
+//        }
+//        
+//        self.tableView.reloadData()
+//        
+//        if let savedPosition = scrollPositions[selectedcategoryName] {
+//            tableView.setContentOffset(savedPosition, animated: false)
+//        } else {
+//            tableView.setContentOffset(.zero, animated: false)
+//        }
+//        
+//        self.tableView.reloadData()
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Save current scroll position before switching categories
+        scrollPositions[selectedcategoryName] = tableView.contentOffset
         
-        self.selectedcategoryName = self.categoryNameArray[indexPath.row]
+        // Update selected category and filter array accordingly
+        selectedcategoryName = categoryNameArray[indexPath.row]
         self.collectionView.reloadData()
-        
-        switch self.categoryNameArray[indexPath.row] {
-        case "All" :
-            self.filterArray = self.modsDataModel
-            break
-        case "New" :
-            self.filterArray = self.modsDataModel.filter { $0.isNew }
-            break
-        case "Favourites" :
-            self.filterArray = self.favouritesArray
-            break
-        case "Popular" :
-            self.filterArray = self.modsDataModel.filter { $0.isPopular }
-            break
-        default : break
+        filterArray = modsDataModel.filter { mod in
+            switch selectedcategoryName {
+            case "New": return mod.isNew
+            case "Favourites": return UserDefaults.AvatarModsFavData.contains { $0.the00Ika == mod.the00Ika }
+            case "Popular": return mod.isPopular
+            default: return true // "All" category
+            }
         }
         
-        self.tableView.reloadData()
+        // Reload data and set the scroll position after reload completes
+        tableView.reloadData()
+        
+        // Delay setting the scroll position to allow reload to complete
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let targetOffset = self.scrollPositions[self.selectedcategoryName] ?? .zero
+            self.tableView.setContentOffset(targetOffset, animated: false)
+        }
     }
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         

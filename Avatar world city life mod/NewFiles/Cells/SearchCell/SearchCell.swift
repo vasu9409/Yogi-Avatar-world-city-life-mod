@@ -16,7 +16,7 @@ class SearchCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        self.seachNameLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 18 , style: .semiBold)
-        self.seachBgView.layer.cornerRadius = IS_IPAD ? 38 : 22
+        self.seachNameLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 28 : 18 , style: .semiBold)
+        self.seachBgView.layer.cornerRadius = IS_IPAD ? 37 : 22
     }
 }

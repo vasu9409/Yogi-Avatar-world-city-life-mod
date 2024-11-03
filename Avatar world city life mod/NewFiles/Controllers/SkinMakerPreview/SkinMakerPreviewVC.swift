@@ -45,6 +45,11 @@ class SkinMakerPreviewVC: UIViewController {
         self.themeCollectionView.registerNib(for: "SkinCell")
         
         self.assignFirstTime()
+        
+        DispatchQueue.main.async {
+            self.categoryCollectionView.reloadData()
+            self.themeCollectionView.reloadData()
+        }
     }
     
     @IBAction func btnBack(_ sender: Any) {
@@ -58,7 +63,7 @@ class SkinMakerPreviewVC: UIViewController {
         ctrl.selectedImage = image
         self.navigationController?.pushViewController(ctrl, animated: true)
     }
-
+    
     func fetchModsData() {
         let jsonFilePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + "content.json"
         
@@ -76,12 +81,31 @@ class SkinMakerPreviewVC: UIViewController {
             appendStrokes(for: "Headdress", from: files.z3D.headdress)
             appendStrokes(for: "Face", from: files.z3D.face)
             appendStrokes(for: "Accessory", from: files.z3D.accessory)
+            
+            self.filterArray = self.modsDataModel.filter { $0.type == self.selectedcategoryName }
         }
     }
     
     private func appendStrokes(for type: String, from data: [String: Accessory]) {
         for (_, value) in data {
             let stroke = CustomEditorStroke(type: type, data: value)
+            
+            let originalImagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + "\(stroke.data.imageOriginal)"
+            let editorContentOriginalImgData = self.loadImageFromFile(at: originalImagePath)
+            if editorContentOriginalImgData.isEmpty {
+                self.downloadImageFile("/content/66ebf80676cb8/\(stroke.data.imageOriginal)", "\(stroke.data.imageOriginal)", folderName: "66ebf80676cb8")
+                
+            }
+            
+            let previewImagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + "\(stroke.data.previewImage)"
+            let editorContentPreviewImgData = self.loadImageFromFile(at: previewImagePath)
+            
+            
+            if editorContentPreviewImgData.isEmpty {
+                self.downloadImageFile("/content/66ebf80676cb8/\(stroke.data.previewImage)", "\(stroke.data.previewImage)", folderName: "66ebf80676cb8")
+                
+            }
+            
             self.modsDataModel.append(stroke)
         }
     }
@@ -178,6 +202,9 @@ extension SkinMakerPreviewVC: UICollectionViewDelegate, UICollectionViewDelegate
         assignEditorImage(for: "Clothes")
         assignEditorImage(for: "Hair")
         assignEditorImage(for: "Brows")
+        
+        self.categoryCollectionView.reloadData()
+        self.themeCollectionView.reloadData()
     }
 
     private func assignEditorImage(for category: String) {
@@ -197,10 +224,10 @@ extension SkinMakerPreviewVC: UICollectionViewDelegate, UICollectionViewDelegate
             selectedDictionaryData[category] = 0
             
             // Reload the theme collection view if needed to reflect selection
+            self.categoryCollectionView.reloadData()
             self.themeCollectionView.reloadData()
         }
     }
-
 }
 
 

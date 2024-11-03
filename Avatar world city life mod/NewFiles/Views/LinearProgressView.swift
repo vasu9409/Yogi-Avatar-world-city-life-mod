@@ -67,6 +67,7 @@ class LinearProgressBar: UIView {
         // Configure percentageLabel
         percentageLabel.textAlignment = .center
         percentageLabel.textColor = .black
+        percentageLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 28 : 18, style: .Medium)
         addSubview(percentageLabel)
     }
 

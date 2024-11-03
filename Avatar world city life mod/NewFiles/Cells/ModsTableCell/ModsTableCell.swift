@@ -24,7 +24,7 @@ class ModsTableCell: UITableViewCell {
         
         self.ArrowButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         self.mainView.layer.cornerRadius = IS_IPAD ? 52 : 28
-        self.cellImageView.layer.cornerRadius = IS_IPAD ? 52 : 24
+        self.cellImageView.layer.cornerRadius = IS_IPAD ? 48 : 24
         self.heartButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         
         self.nameLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 18, style: .bold)

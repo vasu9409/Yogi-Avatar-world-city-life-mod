@@ -1034,7 +1034,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Avatar world city life mod/Avatar world city life mod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B748YP7MZU;
+				DEVELOPMENT_TEAM = 954297RNB5;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Avatar world city life mod/Resource/Info.plist";
@@ -1070,7 +1070,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Avatar world city life mod/Avatar world city life mod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B748YP7MZU;
+				DEVELOPMENT_TEAM = 954297RNB5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Avatar world city life mod/Resource/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Downloading content to Photo Library";

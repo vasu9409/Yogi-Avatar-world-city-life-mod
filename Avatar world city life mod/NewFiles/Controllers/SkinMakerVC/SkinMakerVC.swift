@@ -39,12 +39,13 @@ class SkinMakerVC: UIViewController, DeleteVCDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.fetchAllDataForSkinMaker()
         self.isShowVerification = true
         
-        self.largeTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 36 : 22, style: .bold)
-        self.AddNewButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
-        self.noskinaddedButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
-        self.addNewSkinButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 20, style: .bold)
+        self.largeTitleLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 22, style: .bold)
+        self.AddNewButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 20, style: .bold)
+        self.noskinaddedButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 20, style: .bold)
+        self.addNewSkinButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 30 : 20, style: .bold)
         
         self.setupUI()
         
@@ -72,7 +73,7 @@ class SkinMakerVC: UIViewController, DeleteVCDelegate {
     }
     
     @IBAction func btnNoSkinAdd(_ sender: Any) {
-
+        
     }
     
     @IBAction func btnRight(_ sender: Any) {
@@ -128,7 +129,7 @@ class SkinMakerVC: UIViewController, DeleteVCDelegate {
         } catch {
             print("Error fetching data from Realm: \(error)")
         }
-
+        
     }
     
     func clearAndFetchSkins() {

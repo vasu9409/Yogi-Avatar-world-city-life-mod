@@ -22,6 +22,9 @@ class ModsDetailsVC: UIViewController {
     var detailsMode: The8Ua8Onb?
     var largeTitle: String = ""
     
+    var isFromHouseMods: Bool = false
+    var isSelectedForFavorite: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,8 +59,17 @@ class ModsDetailsVC: UIViewController {
             self.detailImageView.image = UIImage(data: self.loadImageFromFile(at: imagePath))
         }
         
-        self.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
-        self.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .selected)
+        if self.isFromHouseMods {
+            self.isSelectedForFavorite = (UserDefaults.MVTMindFreshnerQuestionsSave.contains(where: { $0.the1477 == self.detailsMode?.the1477 }))
+        } else {
+            self.isSelectedForFavorite = UserDefaults.AvatarModsFavData.contains(where: { $0.the00Ika == self.modsDetailsMode?.the00Ika})
+        }
+        
+        if isSelectedForFavorite {
+            self.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
+        } else {
+            self.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
+        }
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -65,7 +77,31 @@ class ModsDetailsVC: UIViewController {
     }
     
     @IBAction func heartButton(_ sender: Any) {
-        
+        if self.isFromHouseMods {
+            guard let houseData = self.detailsMode else { return }
+            if !(UserDefaults.MVTMindFreshnerQuestionsSave.contains(where: { $0.the1477 == houseData.the1477 })) {
+                
+                UserDefaults.MVTMindFreshnerQuestionsSave.append(houseData)
+                UserDefaults.standard.synchronize()
+                self.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
+            } else {
+                UserDefaults.MVTMindFreshnerQuestionsSave.removeAll(where: { ($0.the1477 == houseData.the1477) })
+                UserDefaults.standard.synchronize()
+                self.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
+            }
+        } else {
+            guard let modsData = self.modsDetailsMode else { return }
+            if !(UserDefaults.AvatarModsFavData.contains(where: { $0.the00Ika == modsData.the00Ika })) {
+                
+                UserDefaults.AvatarModsFavData.append(modsData)
+                UserDefaults.standard.synchronize()
+                self.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
+            } else {
+                UserDefaults.AvatarModsFavData.removeAll(where: { ($0.the00Ika == modsData.the00Ika) })
+                UserDefaults.standard.synchronize()
+                self.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
+            }
+        }
     }
     
     func setupProgress() {

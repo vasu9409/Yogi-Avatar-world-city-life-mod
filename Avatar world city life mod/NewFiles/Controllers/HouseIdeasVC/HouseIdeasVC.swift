@@ -9,8 +9,18 @@ import UIKit
 
 let localFolderPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path + "/content"
 
-class HouseIdeasVC: UIViewController {
-
+class HouseIdeasVC: UIViewController, SearchVCDelegate {
+    func selectedFromSearch(mods: E8V?, houseMods: The8Ua8Onb?) {
+        if houseMods != nil {
+            let ctrl = ModsDetailsVC()
+            ctrl.largeTitle = "House ideas"
+            ctrl.detailsMode = houseMods
+            ctrl.isFromHouseMods = true
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+    }
+    
+    
     @IBOutlet weak var searchButtonView: UIView!
     @IBOutlet weak var menuButtonView: UIView!
     @IBOutlet weak var modsTitleLabel: UILabel!
@@ -20,12 +30,12 @@ class HouseIdeasVC: UIViewController {
     @IBOutlet weak var catCollectionView: UICollectionView!
     
     var isForMods: Bool = false
-    
+    var scrollPositions: [String: CGPoint] = [:]
     var categoryNameArray: [String] = ["All", "New", "Favourites", "Top"]
     var selectedcategoryName: String = "All"
     
     var houseIdeaDataModel: [The8Ua8Onb] = []
-    var favouritesArray: [The8Ua8Onb] = []
+//    var favouritesArray: [The8Ua8Onb] = []
     var filterArray: [The8Ua8Onb] = []
     
     override func viewDidLoad() {
@@ -42,17 +52,27 @@ class HouseIdeasVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.collectionView.reloadData()
+    }
+    
     @IBAction func menuButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func searchButton(_ sender: Any) {
-        
+        let ctrl = SearchVC()
+        ctrl.modalPresentationStyle = .overFullScreen
+        ctrl.isFromHouseMods = true
+        ctrl.houseModsFilterArray = self.filterArray
+        ctrl.delegate = self
+        self.present(ctrl, animated: false)
     }
     
     func fetchModsData() {
         let jsonFilePath = localFolderPath + "/" + ContentType_AW.houseIdeas.rawValue + "/" + "content.json"
-        
         
         if let files: HouseIdeas = FileSession_AW.shared.getModelFromFile_AW(from: URL(fileURLWithPath: jsonFilePath)) {
             self.houseIdeaDataModel.removeAll()
@@ -79,6 +99,10 @@ class HouseIdeasVC: UIViewController {
         self.catCollectionView.dataSource = self
         self.catCollectionView.delegate = self
         self.catCollectionView.registerNib(for: "CategoryCell")
+        
+    }
+    
+    func loadFavouritesFromUserDefaults() {
         
     }
 }
@@ -108,7 +132,7 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             
             cell.ideaTitleName.text = self.filterArray[indexPath.row].title
             
-            if self.favouritesArray.contains(where: { $0.the1477 == self.filterArray[indexPath.row].the1477}) {
+            if (UserDefaults.MVTMindFreshnerQuestionsSave.contains(where: { $0.the1477 == self.filterArray[indexPath.row].the1477 })) {
                 cell.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
             } else {
                 cell.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
@@ -120,12 +144,14 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             
             cell.isheartButtonTapped = { [weak self] in
                 guard let self else { return }
-                if let index = self.favouritesArray.firstIndex(where: { $0.the1477 == self.filterArray[indexPath.row].the1477 }) {
-                    self.favouritesArray.remove(at: index)
-                    cell.heartButton.setImage(UIImage(named: "heartuncheckbroken"), for: .normal)
+                
+                if !(UserDefaults.MVTMindFreshnerQuestionsSave.contains(where: { $0.the1477 == self.filterArray[indexPath.row].the1477 })) {
+                    
+                    UserDefaults.MVTMindFreshnerQuestionsSave.append(self.filterArray[indexPath.row])
+                    UserDefaults.standard.synchronize()
                 } else {
-                    self.favouritesArray.append(self.filterArray[indexPath.row])
-                    cell.heartButton.setImage(UIImage(named: "newStromheartStone"), for: .normal)
+                    UserDefaults.MVTMindFreshnerQuestionsSave.removeAll(where: { ($0.the1477 == self.filterArray[indexPath.row].the1477) })
+                    UserDefaults.standard.synchronize()
                 }
                 
                 self.collectionView.reloadData()
@@ -138,6 +164,9 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == self.catCollectionView {
+            
+            scrollPositions[selectedcategoryName] = collectionView.contentOffset
+            
             self.selectedcategoryName = self.categoryNameArray[indexPath.row]
             self.catCollectionView.reloadData()
             
@@ -149,7 +178,7 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                 self.filterArray = self.houseIdeaDataModel.filter { $0.isNew }
                 break
             case "Favourites" :
-                self.filterArray = self.favouritesArray
+                self.filterArray = UserDefaults.MVTMindFreshnerQuestionsSave
                 break
             case "Top" :
                 self.filterArray = self.houseIdeaDataModel.filter { $0.isTop }
@@ -159,11 +188,17 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             
             self.collectionView.reloadData()
             
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                let targetOffset = self.scrollPositions[self.selectedcategoryName] ?? .zero
+                self.catCollectionView.setContentOffset(targetOffset, animated: false)
+            }
             
         } else {
             let ctrl = ModsDetailsVC()
             ctrl.largeTitle = "House ideas"
             ctrl.detailsMode = self.filterArray[indexPath.row]
+            ctrl.isFromHouseMods = true
             self.navigationController?.pushViewController(ctrl, animated: true)
         }
         
@@ -176,7 +211,7 @@ extension HouseIdeasVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             // Return the maximum of the cell's width and the label's required width
             return CGSize(width: labelWidth, height: collectionView.frame.height)
         } else {
-            return CGSize(width: (collectionView.frame.width - (IS_IPAD ? 16 : 8)) / 2, height: IS_IPAD ? 368 : 216)
+            return CGSize(width: (collectionView.frame.width - (IS_IPAD ? 16 : 8)) / 2, height: IS_IPAD ? 300 : 216)
         }
     }
     

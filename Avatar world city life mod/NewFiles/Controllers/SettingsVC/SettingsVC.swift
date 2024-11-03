@@ -64,19 +64,25 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            let ctrl = TermsVC()
-            self.navigationController?.pushViewController(ctrl, animated: true)
-            
+//            let ctrl = TermsVC()
+//            self.navigationController?.pushViewController(ctrl, animated: true)
+            self.openURL("https://www.google.com")
             break
             
         case 1:
-            let ctrl = PrivacyVC()
-            self.navigationController?.pushViewController(ctrl, animated: true)
-            
+//            let ctrl = PrivacyVC()
+//            self.navigationController?.pushViewController(ctrl, animated: true)
+            self.openURL("https://www.yandex.com")
             break
             
         default : break
             
+        }
+    }
+    
+    func openURL(_ urlString: String) {
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 }

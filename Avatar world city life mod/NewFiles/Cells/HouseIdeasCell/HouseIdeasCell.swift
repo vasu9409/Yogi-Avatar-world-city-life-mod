@@ -20,7 +20,7 @@ class HouseIdeasCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         self.mainBGView.layer.cornerRadius = IS_IPAD ? 52 : 28
-        self.cellImageVIew.layer.cornerRadius = IS_IPAD ? 52 : 24
+        self.cellImageVIew.layer.cornerRadius = IS_IPAD ? 48 : 24
         self.heartButton.layer.cornerRadius = IS_IPAD ? 41 : 24
         
         self.ideaTitleName.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 18, style: .bold)

@@ -27,6 +27,8 @@ struct DropboxFileContent {
 
 class PreloaderVC: UIViewController {
     
+    @IBOutlet weak var rightTrailingConstant: NSLayoutConstraint!
+    @IBOutlet weak var leftLeadingConstant: NSLayoutConstraint!
     @IBOutlet weak var connectionView: UIView!
     @IBOutlet weak var internetConnectionLabel: UILabel!
     @IBOutlet weak var loadingLabel: UILabel!
@@ -51,8 +53,16 @@ class PreloaderVC: UIViewController {
         super.viewDidLoad()
         
         self.connectionView.isHidden = true
-        self.loadingLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 24,style: .semiBold)
-        self.internetConnectionLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 24,style: .semiBold)
+        
+        if UIScreen.main.nativeBounds.height == 2360 {
+            self.leftLeadingConstant.constant = 100
+            self.rightTrailingConstant.constant = 100
+            self.view.layoutIfNeeded()
+        }
+        
+        
+        self.loadingLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 24,style: .semiBold)
+        self.internetConnectionLabel.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 32 : 24,style: .semiBold)
         self.okInternetButton.titleLabel?.font = GilroyAppConstFontsTexture.gilroyDimension(size: IS_IPAD ? 34 : 24,style: .semiBold)
         self.okInternetButton.layer.cornerRadius = IS_IPAD ? 44 : 26
         self.intenetConnectionView.layer.cornerRadius = IS_IPAD ? 44 : 26
@@ -71,7 +81,7 @@ class PreloaderVC: UIViewController {
         self.leanerarProgressView.clipsToBounds = true
         self.leanerarProgressView.barColor = UIColor(named: "newblackcolorfounded")!
         self.leanerarProgressView.borderColor = UIColor(named: "lightercoloruidrag")!
-        self.leanerarProgressView.borderWidth = IS_IPAD ? 4 : 7
+        self.leanerarProgressView.borderWidth = IS_IPAD ? 8 : 4
         self.leanerarProgressView.spacing = 0
         self.leanerarProgressView.innerSpacing = 0
         self.leanerarProgressView.progress = 0 // Initial progress
@@ -155,7 +165,7 @@ class PreloaderVC: UIViewController {
         DBManager_AW.shared.connect_AW { client in
             
             guard client != nil else {
-//                print("Failed to connect to Dropbox")
+                print("Failed to connect to Dropbox")
                 return
             }
             
@@ -177,9 +187,6 @@ class PreloaderVC: UIViewController {
                                 
                             } else {
                                 if file.name.hasSuffix(".png") {
-                                    
-                                    print("file.path", file.path)
-                                    print("file.name", file.name)
                                     
                                     self.downloadImageFile(file.path, file.name, folderName: "66ebf80676cb8")
                                 }
@@ -231,25 +238,25 @@ class PreloaderVC: UIViewController {
                                 }
                             }
                             
-                            folderPath = "/content/66ebf80676cb8"
-                            DBManager_AW.shared.listFolder_AW(path: folderPath) { result in
-                                switch result {
-                                case .success(let folderContents):
-                                    for file in folderContents {
-                                        if file.isFolder {
-                                            
-                                        } else {
-                                            if file.name.hasSuffix(".png") {
-                                                self.downloadImageFile(file.path, file.name, folderName: "66ebf80676cb8")
-                                            }
-                                        }
-                                    }
-                                    
-                                case .failure(let error):
-                                    print("Failed to fetch folder contents: \(error.localizedDescription)")
-                                    
-                                }
-                            }
+//                            folderPath = "/content/66ebf80676cb8"
+//                            DBManager_AW.shared.listFolder_AW(path: folderPath) { result in
+//                                switch result {
+//                                case .success(let folderContents):
+//                                    for file in folderContents {
+//                                        if file.isFolder {
+//                                            
+//                                        } else {
+//                                            if file.name.hasSuffix(".png") {
+//                                                self.downloadImageFile(file.path, file.name, folderName: "66ebf80676cb8")
+//                                            }
+//                                        }
+//                                    }
+//                                    
+//                                case .failure(let error):
+//                                    print("Failed to fetch folder contents: \(error.localizedDescription)")
+//                                    
+//                                }
+//                            }
                             
                         case .failure(let error):
                             print("Failed to fetch folder contents: \(error.localizedDescription)")
@@ -446,13 +453,15 @@ class PreloaderVC: UIViewController {
 //            return nil
 //        }
 //    }
+}
+
+
+extension UIViewController {
     
-    // Save image data to the device in specific folder
     func saveImageToDevice(_ data: Data, fileName: String, folderName: String) -> String? {
         let fileManager = FileManager.default
         let folderPath = localFolderPath + "/\(folderName)"
         
-        // Create the directory if it does not exist
         if !fileManager.fileExists(atPath: folderPath) {
             do {
                 try fileManager.createDirectory(atPath: folderPath, withIntermediateDirectories: true, attributes: nil)
@@ -466,7 +475,6 @@ class PreloaderVC: UIViewController {
         
         do {
             try data.write(to: fileURL)
-//            filesPath.append(fileURL)
             return fileURL.path
         } catch {
             print("Failed to save image file: \(error.localizedDescription)")
@@ -474,12 +482,10 @@ class PreloaderVC: UIViewController {
         }
     }
     
-    // Save JSON data to the device in specific folder
     func saveJsonToDevice(_ data: Data, fileName: String, folderName: String) -> String? {
         let fileManager = FileManager.default
         let folderPath = localFolderPath + "/\(folderName)"
         
-        // Create the directory if it does not exist
         if !fileManager.fileExists(atPath: folderPath) {
             do {
                 try fileManager.createDirectory(atPath: folderPath, withIntermediateDirectories: true, attributes: nil)
@@ -519,8 +525,6 @@ class PreloaderVC: UIViewController {
                     print("Failed to download image file: \(error.localizedDescription)")
                 }
             }
-        } else {
-//            print("Already Exists")
         }
     }
     
@@ -542,16 +546,55 @@ class PreloaderVC: UIViewController {
                     
                     if let savedPath = self.saveJsonToDevice(jsonData, fileName: name, folderName: folderName) {
                         print("\nJSON file saved at: \(savedPath)\n")
+                        
+                        if name == "66ebf80676cb8" {
+                            self.fetchAllDataForSkinMaker()
+                        }
                     }
                     
                 case .failure(let error):
                     print("Failed to download JSON file: \(error.localizedDescription)")
                 }
             }
-        } else {
-//            print("Already Exists")
+        }
+    }
+    
+    func fetchAllDataForSkinMaker() {
+        let jsonFilePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + "content.json"
+        
+        if let files: EditorContent = FileSession_AW.shared.getModelFromFile_AW(from: URL(fileURLWithPath: jsonFilePath)) {
+            
+            self.appendStrokes(for: "Shoes", from: files.z3D.shoes)
+            self.appendStrokes(for: "Eyes", from: files.z3D.eyes)
+            self.appendStrokes(for: "Body", from: files.z3D.body)
+            self.appendStrokes(for: "Mouth", from: files.z3D.mouth)
+            self.appendStrokes(for: "Clothes", from: files.z3D.clothes)
+            self.appendStrokes(for: "Hair", from: files.z3D.hair)
+            self.appendStrokes(for: "Brows", from: files.z3D.brows)
+            self.appendStrokes(for: "Headdress", from: files.z3D.headdress)
+            self.appendStrokes(for: "Face", from: files.z3D.face)
+            self.appendStrokes(for: "Accessory", from: files.z3D.accessory)
+        }
+    }
+    
+    private func appendStrokes(for type: String, from data: [String: Accessory]) {
+        for (_, value) in data {
+            let stroke = CustomEditorStroke(type: type, data: value)
+            
+            let originalImagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + "\(stroke.data.imageOriginal)"
+            let editorContentOriginalImgData = self.loadImageFromFile(at: originalImagePath)
+            if editorContentOriginalImgData.isEmpty {
+                self.downloadImageFile("/content/66ebf80676cb8/\(stroke.data.imageOriginal)", "\(stroke.data.imageOriginal)", folderName: "66ebf80676cb8")
+                
+            }
+            
+            let previewImagePath = localFolderPath + "/" + ContentType_AW.unknown.rawValue + "/" + "\(stroke.data.previewImage)"
+            let editorContentPreviewImgData = self.loadImageFromFile(at: previewImagePath)
+            
+            if editorContentPreviewImgData.isEmpty {
+                self.downloadImageFile("/content/66ebf80676cb8/\(stroke.data.previewImage)", "\(stroke.data.previewImage)", folderName: "66ebf80676cb8")
+                
+            }
         }
     }
 }
-
-

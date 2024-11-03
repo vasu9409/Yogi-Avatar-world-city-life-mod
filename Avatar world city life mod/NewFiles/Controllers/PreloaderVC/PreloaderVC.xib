@@ -15,8 +15,10 @@
                 <outlet property="intenetConnectionView" destination="7MY-Xk-p92" id="2kg-et-3EM"/>
                 <outlet property="internetConnectionLabel" destination="wis-Yz-UBJ" id="8kC-VQ-DAd"/>
                 <outlet property="leanerarProgressView" destination="aCE-x3-Auj" id="Dvi-AK-Zt6"/>
+                <outlet property="leftLeadingConstant" destination="sHu-n2-WPf" id="58t-oa-6mL"/>
                 <outlet property="loadingLabel" destination="8CK-hg-RCH" id="S3Q-Ip-ihG"/>
                 <outlet property="okInternetButton" destination="s7M-U7-kXK" id="l23-uT-yGa"/>
+                <outlet property="rightTrailingConstant" destination="53g-87-xuW" id="Xyu-tz-Jwo"/>
                 <outlet property="view" destination="rfk-Gr-uv0" id="8eC-JN-Wbb"/>
             </connections>
         </placeholder>
@@ -39,7 +41,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CK-hg-RCH">
-                    <rect key="frame" x="159.33333333333334" y="369.66666666666669" width="74.666666666666657" height="20.333333333333314"/>
+                    <rect key="frame" x="159.33333333333334" y="373.66666666666669" width="74.666666666666657" height="20.333333333333314"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" name="newblackcolorfounded"/>
                     <nil key="highlightedColor"/>
@@ -133,18 +135,14 @@
                 </constraint>
                 <constraint firstItem="zgC-ck-dcZ" firstAttribute="centerY" secondItem="rfk-Gr-uv0" secondAttribute="centerY" id="6d8-9g-QYG"/>
                 <constraint firstItem="QaN-Cz-GFN" firstAttribute="trailing" secondItem="hG5-HR-bmF" secondAttribute="trailing" id="Gcg-48-0jN"/>
-                <constraint firstItem="aCE-x3-Auj" firstAttribute="top" secondItem="8CK-hg-RCH" secondAttribute="bottom" constant="16" id="Ijv-hA-DN0">
+                <constraint firstItem="aCE-x3-Auj" firstAttribute="top" secondItem="8CK-hg-RCH" secondAttribute="bottom" constant="12" id="Ijv-hA-DN0">
                     <variation key="heightClass=regular-widthClass=regular" constant="28"/>
                 </constraint>
-                <constraint firstItem="QaN-Cz-GFN" firstAttribute="trailing" secondItem="zgC-ck-dcZ" secondAttribute="trailing" constant="20" id="QbW-eS-YG6">
-                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
-                </constraint>
-                <constraint firstItem="zgC-ck-dcZ" firstAttribute="leading" secondItem="QaN-Cz-GFN" secondAttribute="leading" constant="20" id="Qj7-Uq-VTA">
-                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
-                </constraint>
                 <constraint firstItem="hG5-HR-bmF" firstAttribute="leading" secondItem="QaN-Cz-GFN" secondAttribute="leading" id="RUa-hQ-uWc"/>
+                <constraint firstItem="zgC-ck-dcZ" firstAttribute="leading" secondItem="aCE-x3-Auj" secondAttribute="leading" id="Txu-fs-UUo"/>
                 <constraint firstAttribute="bottom" secondItem="hG5-HR-bmF" secondAttribute="bottom" id="U8v-cl-FzP"/>
                 <constraint firstItem="hG5-HR-bmF" firstAttribute="top" secondItem="rfk-Gr-uv0" secondAttribute="top" id="bN5-kF-BEh"/>
+                <constraint firstItem="zgC-ck-dcZ" firstAttribute="trailing" secondItem="aCE-x3-Auj" secondAttribute="trailing" id="cyl-pt-Agx"/>
                 <constraint firstItem="8CK-hg-RCH" firstAttribute="centerX" secondItem="rfk-Gr-uv0" secondAttribute="centerX" id="gFy-bM-uVE"/>
                 <constraint firstItem="aCE-x3-Auj" firstAttribute="leading" secondItem="QaN-Cz-GFN" secondAttribute="leading" constant="20" id="sHu-n2-WPf">
                     <variation key="heightClass=regular-widthClass=regular" constant="180"/>
